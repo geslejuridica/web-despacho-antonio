@@ -462,10 +462,9 @@
             </sc-if>
             <sc-if value="{{ enviado }}">
               <div role="status" style="display:grid;gap:16px">
-                <p style="font-size:11.5px;letter-spacing:.24em;text-transform:uppercase;color:#1F6E8C">Consulta registrada</p>
-                <h2 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(24px,2.8vw,34px);line-height:1.2">Gràcies. He rebut el teu missatge.</h2>
-                <p style="font-size:16.5px;line-height:1.8;color:#3B5461">Contactaré amb tu pel mitjà que has indicat. Si el teu assumpte és urgent, pots trucar al <a href="tel:+34645877276">645 877 276</a>.</p>
-                <p style="font-size:13.5px;color:#56707C;line-height:1.7">[PENDENT: connectar el formulari al correu o gestor del despatx abans de publicar.]</p>
+                <p style="font-size:11.5px;letter-spacing:.24em;text-transform:uppercase;color:#1F6E8C">Gairebé enviat</p>
+                <h2 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(24px,2.8vw,34px);line-height:1.2">S'ha obert el teu correu amb la consulta.</h2>
+                <p style="font-size:16.5px;line-height:1.8;color:#3B5461">Revisa el missatge i prem enviar al teu programa de correu perquè m'arribi. Si no s'ha obert, escriu-me a geslejuridica@gmail.com o truca al <a href="tel:+34645877276">645 877 276</a>.</p>
               </div>
             </sc-if>
           </div>
@@ -1149,7 +1148,7 @@ class Component extends DCLogic {
       irAviso: () => this.go('aviso'),
       irPrivacidad: () => this.go('privacidad'),
       irCookies: () => this.go('cookies'),
-      enviar: (e) => { e.preventDefault(); this.setState({ enviado: true }); },
+      enviar: (e) => { e.preventDefault(); var f = new FormData(e.target); var g = function (k) { return String(f.get(k) || '').trim(); }; var cuerpo = ['Nombre: ' + g('nombre'), 'Telefono: ' + g('telefono'), 'Email: ' + g('email'), 'Prefiere contacto por: ' + g('preferencia'), '', 'Consulta:', g('caso')].join('\n'); var asunto = 'Consulta web' + (g('nombre') ? ' - ' + g('nombre') : ''); try { window.location.href = 'mailto:geslejuridica@gmail.com?subject=' + encodeURIComponent(asunto) + '&body=' + encodeURIComponent(cuerpo); } catch (err) {} this.setState({ enviado: true }); },
       abrirPanel: () => this.setState({ panel: true }),
       cerrarPanel: () => this.setState({ panel: false }),
       toggleAnalitica: (e) => this.setState({ analitica: e.target.checked }),
