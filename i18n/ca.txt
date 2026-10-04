@@ -1,0 +1,458 @@
+@@0 Saltar al contingut
+@@1 Gestió Legal Jurídica
+@@2 Antonio Villegas · Advocat
+@@3 Inici
+@@4 El despatx
+@@5 Com treballo
+@@6 El teu problema
+@@7 Girona
+@@8 Sant Feliu
+@@9 El Dret, més a prop
+@@10 Sol·licitar consulta
+@@11 Contacte
+@@12 Tens un problema legal?
+@@13 Sant Feliu de Guíxols
+@@14 Girona · Sant Feliu de Guíxols
+@@15 No cal que sàpigues quin advocat necessites.
+@@16 Explica'm què ha passat.
+@@17 Tu tens un problema.
+@@18 Jo analitzo les teves opcions.
+@@19 El teu problema mereix ser escoltat i analitzat
+@@20 abans de decidir.
+@@21 M'expliques la teva situació, estudio els fets i la documentació disponible, i t'explico amb claredat si hi ha una via jurídica per actuar i quines opcions tens.
+@@22 Explica'm el teu cas
+@@23 O truca directament:
+@@24 Antonio Villegas
+@@25 «No cal que sàpigues com es diu jurídicament el teu problema. Necessites que algú l'analitzi.»
+@@26 Camí de Ronda de S'Agaró a Sa Conca, Platja d'Aro · Foto: Antonio Villegas
+@@27 El plantejament
+@@28 Cada cas mereix una anàlisi completa, no una etiqueta.
+@@29 Quan una persona acudeix a mi no sempre sap quin procediment necessita ni quina branca del Dret afecta la seva situació. Per això el meu primer pas no és triar una especialitat: és escoltar, analitzar i valorar.
+@@30 Un mateix problema poques vegades pertany a una sola branca del Dret. Un divorci pot tenir conseqüències civils, fiscals i patrimonials; un acomiadament pot afectar qüestions laborals i de Seguretat Social; una herència pot implicar aspectes civils, tributaris i immobiliaris. Per això estudio la teva situació en conjunt, identifico totes les matèries implicades i t'explico com es relacionen entre si.
+@@31 Analitzo el teu cas per determinar si hi ha una via jurídica viable i t'explico les opcions, possibilitats i riscos abans de prendre cap decisió.
+@@32 Escoltar · Analitzar · Explicar · Decidir · Actuar
+@@33 Veure el procés complet
+@@34 Escoltar
+@@35 M'expliques què ha passat i conec les circumstàncies del teu cas.
+@@36 Analitzar
+@@37 Estudio els fets, la documentació disponible i les possibilitats jurídiques.
+@@38 Explicar
+@@39 T'explico de manera clara les opcions existents, les seves possibilitats, riscos i implicacions.
+@@40 Decidir
+@@41 Valoro amb tu si té sentit iniciar una actuació.
+@@42 Actuar
+@@43 Si decideixes tirar endavant, començo a treballar en el teu cas.
+@@44 Comença per explicar-ho amb les teves paraules.
+@@45 Aquestes són algunes de les maneres en què les persones descriuen la seva situació quan arriben al despatx. Cap no esmenta una branca del Dret, i no cal que la teva ho faci.
+@@46 «M'han acomiadat i no sé si és correcte el que m'ofereixen.»
+@@47 «He rebut una carta i no entenc què em reclamen.»
+@@48 «Tinc un desacord amb un familiar i no sé com resoldre'l.»
+@@49 «Vaig signar una cosa i ara crec que no l'hauria d'haver signat.»
+@@50 «Em reclamen uns diners que no crec que degui.»
+@@51 «No sé si això que m'ha passat té alguna solució legal.»
+@@52 Assumptes que arriben al despatx
+@@53 Alguns dels àmbits en què treballo
+@@54 Serveixen d'orientació. Si la teva situació no encaixa en cap, o no saps en quin encaixa, explica-me-la igualment.
+@@55 Família i divorcis
+@@56 Separacions, divorcis, custòdia dels fills, pensions i acords entre familiars.
+@@57 Herències
+@@58 Testaments, acceptació o renúncia d'herències, repartiment de béns i desacords entre hereus.
+@@59 Nacionalitat i estrangeria
+@@60 Permisos de residència i treball, arrelament, reagrupament familiar i sol·licituds de nacionalitat.
+@@61 Financer i tributari
+@@62 Reclamacions a entitats bancàries, requeriments d'Hisenda, sancions i deutes tributaris.
+@@63 Mercantil
+@@64 Contractes entre empreses, societats, impagaments comercials i conflictes entre socis.
+@@65 Administratiu
+@@66 Multes i sancions, recursos davant l'Administració, llicències i procediments amb organismes públics.
+@@67 Laboral
+@@68 Per a treballadors: acomiadaments, reclamacions de salaris, condicions de treball i liquidacions. Per a empreses: contractació, sancions disciplinàries, extincions de contracte i relació amb la plantilla.
+@@69 No hi veus el teu cas?
+@@70 No cal que encaixi en cap categoria. Explica'm què ha passat i ho analitzaré.
+@@71 On atenc
+@@72 Atenció a persones i famílies de la ciutat i la seva àrea, amb cita prèvia.
+@@73 Veure Girona
+@@74 Atenció a la costa del Baix Empordà, amb cita prèvia.
+@@75 Veure Sant Feliu
+@@76 Una valoració inicial no suposa garantia de resultat. L'objectiu de la primera conversa és entendre la teva situació i explicar-te quines opcions hi ha.
+@@77 11 segons.
+@@78 És el temps mitjà que triga un metge a interrompre un pacient que comença a explicar per què ha anat a la consulta, segons un estudi publicat al
+@@79 Journal of General Internal Medicine
+@@80 (2018). Explicar un problema sense interrupcions és menys habitual del que sembla. En aquest despatx, la primera conversa comença per escoltar-te fins al final.
+@@81 Advocat · ICAG núm. 3913
+@@82 geslejuridica@gmail.com
+@@83 Advocat exercent a Girona i Sant Feliu de Guíxols. Gestió Legal Jurídica és el meu despatx.
+@@84 La meva manera de treballar parteix d'una convicció senzilla: la persona que arriba amb un problema no té per què saber Dret. El que necessita és que algú escolti els fets, els analitzi amb rigor i li expliqui, sense tecnicismes innecessaris, quines opcions hi ha i què implica cadascuna.
+@@85 Aquesta anàlisi prèvia és la feina real. A partir d'aquí, la decisió d'actuar la prenem junts, amb la informació sobre la taula.
+@@86 Formació
+@@87 Graduat en Dret
+@@88 Màster Universitari en Advocacia i Capacitació Professional per a l'Exercici de l'Advocacia
+@@89 Conciliador privat titulat pel Consell dels Il·lustres Col·legis de l'Advocacia de Catalunya
+@@90 Diplomat en Competències Digitals Professionals pel Consejo General de la Abogacía Española
+@@91 Discreció
+@@92 Explicar un problema exigeix confiança. Tot el que comparteixes està protegit pel secret professional i es tracta amb la reserva que la teva situació mereix.
+@@93 Atenció directa
+@@94 Des de la primera conversa fins al final, el teu interlocutor sóc jo. Conec el teu cas de primera mà i en segueixo personalment cada pas.
+@@95 Honestedat
+@@96 T'explico les teves opcions en un llenguatge comprensible, amb les seves possibilitats i també els seus riscos. Si una via no és viable, t'ho dic abans de començar.
+@@97 Parlar amb l'Antonio
+@@98 Cinc passos per entendre la teva situació i decidir amb claredat.
+@@99 Aquesta és la meva manera de treballar. El detall de cada assumpte s'ajusta a les seves circumstàncies concretes.
+@@100 M'expliques què ha passat i conec les circumstàncies del teu cas. No cal que facis servir termes jurídics ni que sàpigues per endavant quin tipus de procediment et correspon.
+@@101 Estudio els fets, la documentació disponible i les possibilitats jurídiques. Aquí es determina quina matèria està realment en joc i si hi ha marge d'actuació.
+@@102 T'explico de manera clara les opcions existents, les seves possibilitats, riscos i implicacions. També quan el més raonable és no iniciar cap actuació.
+@@103 Valoro amb tu si té sentit iniciar una actuació. La decisió és teva, presa amb la informació i les condicions sobre la taula.
+@@104 Si decideixes tirar endavant, començo a treballar en el teu cas i et mantinc informat de la seva evolució.
+@@105 Nota important
+@@106 Una valoració inicial no suposa garantia de resultat. El despatx no promet desenllaços: analitza el cas, exposa les possibilitats i els riscos, i actua quan hi ha una via jurídica viable.
+@@107 Condicions de la primera consulta i honoraris: cada assumpte és diferent, per la qual cosa les condicions es valoren de manera individual en funció de les circumstàncies del cas. T'explicaré amb claredat abans d'iniciar qualsevol actuació.
+@@108 Cada problema pot tenir més d'una dimensió jurídica
+@@109 És important identificar quins àmbits del Dret afecten la teva situació. La meva feina és analitzar el conjunt del problema, determinar quines branques del Dret hi poden intervenir i valorar les diferents vies jurídiques disponibles.
+@@110 Explica'm què ha passat, analitzaré el teu cas i t'explicaré de manera clara quines opcions hi ha i quina pot ser la via més adequada.
+@@111 Què passa quan escrius
+@@112 Llegeixo el que m'expliques i, si hi falta alguna cosa essencial, t'ho pregunto.
+@@113 Contacto amb tu pel mitjà que hagis indicat per concertar una conversa.
+@@114 Analitzo la situació i t'explico quines opcions hi ha i què implica cadascuna.
+@@115 Decideixes amb aquesta informació. Si hi ha via i vols continuar, comencem.
+@@116 Abans d'actuar, analitzo el teu cas. No prometo resultats: t'explico les possibilitats i decidim junts com avançar.
+@@117 Per seguretat
+@@118 No enviïs pel formulari dades especialment sensibles (salut, ideologia, antecedents, dades de tercers) ni documentació confidencial que no sigui imprescindible. N'hi ha prou amb un resum del que ha passat; la documentació es revisa després pel canal adequat.
+@@119 Nom
+@@120 Telèfon
+@@121 Correu electrònic
+@@122 Explica'm breument què ha passat
+@@123 Amb les teves paraules. No cal cap terme jurídic.
+@@124 Preferència de contacte
+@@125 He llegit la
+@@126 política de privacitat
+@@127 i la informació sobre el tractament de les meves dades.
+@@128 Responsable: Antonio Villegas — Gestió Legal Jurídica. Finalitat: atendre la teva consulta. Base jurídica: aplicació de mesures precontractuals a petició de l'interessat. Drets: accés, rectificació, supressió, oposició, limitació i portabilitat, escrivint a geslejuridica@gmail.com. Més informació a la política de privacitat.
+@@129 Enviar consulta
+@@130 Consulta registrada
+@@131 Gràcies. He rebut el teu missatge.
+@@132 Contactaré amb tu pel mitjà que has indicat. Si el teu assumpte és urgent, pots trucar al
+@@133 [PENDENT: connectar el formulari al correu o gestor del despatx abans de publicar.]
+@@134 Advocat al centre de Girona. A pocs passos de tu, quan més ho necessites.
+@@135 A Girona atenc qui arriba amb un problema i encara no sap com es diu jurídicament.
+@@136 Moltes de les persones que acudeixen al meu despatx de Girona ho fan després de rebre una carta, una notificació o una comunicació que no entenen, o després d'un conflicte que s'ha allargat més del que esperaven. Cada consulta comença sempre igual: m'expliques què ha passat.
+@@137 Si vius o treballes a Girona, la primera conversa es pot fer en persona, amb cita prèvia. El meu objectiu en aquesta cita no és vendre't un procediment, sinó determinar amb tu si hi ha una via jurídica i què suposaria recórrer-la.
+@@138 Què cal portar a la primera cita
+@@139 Qualsevol document que hagis rebut i no entenguis, amb les seves dates.
+@@140 Contractes, correus o missatges relacionats amb l'assumpte, si en tens.
+@@141 Un resum del que ha passat en ordre cronològic, encara que sigui a mà.
+@@142 Atenció a Girona
+@@143 Carrer Sèquia, 3
+@@144 Cita prèvia:
+@@145 L'Onyar, el pont de les Peixateries Velles i la Catedral (Girona) · Foto: Wikimedia Commons, CC BY-SA
+@@146 Advocat a Sant Feliu de Guíxols i zona de la Costa Brava.
+@@147 A la costa del Baix Empordà, tenir el despatx a prop canvia com s'afronta un problema.
+@@148 Sant Feliu de Guíxols viu amb dos ritmes: el de tot l'any i el de la temporada. Això es nota en els assumptes que arriben al despatx, en les relacions de veïnatge i en l'habitatge, i també en la dificultat de trobar temps per tractar un problema legal amb calma.
+@@149 Atendre aquí permet que la primera conversa no depengui d'un desplaçament a Girona. Es concerta cita, s'explica el que ha passat i s'analitza amb el mateix criteri.
+@@150 Quan convé no esperar
+@@151 Quan el document que has rebut esmenta un termini.
+@@152 Quan l'altra part ja ha demanat assessorament.
+@@153 Quan estàs a punt de signar alguna cosa que no acabes d'entendre.
+@@154 Davant d'un termini, la primera trucada és el més urgent:
+@@155 Atenció a Sant Feliu
+@@156 Punta del Castell des de s'Alguer (Costa Brava) · Fotografia: Antonio Villegas
+@@157 Informació jurídica
+@@158 Informació jurídica i recursos d'interès per ajudar-te a conèixer millor els teus drets.
+@@159 El Dret està en constant evolució.
+@@160 En aquest espai trobaràs informació i recursos d'interès per conèixer millor els teus drets, entendre algunes situacions jurídiques habituals i accedir directament a fonts jurídiques fiables i oficials.
+@@161 El meu objectiu és apropar la informació jurídica a les persones d'una manera clara, senzilla i comprensible.
+@@162 La informació continguda en aquesta secció té caràcter general i divulgatiu i no substitueix l'assessorament jurídic personalitzat. Cada situació s'ha d'analitzar atenent a les seves circumstàncies concretes.
+@@163 Recursos oficials
+@@164 Fonts jurídiques d'interès
+@@165 Poso al teu abast algunes de les principals fonts oficials d'informació jurídica perquè puguis consultar legislació, jurisprudència i recursos relacionats amb la Justícia.
+@@166 Legislació
+@@167 BOE – Boletín Oficial del Estado
+@@168 Consulta de legislació, normativa i disposicions oficials de l'Estat.
+@@169 Accedir al BOE
+@@170 Jurisprudència
+@@171 CENDOJ – Centre de Documentació Judicial
+@@172 Accés a informació sobre jurisprudència i resolucions judicials.
+@@173 Consultar jurisprudència
+@@174 Professió
+@@175 Consejo General de la Abogacía Española
+@@176 Informació institucional, actualitat jurídica i recursos relacionats amb la professió de l'Advocacia.
+@@177 Visitar l'Advocacia
+@@178 Tribunals
+@@179 Poder Judicial
+@@180 Informació institucional, actualitat dels tribunals i recursos relacionats amb l'Administració de Justícia.
+@@181 Accedir al Poder Judicial
+@@182 Normativa catalana
+@@183 Portal Jurídic de Catalunya
+@@184 Consulta de legislació i normativa aplicable a Catalunya.
+@@185 Consultar normativa catalana
+@@186 Tràmits
+@@187 Justícia – Generalitat de Catalunya
+@@188 Informació sobre Justícia, tràmits, serveis i recursos de la Generalitat de Catalunya.
+@@189 Accedir a Justícia
+@@190 Editorials i bases de dades jurídiques
+@@191 Editorials especialitzades amb legislació, jurisprudència i doctrina. Alguns continguts requereixen subscripció.
+@@192 vLex
+@@193 Base de dades jurídica amb jurisprudència, legislació i doctrina.
+@@194 Visitar
+@@195 Colex
+@@196 Editorial jurídica amb codis, publicacions i novetats normatives.
+@@197 Lefebvre
+@@198 Informació jurídica, bases de dades i actualitat legal.
+@@199 Aranzadi La Ley
+@@200 Bases de dades de legislació, jurisprudència i doctrina, i publicacions jurídiques.
+@@201 Tirant lo Blanch
+@@202 Editorial jurídica amb bases de dades, legislació i jurisprudència.
+@@203 Iberley
+@@204 Informació jurídica pràctica: legislació, jurisprudència i formularis.
+@@205 Sepín
+@@206 Editorial jurídica especialitzada en bases de dades i publicacions per matèries.
+@@207 Gestió Legal Jurídica no està vinculada a aquestes entitats.
+@@208 Píndoles jurídiques
+@@209 Ho sabies?
+@@210 No tots els conflictes han d'acabar als tribunals.
+@@211 En determinats assumptes, la negociació, la mediació o les vies extrajudicials poden permetre arribar a una solució adequada sense necessitat d'iniciar un procediment judicial.
+@@212 Abans de signar un document, és important conèixer-ne les conseqüències.
+@@213 Un contracte, acord o document pot generar drets i obligacions. Davant de qualsevol dubte, consultar prèviament amb un professional pot evitar problemes posteriors.
+@@214 Una notificació judicial no s'hauria d'ignorar.
+@@215 Els procediments judicials estan subjectes a terminis. Si reps una notificació judicial, és important saber què significa i quines actuacions poden ser necessàries.
+@@216 La prova pot ser determinant en un procediment.
+@@217 Documents, comunicacions, contractes, fotografies, correus electrònics o altres elements poden tenir rellevància en funció del cas i de les circumstàncies en què s'hagin obtingut.
+@@218 Consultar amb un advocat no significa necessàriament iniciar un procediment judicial.
+@@219 Una consulta pot servir simplement per conèixer els teus drets, valorar les diferents opcions disponibles i decidir quina és l'actuació més adequada.
+@@220 Actuar a temps pot ser important.
+@@221 Determinades accions i reclamacions estan subjectes a terminis. Per això, davant d'un problema jurídic, obtenir assessorament amb prou antelació pot resultar fonamental.
+@@222 Dubtes habituals
+@@223 Preguntes jurídiques freqüents
+@@224 Alguns dubtes apareixen sovint. Aquí trobaràs respostes generals a qüestions jurídiques habituals.
+@@225 Tens un dubte jurídic?
+@@226 Cada situació és diferent. Si necessites orientació sobre el teu cas, puc estudiar amb tu les opcions disponibles i ajudar-te a determinar quin pot ser el pas següent.
+@@227 Consultar amb mi
+@@228 La informació publicada en aquesta secció té caràcter general i divulgatiu i no constitueix assessorament jurídic.
+@@229 Per telèfon, per correu electrònic o deixant-me escrit què ha passat. Com et sigui més fàcil.
+@@230 Atenció a
+@@231 Girona — Carrer Sèquia, 3
+@@232 Trucar ara
+@@233 Escriu-me
+@@234 Un resum breu és suficient per començar.
+@@235 Anar al formulari
+@@236 Les dades que facilitis es tracten únicament per atendre la teva consulta. No enviïs documentació confidencial innecessària ni dades especialment sensibles per canals no segurs. Una valoració inicial no suposa garantia de resultat.
+@@237 Informació legal
+@@238 Avís legal
+@@239 1. Titular del lloc web
+@@240 En compliment de l'article 10 de la Llei 34/2002, d'11 de juliol, de serveis de la societat de la informació i de comerç electrònic (LSSI-CE), es faciliten les dades següents:
+@@241 Titular:
+@@242 Nom comercial:
+@@243 Domicili professional:
+@@244 Carrer Sèquia, 3, Girona
+@@245 Telèfon:
+@@246 Correu electrònic:
+@@247 Professió:
+@@248 advocat en exercici
+@@249 Titulació:
+@@250 Graduat en Dret i Màster Universitari en Advocacia, títols expedits a Espanya
+@@251 Col·legi professional:
+@@252 Il·lustre Col·legi de l'Advocacia de Girona (ICAG), número de col·legiat 3913
+@@253 Normes professionals aplicables:
+@@254 Estatut General de l'Advocacia Espanyola, aprovat pel Reial decret 135/2021, de 2 de març; Codi Deontològic de l'Advocacia Espanyola; i normativa del Consell dels Il·lustres Col·legis de l'Advocacia de Catalunya i de l'ICAG, consultables a
+@@255 www.abogacia.es
+@@256 i
+@@257 www.icag.cat
+@@258 2. Objecte
+@@259 Aquest Avís Legal té per objecte regular l'accés, la navegació i l'ús del lloc web, així com informar els usuaris sobre les condicions aplicables als continguts i serveis oferts a través seu.
+@@260 L'accés i la navegació per aquest lloc web atribueixen la condició d'usuari i impliquen l'acceptació de les condicions establertes en aquest Avís Legal.
+@@261 La informació continguda en aquest web té caràcter merament informatiu i està destinada a facilitar el coneixement dels serveis professionals oferts pel despatx. La informació publicada no constitueix, per si mateixa, assessorament jurídic ni substitueix l'anàlisi individualitzada de cada cas per part d'un professional de l'advocacia.
+@@262 3. Normativa professional
+@@263 L'activitat professional desenvolupada a través d'aquest lloc web està subjecta a la normativa vigent aplicable a l'exercici de l'advocacia a Espanya, així com a les normes deontològiques i professionals que hi siguin d'aplicació.
+@@264 En particular, l'exercici professional es desenvolupa de conformitat amb la legislació reguladora de la professió de l'Advocacia, les normes deontològiques de l'Advocacia Espanyola i, si escau, les disposicions i normes del Col·legi de l'Advocacia corresponent.
+@@265 La relació professional entre l'advocat i el client es regirà per la normativa aplicable i per les condicions que, en cada cas, s'estableixin específicament entre les parts.
+@@266 4. Propietat intel·lectual
+@@267 Tots els continguts d'aquest lloc web, incloent-hi, a títol enunciatiu i no limitatiu, textos, fotografies, imatges, logotips, gràfics, dissenys, elements audiovisuals, estructura, codi font i altres elements que formin part del web, estan protegits per la normativa vigent en matèria de propietat intel·lectual i industrial.
+@@268 Llevat que s'indiqui expressament el contrari o hi hagi autorització prèvia del titular dels drets, queda prohibida la reproducció, distribució, transformació, comunicació pública, posada a disposició o qualsevol altra forma d'explotació, total o parcial, dels continguts d'aquest lloc web.
+@@269 L'accés al lloc web no implica, en cap cas, l'adquisició per part de l'usuari de cap dret de propietat sobre els continguts, dissenys o elements que l'integren.
+@@270 5. Condicions d'ús i responsabilitat
+@@271 L'usuari es compromet a utilitzar el lloc web de manera diligent, lícita i d'acord amb la legislació vigent, aquest Avís Legal i les normes generalment acceptades de convivència i bona fe.
+@@272 Queda prohibit utilitzar el lloc web per dur a terme activitats il·lícites, fraudulentes o contràries a la bona fe, així com per introduir o transmetre continguts que puguin resultar lesius per als drets o interessos de tercers.
+@@273 El titular del lloc web procura que la informació publicada sigui correcta, actualitzada i accessible. No obstant això, no garanteix la inexistència d'errors, omissions o possibles desactualitzacions dels continguts, ni assumeix cap responsabilitat pels danys que es poguessin derivar de l'ús de la informació continguda al web quan s'utilitzi sense el corresponent assessorament professional.
+@@274 El titular tampoc no serà responsable dels danys o perjudicis que es puguin derivar de circumstàncies alienes al seu control, incloent-hi, entre d'altres, errors tècnics, interrupcions del servei, errors de connexió, virus informàtics o actuacions de tercers.
+@@275 L'existència d'enllaços a pàgines web de tercers, si escau, tindrà caràcter merament informatiu. El titular no assumeix cap responsabilitat pels continguts, serveis o polítiques de privacitat d'aquestes pàgines externes.
+@@276 L'enviament d'una consulta o sol·licitud de contacte a través del web no implica per si mateix l'acceptació d'un encàrrec professional ni estableix una relació advocat-client. Aquesta relació quedarà formalment constituïda quan hi hagi acceptació expressa de l'encàrrec i s'hagin establert les condicions corresponents.
+@@277 6. Legislació aplicable i jurisdicció
+@@278 Aquest Avís Legal es regirà i interpretarà de conformitat amb la legislació espanyola vigent.
+@@279 Per a qualsevol controvèrsia que pogués sorgir en relació amb l'accés, la navegació o la utilització del lloc web, les parts se sotmetran als jutjats i tribunals que resultin competents de conformitat amb la legislació aplicable.
+@@280 En els casos en què la normativa permeti l'elecció de fur, les parts es podran sotmetre expressament als jutjats i tribunals que corresponguin al domicili professional del titular del lloc web.
+@@281 7. Protecció de dades i cookies
+@@282 El tractament de les dades personals facilitades a través d'aquest lloc web es regeix per la
+@@283 Política de privacitat
+@@284 , i l'ús de cookies, per la
+@@285 Política de cookies
+@@286 Darrera actualització: octubre de 2026.
+@@287 Protecció de dades
+@@288 Aquesta Política de Privacitat té com a finalitat informar els usuaris del lloc web sobre el tractament de les dades personals que s'hi puguin facilitar, de conformitat amb el Reglament (UE) 2016/679, de 27 d'abril de 2016, General de Protecció de Dades (RGPD), i la Llei Orgànica 3/2018, de 5 de desembre, de Protecció de Dades Personals i garantia dels drets digitals (LOPDGDD), així com qualsevol altra normativa que hi resulti aplicable.
+@@289 1. Responsable del tractament
+@@290 Responsable:
+@@291 Il·lustre Col·legi de l'Advocacia de Girona (ICAG)
+@@292 Número de col·legiat:
+@@293 2. Quines dades personals es poden recollir?
+@@294 A través d'aquest lloc web es poden tractar les dades personals que l'usuari faciliti voluntàriament mitjançant els formularis de contacte, el correu electrònic, el telèfon o altres mitjans habilitats al web.
+@@295 Entre d'altres, es poden tractar dades identificatives i de contacte, com ara nom i cognoms, adreça de correu electrònic, número de telèfon i qualsevol altra informació que l'usuari decideixi facilitar voluntàriament en la seva comunicació.
+@@296 Es recomana a l'usuari no incloure als formularis de contacte informació especialment sensible o documentació que no sigui necessària per fer la consulta inicial.
+@@297 Els camps assenyalats com a obligatoris al formulari són necessaris per poder atendre la consulta. Si no es faciliten, no serà possible respondre-la.
+@@298 3. Finalitats del tractament
+@@299 Les dades personals es podran tractar per a les finalitats següents:
+@@300 Atendre i respondre les consultes, sol·licituds d'informació o comunicacions fetes per l'usuari.
+@@301 Contactar amb l'usuari quan sigui necessari per atendre la seva sol·licitud.
+@@302 Gestionar, si escau, la relació professional i contractual derivada de la prestació de serveis jurídics.
+@@303 Elaborar pressupostos o propostes de serveis professionals quan s'hagin sol·licitat.
+@@304 Complir les obligacions legals que siguin aplicables al responsable del tractament.
+@@305 Gestionar i mantenir la seguretat del lloc web i prevenir possibles usos fraudulents o il·lícits.
+@@306 Les dades no s'utilitzaran per a finalitats incompatibles amb aquelles per a les quals es van recollir.
+@@307 No es prenen decisions automatitzades ni s'elaboren perfils a partir de les dades facilitades.
+@@308 4. Base jurídica del tractament
+@@309 La base jurídica per al tractament de les dades personals dependrà de la finalitat concreta per a la qual es recullin.
+@@310 Quan l'usuari contacti voluntàriament amb el despatx per sol·licitar informació o fer una consulta, el tractament es podrà basar en l'aplicació de mesures precontractuals a petició de l'interessat, de conformitat amb l'article 6.1.b) del RGPD.
+@@311 Quan hi hagi una relació professional o contractual, el tractament de les dades serà necessari per a l'execució del contracte i per a la gestió dels serveis jurídics sol·licitats.
+@@312 Així mateix, determinats tractaments es podran basar en el compliment d'obligacions legals aplicables al responsable del tractament, de conformitat amb l'article 6.1.c) del RGPD.
+@@313 Quan sigui necessari i no hi hagi cap altra base jurídica aplicable, determinats tractaments es podran fer amb el consentiment de l'usuari, que es podrà retirar en qualsevol moment, sense que això afecti la licitud del tractament fet amb anterioritat.
+@@314 5. Conservació de les dades
+@@315 Les dades personals es conservaran durant el temps necessari per atendre la sol·licitud feta per l'usuari i, quan hi hagi una relació professional, durant el temps necessari per gestionar aquesta relació.
+@@316 Un cop finalitzada la relació o quan les dades deixin de ser necessàries per a la finalitat per a la qual es van recollir, es podran mantenir degudament bloquejades durant els terminis legalment establerts per atendre possibles responsabilitats legals o reclamacions.
+@@317 Transcorreguts aquests terminis, les dades s'eliminaran o s'anonimitzaran quan correspongui.
+@@318 6. Destinataris de les dades
+@@319 Amb caràcter general, les dades personals no es cediran a tercers llevat que hi hagi una obligació legal, sigui necessari per a la prestació del servei sol·licitat o l'usuari hi hagi donat el consentiment quan sigui necessari.
+@@320 Les dades es podran comunicar a organismes públics, jutjats, tribunals, administracions públiques, professionals, col·laboradors o proveïdors de serveis quan aquesta comunicació sigui necessària per a la gestió de l'assumpte o estigui emparada per una obligació legal o per una base jurídica vàlida.
+@@321 Quan calgui recórrer a proveïdors externs que tinguin accés a dades personals per prestar determinats serveis, aquests actuaran, quan correspongui, com a encarregats del tractament i estaran subjectes a les obligacions establertes per la normativa de protecció de dades.
+@@322 7. Transferències internacionals
+@@323 Alguns proveïdors tecnològics utilitzats pel despatx, com els serveis de correu electrònic, poden tractar dades fora de l'Espai Econòmic Europeu.
+@@324 En aquest cas, les transferències internacionals es faran únicament a l'empara d'una decisió d'adequació de la Comissió Europea o d'altres garanties adequades previstes al RGPD, com les clàusules contractuals tipus.
+@@325 8. Drets dels usuaris
+@@326 L'usuari pot exercir, en els termes establerts per la normativa aplicable, els drets següents:
+@@327 Dret d'accés:
+@@328 saber si s'estan tractant les seves dades personals i obtenir informació sobre aquest tractament.
+@@329 Dret de rectificació:
+@@330 sol·licitar la correcció de les dades inexactes o incompletes.
+@@331 Dret de supressió:
+@@332 sol·licitar l'eliminació de les seves dades quan concorrin els requisits legalment establerts.
+@@333 Dret a la limitació del tractament:
+@@334 sol·licitar que es limiti el tractament de les seves dades en determinats supòsits.
+@@335 Dret d'oposició:
+@@336 oposar-se al tractament de les seves dades en determinades circumstàncies.
+@@337 Dret a la portabilitat:
+@@338 rebre determinades dades personals en un format estructurat, d'ús comú i lectura mecànica, o sol·licitar-ne la transmissió a un altre responsable quan sigui aplicable.
+@@339 Dret a retirar el consentiment:
+@@340 quan el tractament es basi en el consentiment, es podrà retirar en qualsevol moment.
+@@341 Per exercir aquests drets, l'usuari es pot adreçar al responsable del tractament mitjançant correu electrònic a:
+@@342 La sol·licitud haurà d'indicar clarament el dret que vol exercir i, quan sigui necessari per verificar la identitat del sol·licitant, es podrà requerir documentació identificativa.
+@@343 9. Dret a presentar una reclamació
+@@344 L'usuari té dret a presentar una reclamació davant l'
+@@345 Agència Espanyola de Protecció de Dades (AEPD)
+@@346 si considera que el tractament de les seves dades personals no s'ajusta a la normativa vigent.
+@@347 Més informació a:
+@@348 www.aepd.es
+@@349 10. Confidencialitat i seguretat
+@@350 El responsable del tractament es compromet a mantenir la confidencialitat de les dades personals i a aplicar les mesures tècniques i organitzatives adequades per garantir un nivell de seguretat apropiat al risc del tractament.
+@@351 L'accés a la informació quedarà limitat a les persones que necessitin conèixer-la per al compliment de les finalitats corresponents, les quals estaran subjectes, quan escaigui, al deure corresponent de confidencialitat i secret professional.
+@@352 No obstant això, cap sistema d'emmagatzematge o transmissió d'informació per Internet no pot garantir una seguretat absoluta.
+@@353 11. Dades facilitades mitjançant formularis de contacte
+@@354 L'usuari garanteix que les dades que faciliti a través dels formularis de contacte són veritables, exactes, completes i actualitzades.
+@@355 L'usuari serà responsable de qualsevol dany o perjudici que pogués ocasionar el subministrament de dades falses, inexactes o pertanyents a terceres persones sense comptar amb l'autorització corresponent.
+@@356 Quan l'usuari faciliti dades personals de terceres persones, haurà de comptar prèviament amb una base legítima per fer-ho i, quan correspongui, haver informat aquestes persones sobre la comunicació de les seves dades.
+@@357 12. Política de cookies
+@@358 Aquest lloc web pot utilitzar cookies i tecnologies similars amb la finalitat de garantir-ne el funcionament correcte, millorar l'experiència de navegació de l'usuari i, quan correspongui, obtenir informació sobre l'ús que es fa del lloc web.
+@@359 Les cookies són petits arxius que s'emmagatzemen al dispositiu de l'usuari quan visita determinades pàgines web i que permeten, entre altres funcions, recordar determinades preferències, facilitar la navegació i obtenir informació sobre l'ús del lloc.
+@@360 Les cookies utilitzades en aquest lloc web es podran classificar, segons la seva finalitat, en:
+@@361 Cookies tècniques o necessàries:
+@@362 són les imprescindibles per al funcionament correcte del lloc web i per permetre la navegació i la utilització de les seves diferents opcions o serveis.
+@@363 Cookies de preferències o personalització:
+@@364 permeten recordar determinades preferències de l'usuari i adaptar determinats elements de la navegació.
+@@365 Cookies d'anàlisi o mesurament:
+@@366 permeten obtenir informació sobre la manera com els usuaris interactuen amb el lloc web, amb l'objectiu d'analitzar-ne i millorar-ne el funcionament.
+@@367 Cookies de tercers:
+@@368 les poden instal·lar serveis externs utilitzats al lloc web, sempre que correspongui i s'hagi obtingut el consentiment quan sigui legalment necessari.
+@@369 Les cookies que no siguin estrictament necessàries per al funcionament del lloc web s'instal·laran únicament quan l'usuari hi hagi donat el consentiment, quan aquest sigui legalment exigible.
+@@370 L'usuari podrà acceptar, rebutjar o configurar les cookies a través del panell de configuració habilitat al lloc web. Així mateix, podrà modificar les seves preferències en qualsevol moment.
+@@371 La desactivació de determinades cookies pot afectar el funcionament d'alguns serveis o funcionalitats de la pàgina web.
+@@372 Per obtenir informació detallada sobre les cookies utilitzades concretament, la seva finalitat, durada, titularitat i forma de gestió, l'usuari podrà consultar la
+@@373 Política de Cookies
+@@374 disponible en aquest lloc web.
+@@375 El tractament de dades personals que, si escau, es pugui derivar de l'ús de determinades cookies es farà de conformitat amb la normativa vigent en matèria de protecció de dades i amb les condicions establertes en aquesta Política de Privacitat.
+@@376 Configurar cookies
+@@377 13. Actualització de la Política de Privacitat
+@@378 Aquesta Política de Privacitat es podrà modificar quan sigui necessari per adaptar-la a canvis legislatius, jurisprudencials, tècnics o en els tractaments fets a través del lloc web.
+@@379 La versió publicada en cada moment serà la que resulti aplicable.
+@@380 Cookies
+@@381 Aquesta Política de cookies informa sobre l'ús de cookies i tecnologies similars en aquest lloc web, de conformitat amb l'article 22.2 de la Llei 34/2002, de serveis de la societat de la informació i de comerç electrònic (LSSI-CE), i amb la normativa de protecció de dades aplicable.
+@@382 1. Què són les cookies?
+@@383 Les cookies són petits arxius que s'emmagatzemen al dispositiu de l'usuari quan visita determinades pàgines web. Permeten, entre altres funcions, recordar preferències, facilitar la navegació o obtenir informació sobre l'ús del lloc.
+@@384 2. Responsable
+@@385 Antonio Villegas (Gestió Legal Jurídica). Correu electrònic:
+@@386 3. Cookies utilitzades en aquest lloc web
+@@387 Tipus
+@@388 Tècnica o necessària
+@@389 Finalitat
+@@390 Recordar la decisió de l'usuari sobre l'acceptació o el rebuig de cookies.
+@@391 Titular
+@@392 Pròpia
+@@393 Durada
+@@394 12 mesos
+@@395 Anàlisi o mesurament
+@@396 Actualment no s'utilitzen.
+@@397 Publicitat
+@@398 No s'utilitzen.
+@@399 Les cookies tècniques són imprescindibles per al funcionament del lloc i no requereixen consentiment. Si en el futur s'incorporen cookies d'anàlisi o altres no necessàries, s'informarà en aquesta taula i només s'instal·laran amb el consentiment previ de l'usuari.
+@@400 4. Gestió del consentiment
+@@401 L'usuari pot acceptar, rebutjar o configurar les cookies no necessàries a través de l'avís que apareix en la seva primera visita i modificar la seva decisió en qualsevol moment des de l'enllaç «Configuració de cookies» del peu de pàgina. Rebutjar les cookies és tan senzill com acceptar-les.
+@@402 Canviar preferències
+@@403 5. Desactivació des del navegador
+@@404 L'usuari també pot bloquejar o eliminar les cookies des de la configuració de privacitat del seu navegador (Chrome, Firefox, Safari, Edge o altres). La desactivació de les cookies tècniques pot afectar el funcionament d'algunes parts del lloc web.
+@@405 6. Més informació
+@@406 El tractament de les dades personals que es pugui derivar de l'ús de cookies es regeix per la
+@@407 . Per a qualsevol consulta, l'usuari pot escriure a
+@@408 Gestió Legal
+@@409 Jurídica
+@@410 Web
+@@411 Legal
+@@412 Privacitat
+@@413 Configuració de cookies
+@@414 © 2026 Gestió Legal Jurídica · Antonio Villegas
+@@415 La informació d'aquest lloc és general i no constitueix assessorament jurídic personalitzat.
+@@416 Aquest lloc només utilitza cookies tècniques necessàries per al seu funcionament. Més informació a la
+@@417 política de cookies
+@@418 Rebutjar
+@@419 Configurar
+@@420 Acceptar
+@@421 Tria quines cookies permets. Pots canviar aquesta decisió quan vulguis des del peu de pàgina.
+@@422 Necessàries · sempre actives
+@@423 Permeten el funcionament bàsic del lloc i recordar la teva decisió.
+@@424 Analítiques · actualment no s'utilitzen
+@@425 Si en el futur s'incorporen, només s'activaran amb el teu consentiment.
+@@426 Desar preferències
+@@427 Rebutjar-les totes
+@@428 Tancar
+@@429 Gestió Legal Jurídica — Antonio Villegas, advocat. Explica'm què ha passat: analitzo el teu cas i t'explico quines opcions jurídiques hi ha. Girona i Sant Feliu de Guíxols.
+@@430 Gestió Legal Jurídica — inici
+@@431 Logotip de Gestió Legal Jurídica
+@@432 Navegació principal
+@@433 Trucar al 645 877 276
+@@434 Antonio Villegas, advocat, assegut al seu despatx
+@@435 Templet del Camí de Ronda de S'Agaró, davant del mar
+@@436 Retrat d'Antonio Villegas
+@@437 El riu Onyar i el pont de les Peixateries Velles, amb la Catedral de Girona al fons
+@@438 Vista de la Punta del Castell des de s'Alguer, a la Costa Brava
+@@439 Seccions
+@@440 Avís de cookies
+@@441 Cookies necessàries, sempre actives
+@@442 Cookies analítiques, no s'utilitzen
+@@443 Quan hauria de consultar amb un advocat?
+@@444 Quan hi hagi una situació que pugui tenir conseqüències jurídiques, especialment abans de signar documents, iniciar una reclamació, respondre a una demanda o rebre una notificació judicial.
+@@445 Puc consultar amb un advocat encara que no vulgui iniciar cap acció?
+@@446 Sí. Una consulta jurídica pot servir per conèixer les opcions disponibles i valorar quina actuació pot ser més convenient abans de prendre una decisió.
+@@447 Què faig si rebo una demanda o una notificació judicial?
+@@448 No s'ha d'ignorar. Els procediments judicials estan subjectes a terminis, per la qual cosa és recomanable consultar al més aviat possible amb un advocat per conèixer el contingut de la notificació i les actuacions que corresponguin.
+@@449 Cal acudir sempre als tribunals per resoldre un conflicte?
+@@450 No necessàriament. Depenent de la naturalesa del conflicte, hi pot haver alternatives com la negociació, la mediació o altres vies extrajudicials.
+@@451 Puc reclamar si considero que s'han vulnerat els meus drets?
+@@452 En molts casos hi ha mecanismes de reclamació, però les possibilitats i els terminis depenen de la naturalesa concreta de l'assumpte. Cal analitzar cada situació individualment.
+@@453 Quant de temps tinc per presentar una reclamació?
+@@454 No hi ha un termini únic per a totes les reclamacions. Els terminis depenen del tipus d'acció i de la legislació aplicable, per la qual cosa és important consultar el cas concret.
+@@455 Una consulta jurídica implica contractar l'advocat?
+@@456 No necessàriament. La consulta i la contractació de serveis professionals són qüestions diferents. La relació professional s'establirà quan correspongui i d'acord amb les condicions acordades.
+@@457 Menú

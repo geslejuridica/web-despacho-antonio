@@ -1,0 +1,1167 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="description" content="Gestió Legal Jurídica — Antonio Villegas, abogado. Cuéntame qué ha ocurrido: analizo tu caso y te explico qué opciones jurídicas existen. Girona y Sant Feliu de Guíxols." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  body { margin: 0; background: #FBFAF7; -webkit-font-smoothing: antialiased; }
+  h1, h2, h3, h4, p, ul, ol, figure { margin: 0; }
+  ul, ol { padding: 0 0 0 1.15em; }
+  button { font: inherit; }
+  input, textarea, select { font: inherit; }
+  a { color: #1F6E8C; text-decoration: none; border-bottom: 1px solid rgba(31,110,140,.35); }
+  a:hover { color: #10313F; border-bottom-color: #10313F; }
+  :focus-visible { outline: 2px solid #1F6E8C; outline-offset: 3px; }
+  ::selection { background: #BFE0EE; color: #10313F; }
+  @keyframes glj-rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+</style>
+</helmet>
+
+<div style="font-family:'Jost',system-ui,sans-serif;color:#10313F;background:#FBFAF7;min-height:100vh;text-wrap:pretty">
+
+  <a href="#glj-main" style="position:absolute;left:-9999px;top:0;background:#1C5A73;color:#FFFFFF;padding:14px 20px;border:none;z-index:200" style-focus="left:0">Saltar al contenido</a>
+
+  <header style="position:sticky;top:0;z-index:100;background:rgba(251,252,251,.94);backdrop-filter:blur(10px);border-bottom:1px solid rgba(31,110,140,.28)">
+    <div style="max-width:1600px;margin:0 auto;padding:12px clamp(18px,3vw,40px);display:flex;align-items:center;justify-content:space-between;gap:20px">
+      <button type="button" onClick="{{ irInicio }}" aria-label="Gestió Legal Jurídica — inicio" style="display:flex;align-items:center;gap:clamp(14px,1.6vw,22px);background:none;border:none;padding:4px 0;cursor:pointer;text-align:left;flex:none">
+        <img src="assets/logo-gl.png" alt="Logotipo de Gestió Legal Jurídica" width="104" height="104" style="display:block;width:clamp(72px,8vw,104px);height:clamp(72px,8vw,104px);flex:none;object-fit:cover;object-position:50% 26%;box-shadow:0 2px 10px rgba(16,49,63,.18)" />
+        <span style="display:grid;gap:8px">
+          <span style="display:block;font-family:'Cormorant Garamond',serif;color:#10313F;font-size:clamp(19px,2vw,26px);font-weight:500;letter-spacing:.06em;line-height:1.05;white-space:nowrap">Gestió Legal Jurídica</span>
+          <span style="display:flex;align-items:center;gap:10px;font-size:clamp(10px,.9vw,11.5px);letter-spacing:.22em;text-transform:uppercase;color:#1F6E8C;white-space:nowrap"><span style="display:block;width:22px;height:1px;background:#1F6E8C"></span>Antonio Villegas · Advocat</span>
+        </span>
+      </button>
+
+      <div style="display:flex;align-items:center;gap:6px;flex:none">
+        <sc-if value="{{ wide }}" hint-placeholder-val="{{ true }}">
+          <nav aria-label="Navegación principal" style="display:flex;align-items:center;gap:0">
+            <button type="button" onClick="{{ irInicio }}" style="background:none;border:none;color:rgba(16,49,63,.86);font-size:12px;letter-spacing:.12em;text-transform:uppercase;padding:12px 9px;min-height:44px;cursor:pointer;white-space:nowrap" style-hover="color:#1F6E8C">Inicio</button>
+            <button type="button" onClick="{{ irDespacho }}" style="background:none;border:none;color:rgba(16,49,63,.86);font-size:12px;letter-spacing:.12em;text-transform:uppercase;padding:12px 9px;min-height:44px;cursor:pointer;white-space:nowrap" style-hover="color:#1F6E8C">El despacho</button>
+            <button type="button" onClick="{{ irProceso }}" style="background:none;border:none;color:rgba(16,49,63,.86);font-size:12px;letter-spacing:.12em;text-transform:uppercase;padding:12px 9px;min-height:44px;cursor:pointer;white-space:nowrap" style-hover="color:#1F6E8C">Cómo trabajo</button>
+            <button type="button" onClick="{{ irProblema }}" style="background:none;border:none;color:rgba(16,49,63,.86);font-size:12px;letter-spacing:.12em;text-transform:uppercase;padding:12px 9px;min-height:44px;cursor:pointer;white-space:nowrap" style-hover="color:#1F6E8C">Tu problema</button>
+            <button type="button" onClick="{{ irGirona }}" style="background:none;border:none;color:rgba(16,49,63,.86);font-size:12px;letter-spacing:.12em;text-transform:uppercase;padding:12px 9px;min-height:44px;cursor:pointer;white-space:nowrap" style-hover="color:#1F6E8C">Girona</button>
+            <button type="button" onClick="{{ irSfg }}" style="background:none;border:none;color:rgba(16,49,63,.86);font-size:12px;letter-spacing:.12em;text-transform:uppercase;padding:12px 9px;min-height:44px;cursor:pointer;white-space:nowrap" style-hover="color:#1F6E8C">Sant Feliu</button>
+            <sc-if value="{{ blogVisible }}" hint-placeholder-val="{{ true }}"><button type="button" onClick="{{ irBlog }}" style="background:none;border:none;color:rgba(16,49,63,.86);font-size:12px;letter-spacing:.12em;text-transform:uppercase;padding:12px 9px;min-height:44px;cursor:pointer;white-space:nowrap" style-hover="color:#1F6E8C">El Derecho, más cerca</button></sc-if>
+          </nav>
+        </sc-if>
+        <nav aria-label="Idioma / Language" style="display:flex;align-items:center;gap:0;margin-right:4px">
+          <a data-lang="es" href="{{ hrefEs }}" hreflang="es" lang="es" title="Español" aria-label="Español" aria-current="page" style="display:inline-flex;align-items:center;gap:6px;min-height:44px;padding:0 7px;font-size:12px;letter-spacing:.1em;color:#10313F;font-weight:500;border-bottom:2px solid #1F6E8C" style-hover="color:#10313F"><span aria-hidden="true" style="display:block;width:18px;height:12px;flex:none;background:linear-gradient(#AA151B 0 25%,#F1BF00 25% 75%,#AA151B 75%);box-shadow:0 0 0 1px rgba(16,49,63,.18)"></span>ES</a>
+          <a data-lang="ca" href="{{ hrefCa }}" hreflang="ca" lang="ca" title="Català" aria-label="Català" style="display:inline-flex;align-items:center;gap:6px;min-height:44px;padding:0 7px;font-size:12px;letter-spacing:.1em;color:#56707C;font-weight:400;border-bottom:2px solid transparent" style-hover="color:#10313F"><span aria-hidden="true" style="display:block;width:18px;height:12px;flex:none;background:repeating-linear-gradient(#FCDD09 0 11.11%,#DA121A 11.11% 22.22%);box-shadow:0 0 0 1px rgba(16,49,63,.18)"></span>CA</a>
+          <a data-lang="ru" href="{{ hrefRu }}" hreflang="ru" lang="ru" title="Русский" aria-label="Русский" style="display:inline-flex;align-items:center;gap:6px;min-height:44px;padding:0 7px;font-size:12px;letter-spacing:.1em;color:#56707C;font-weight:400;border-bottom:2px solid transparent" style-hover="color:#10313F"><span aria-hidden="true" style="display:block;width:18px;height:12px;flex:none;background:linear-gradient(#FFFFFF 0 33.33%,#0039A6 33.33% 66.66%,#D52B1E 66.66%);box-shadow:0 0 0 1px rgba(16,49,63,.18)"></span>RU</a>
+        </nav>
+        <a href="tel:+34645877276" aria-label="Llamar al 645 877 276" style="display:inline-flex;align-items:center;min-height:44px;padding:0 14px;color:#1F6E8C;border:1px solid rgba(31,110,140,.45);border-bottom-color:rgba(31,110,140,.45);font-size:12.5px;letter-spacing:.08em;white-space:nowrap">645 877 276</a>
+        <sc-if value="{{ showCta }}" hint-placeholder-val="{{ true }}">
+          <button type="button" onClick="{{ irContacto }}" style="background:#1C5A73;color:#FFFFFF;border:none;min-height:44px;padding:0 18px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;cursor:pointer;white-space:nowrap" style-hover="background:#123F52">Solicitar consulta</button>
+        </sc-if>
+        <sc-if value="{{ narrow }}">
+          <button type="button" onClick="{{ toggleMenu }}" aria-expanded="{{ menuOpen }}" aria-controls="glj-menu" style="background:none;border:1px solid rgba(16,49,63,.4);color:#10313F;min-height:44px;min-width:44px;padding:0 14px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;cursor:pointer;white-space:nowrap" style-hover="border-color:#1F6E8C;color:#1F6E8C">{{ menuLabel }}</button>
+        </sc-if>
+      </div>
+    </div>
+    <sc-if value="{{ midNav }}">
+      <nav aria-label="Navegación principal" style="border-top:1px solid rgba(31,110,140,.16)">
+        <div style="max-width:1600px;margin:0 auto;padding:0 clamp(18px,3vw,40px);display:flex;flex-wrap:wrap;justify-content:center;gap:0 clamp(12px,2.2vw,32px)">
+          <button type="button" onClick="{{ irInicio }}" style="background:none;border:none;color:#3B5461;font-size:clamp(11px,1.05vw,12.5px);letter-spacing:.1em;text-transform:uppercase;padding:12px 2px;min-height:44px;cursor:pointer;white-space:nowrap" style-hover="color:#1F6E8C">Inicio</button>
+          <button type="button" onClick="{{ irDespacho }}" style="background:none;border:none;color:#3B5461;font-size:clamp(11px,1.05vw,12.5px);letter-spacing:.1em;text-transform:uppercase;padding:12px 2px;min-height:44px;cursor:pointer;white-space:nowrap" style-hover="color:#1F6E8C">El despacho</button>
+          <button type="button" onClick="{{ irProceso }}" style="background:none;border:none;color:#3B5461;font-size:clamp(11px,1.05vw,12.5px);letter-spacing:.1em;text-transform:uppercase;padding:12px 2px;min-height:44px;cursor:pointer;white-space:nowrap" style-hover="color:#1F6E8C">Cómo trabajo</button>
+          <button type="button" onClick="{{ irProblema }}" style="background:none;border:none;color:#3B5461;font-size:clamp(11px,1.05vw,12.5px);letter-spacing:.1em;text-transform:uppercase;padding:12px 2px;min-height:44px;cursor:pointer;white-space:nowrap" style-hover="color:#1F6E8C">Tu problema</button>
+          <button type="button" onClick="{{ irGirona }}" style="background:none;border:none;color:#3B5461;font-size:clamp(11px,1.05vw,12.5px);letter-spacing:.1em;text-transform:uppercase;padding:12px 2px;min-height:44px;cursor:pointer;white-space:nowrap" style-hover="color:#1F6E8C">Girona</button>
+          <button type="button" onClick="{{ irSfg }}" style="background:none;border:none;color:#3B5461;font-size:clamp(11px,1.05vw,12.5px);letter-spacing:.1em;text-transform:uppercase;padding:12px 2px;min-height:44px;cursor:pointer;white-space:nowrap" style-hover="color:#1F6E8C">Sant Feliu</button>
+          <sc-if value="{{ blogVisible }}" hint-placeholder-val="{{ true }}"><button type="button" onClick="{{ irBlog }}" style="background:none;border:none;color:#3B5461;font-size:clamp(11px,1.05vw,12.5px);letter-spacing:.1em;text-transform:uppercase;padding:12px 2px;min-height:44px;cursor:pointer;white-space:nowrap" style-hover="color:#1F6E8C">El Derecho, más cerca</button></sc-if>
+          <button type="button" onClick="{{ irContacto }}" style="background:none;border:none;color:#3B5461;font-size:clamp(11px,1.05vw,12.5px);letter-spacing:.1em;text-transform:uppercase;padding:12px 2px;min-height:44px;cursor:pointer;white-space:nowrap" style-hover="color:#1F6E8C">Contacto</button>
+        </div>
+      </nav>
+    </sc-if>
+    <sc-if value="{{ menuOpen }}">
+      <nav id="glj-menu" aria-label="Navegación principal" style="border-top:1px solid rgba(31,110,140,.22);padding:8px clamp(18px,4vw,44px) 24px;display:grid;max-height:calc(100vh - 80px);overflow:auto">
+        <button type="button" onClick="{{ irInicio }}" style="background:none;border:none;border-bottom:1px solid rgba(31,110,140,.16);color:#10313F;font-family:'Cormorant Garamond',serif;font-size:22px;text-align:left;padding:14px 0;min-height:52px;cursor:pointer" style-hover="color:#1F6E8C">Inicio</button>
+        <button type="button" onClick="{{ irDespacho }}" style="background:none;border:none;border-bottom:1px solid rgba(31,110,140,.16);color:#10313F;font-family:'Cormorant Garamond',serif;font-size:22px;text-align:left;padding:14px 0;min-height:52px;cursor:pointer" style-hover="color:#1F6E8C">El despacho</button>
+        <button type="button" onClick="{{ irProceso }}" style="background:none;border:none;border-bottom:1px solid rgba(31,110,140,.16);color:#10313F;font-family:'Cormorant Garamond',serif;font-size:22px;text-align:left;padding:14px 0;min-height:52px;cursor:pointer" style-hover="color:#1F6E8C">Cómo trabajo</button>
+        <button type="button" onClick="{{ irProblema }}" style="background:none;border:none;border-bottom:1px solid rgba(31,110,140,.16);color:#10313F;font-family:'Cormorant Garamond',serif;font-size:22px;text-align:left;padding:14px 0;min-height:52px;cursor:pointer" style-hover="color:#1F6E8C">¿Tienes un problema legal?</button>
+        <button type="button" onClick="{{ irGirona }}" style="background:none;border:none;border-bottom:1px solid rgba(31,110,140,.16);color:#10313F;font-family:'Cormorant Garamond',serif;font-size:22px;text-align:left;padding:14px 0;min-height:52px;cursor:pointer" style-hover="color:#1F6E8C">Girona</button>
+        <button type="button" onClick="{{ irSfg }}" style="background:none;border:none;border-bottom:1px solid rgba(31,110,140,.16);color:#10313F;font-family:'Cormorant Garamond',serif;font-size:22px;text-align:left;padding:14px 0;min-height:52px;cursor:pointer" style-hover="color:#1F6E8C">Sant Feliu de Guíxols</button>
+        <sc-if value="{{ blogVisible }}" hint-placeholder-val="{{ true }}"><button type="button" onClick="{{ irBlog }}" style="background:none;border:none;border-bottom:1px solid rgba(31,110,140,.16);color:#10313F;font-family:'Cormorant Garamond',serif;font-size:22px;text-align:left;padding:14px 0;min-height:52px;cursor:pointer" style-hover="color:#1F6E8C">El Derecho, más cerca</button></sc-if>
+        <button type="button" onClick="{{ irContacto }}" style="background:none;border:none;border-bottom:1px solid rgba(31,110,140,.16);color:#10313F;font-family:'Cormorant Garamond',serif;font-size:22px;text-align:left;padding:14px 0;min-height:52px;cursor:pointer" style-hover="color:#1F6E8C">Contacto</button>
+        <button type="button" onClick="{{ irContacto }}" style="margin-top:20px;background:#1C5A73;color:#FFFFFF;border:none;min-height:52px;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;cursor:pointer">Solicitar consulta</button>
+      </nav>
+    </sc-if>
+  </header>
+
+  <main id="glj-main">
+
+    <!-- ══════════ INICIO ══════════ -->
+    <sc-if value="{{ pInicio }}" hint-placeholder-val="{{ true }}">
+      <section style="background:#EAF3F7;color:#10313F;padding:clamp(48px,7vw,100px) clamp(20px,5vw,56px) clamp(56px,7vw,96px);position:relative;overflow:hidden">
+        <div style="position:absolute;inset:14px;border:1px solid rgba(31,110,140,.22);pointer-events:none"></div>
+        <div style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:clamp(36px,5vw,72px);align-items:start;position:relative">
+          <div style="animation:glj-rise .7s ease both">
+            <p style="font-size:11.5px;letter-spacing:.3em;text-transform:uppercase;color:#1F6E8C;margin-bottom:26px">Girona · Sant Feliu de Guíxols</p>
+            <sc-if value="{{ varA }}" hint-placeholder-val="{{ true }}">
+              <h1 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(38px,5.6vw,68px);line-height:1.06;letter-spacing:-.01em">No necesitas saber qué abogado necesitas.<br /><em style="color:#1F6E8C;font-style:italic">Cuéntame qué ha ocurrido.</em></h1>
+            </sc-if>
+            <sc-if value="{{ varB }}">
+              <h1 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(38px,5.6vw,68px);line-height:1.06;letter-spacing:-.01em">Tú tienes un problema.<br /><em style="color:#1F6E8C;font-style:italic">Yo analizo tus opciones.</em></h1>
+            </sc-if>
+            <sc-if value="{{ varC }}">
+              <h1 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(38px,5.6vw,68px);line-height:1.06;letter-spacing:-.01em">Tu problema merece ser escuchado y analizado <em style="color:#1F6E8C;font-style:italic">antes de decidir.</em></h1>
+            </sc-if>
+            <p style="margin-top:28px;max-width:44ch;font-size:clamp(16px,1.5vw,19px);line-height:1.75;color:rgba(16,49,63,.82)">Me cuentas tu situación, estudio los hechos y la documentación disponible, y te explico con claridad si existe una vía jurídica para actuar y qué opciones tienes.</p>
+            <div style="display:flex;flex-wrap:wrap;gap:14px;margin-top:38px">
+              <button type="button" onClick="{{ irContacto }}" style="background:#1C5A73;color:#FFFFFF;border:none;min-height:52px;padding:0 30px;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;cursor:pointer" style-hover="background:#123F52">Solicitar consulta</button>
+              <button type="button" onClick="{{ irProblema }}" style="background:transparent;color:#1F6E8C;border:1px solid rgba(31,110,140,.5);min-height:52px;padding:0 30px;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;cursor:pointer" style-hover="border-color:#1F6E8C;background:rgba(31,110,140,.08)">Cuéntame tu caso</button>
+            </div>
+            <p style="margin-top:26px;font-size:14px;color:rgba(16,49,63,.72)">O llama directamente: <a href="tel:+34645877276" style="color:#10313F;border-bottom-color:rgba(16,49,63,.7);font-size:17px;letter-spacing:.04em">645 877 276</a></p>
+          </div>
+
+          <div style="animation:glj-rise .9s ease both;max-width:300px;width:100%;justify-self:center">
+            <div style="border:1px solid rgba(31,110,140,.32);padding:clamp(12px,1.4vw,18px);background:#FFFFFF">
+              <img src="assets/antonio-despacho.jpg" alt="Antonio Villegas, abogado, sentado en su despacho" width="960" height="1200" fetchpriority="high" style="display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:50% 22%" />
+              <div style="display:flex;align-items:center;justify-content:space-between;gap:16px;margin-top:clamp(14px,1.6vw,20px);padding-top:clamp(12px,1.4vw,16px);border-top:1px solid rgba(31,110,140,.28)">
+                <span style="font-family:'Cormorant Garamond',serif;font-size:21px;letter-spacing:.02em">Antonio Villegas</span>
+                <img src="assets/logo-gl-claro.png" alt="Logotipo de Gestió Legal Jurídica" width="44" height="44" style="display:block;width:44px;height:auto;flex:none" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section style="background:#DCEBF2;color:#10313F;padding:clamp(34px,4vw,52px) clamp(20px,5vw,56px);border-top:1px solid rgba(31,110,140,.2)">
+        <p style="max-width:1180px;margin:0 auto;font-family:'Cormorant Garamond',serif;font-size:clamp(20px,2.4vw,30px);line-height:1.5;text-align:center;color:#10313F">«No necesitas saber cómo se llama jurídicamente tu problema. Necesitas que alguien lo analice.»</p>
+      </section>
+
+      <figure style="position:relative;margin:0;background:#DCEBF2">
+        <img src="assets/cami-ronda-sagaro.png" alt="Templete del Camí de Ronda de S'Agaró, frente al mar" width="1983" height="793" loading="lazy" style="display:block;width:100%;height:clamp(260px,42vw,560px);object-fit:cover;object-position:50% 50%" />
+        <figcaption style="position:absolute;left:clamp(20px,5vw,56px);bottom:18px;background:rgba(251,252,251,.9);padding:6px 12px;font-size:12px;letter-spacing:.06em;color:#3B5461">Camí de Ronda de S'Agaró a Sa Conca, Platja d'Aro · Foto: Antonio Villegas</figcaption>
+      </figure>
+
+      <section style="background:#FBFAF7;padding:clamp(64px,9vw,124px) clamp(20px,5vw,56px)">
+        <div style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:clamp(36px,5vw,80px);align-items:start">
+          <div>
+            <p style="font-size:11.5px;letter-spacing:.3em;text-transform:uppercase;color:#1F6E8C;margin-bottom:22px">El planteamiento</p>
+            <h2 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(30px,4vw,50px);line-height:1.14">Cada caso merece un análisis completo, no una etiqueta.</h2>
+          </div>
+          <div style="font-size:17px;line-height:1.8;color:#3B5461;display:grid;gap:20px">
+            <p>Cuando una persona acude a mí no siempre sabe qué procedimiento necesita ni qué rama del Derecho afecta a su situación. Por eso mi primer paso no es elegir una especialidad: es escuchar, analizar y valorar.</p>
+            <p>Un mismo problema rara vez pertenece a una sola rama del Derecho. Un divorcio puede tener consecuencias civiles, fiscales y patrimoniales; un despido puede afectar a cuestiones laborales y de Seguridad Social; una herencia puede implicar aspectos civiles, tributarios e inmobiliarios. Por eso estudio tu situación en su conjunto, identifico todas las materias implicadas y te explico cómo se relacionan entre sí.</p>
+            <p style="padding-left:20px;border-left:1px solid #1F6E8C;color:#10313F">Analizo tu caso para determinar si existe una vía jurídica viable y te explico las opciones, posibilidades y riesgos antes de tomar cualquier decisión.</p>
+          </div>
+        </div>
+      </section>
+
+      <section style="background:#EAF3F7;color:#10313F;padding:clamp(64px,9vw,124px) clamp(20px,5vw,56px)">
+        <div style="max-width:1180px;margin:0 auto">
+          <div style="display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:20px;margin-bottom:clamp(40px,5vw,64px)">
+            <div>
+              <p style="font-size:11.5px;letter-spacing:.3em;text-transform:uppercase;color:#1F6E8C;margin-bottom:20px">Cómo trabajo</p>
+              <h2 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(30px,4vw,50px);line-height:1.14">Escuchar · Analizar · Explicar · Decidir · Actuar</h2>
+            </div>
+            <button type="button" onClick="{{ irProceso }}" style="background:transparent;color:#1F6E8C;border:1px solid rgba(31,110,140,.45);min-height:48px;padding:0 24px;font-size:12px;letter-spacing:.16em;text-transform:uppercase;cursor:pointer" style-hover="background:rgba(31,110,140,.1)">Ver el proceso completo</button>
+          </div>
+          <ol style="list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1px;background:rgba(31,110,140,.24)">
+            <li style="background:#EAF3F7;padding:clamp(24px,3vw,34px)">
+              <span style="font-family:'Cormorant Garamond',serif;font-size:34px;color:#1F6E8C">01</span>
+              <h3 style="font-size:13px;letter-spacing:.2em;text-transform:uppercase;margin:14px 0 12px;font-weight:500">Escuchar</h3>
+              <p style="font-size:15.5px;line-height:1.7;color:rgba(16,49,63,.78)">Me cuentas qué ha ocurrido y conozco las circunstancias de tu caso.</p>
+            </li>
+            <li style="background:#EAF3F7;padding:clamp(24px,3vw,34px)">
+              <span style="font-family:'Cormorant Garamond',serif;font-size:34px;color:#1F6E8C">02</span>
+              <h3 style="font-size:13px;letter-spacing:.2em;text-transform:uppercase;margin:14px 0 12px;font-weight:500">Analizar</h3>
+              <p style="font-size:15.5px;line-height:1.7;color:rgba(16,49,63,.78)">Estudio los hechos, la documentación disponible y las posibilidades jurídicas.</p>
+            </li>
+            <li style="background:#EAF3F7;padding:clamp(24px,3vw,34px)">
+              <span style="font-family:'Cormorant Garamond',serif;font-size:34px;color:#1F6E8C">03</span>
+              <h3 style="font-size:13px;letter-spacing:.2em;text-transform:uppercase;margin:14px 0 12px;font-weight:500">Explicar</h3>
+              <p style="font-size:15.5px;line-height:1.7;color:rgba(16,49,63,.78)">Te explico de forma clara las opciones existentes, sus posibilidades, riesgos e implicaciones.</p>
+            </li>
+            <li style="background:#EAF3F7;padding:clamp(24px,3vw,34px)">
+              <span style="font-family:'Cormorant Garamond',serif;font-size:34px;color:#1F6E8C">04</span>
+              <h3 style="font-size:13px;letter-spacing:.2em;text-transform:uppercase;margin:14px 0 12px;font-weight:500">Decidir</h3>
+              <p style="font-size:15.5px;line-height:1.7;color:rgba(16,49,63,.78)">Valoro contigo si tiene sentido iniciar una actuación.</p>
+            </li>
+            <li style="background:#EAF3F7;padding:clamp(24px,3vw,34px)">
+              <span style="font-family:'Cormorant Garamond',serif;font-size:34px;color:#1F6E8C">05</span>
+              <h3 style="font-size:13px;letter-spacing:.2em;text-transform:uppercase;margin:14px 0 12px;font-weight:500">Actuar</h3>
+              <p style="font-size:15.5px;line-height:1.7;color:rgba(16,49,63,.78)">Si decides seguir adelante, comienzo a trabajar en tu caso.</p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section style="background:#FBFAF7;padding:clamp(64px,9vw,124px) clamp(20px,5vw,56px)">
+        <div style="max-width:1180px;margin:0 auto">
+          <p style="font-size:11.5px;letter-spacing:.3em;text-transform:uppercase;color:#1F6E8C;margin-bottom:22px">¿Tienes un problema legal?</p>
+          <h2 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(30px,4.2vw,54px);line-height:1.12;max-width:22ch">Empieza por contarlo con tus palabras.</h2>
+          <p style="margin-top:24px;max-width:58ch;font-size:17px;line-height:1.8;color:#3B5461">Estas son algunas de las formas en que las personas describen su situación cuando llegan al despacho. Ninguna menciona una rama del Derecho, y no hace falta que la tuya lo haga.</p>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px;margin-top:40px">
+            <p style="border:1px solid #D3E2E9;background:#FFFFFF;padding:22px;font-family:'Cormorant Garamond',serif;font-size:20px;line-height:1.45">«Me han despedido y no sé si es correcto lo que me ofrecen.»</p>
+            <p style="border:1px solid #D3E2E9;background:#FFFFFF;padding:22px;font-family:'Cormorant Garamond',serif;font-size:20px;line-height:1.45">«He recibido una carta y no entiendo qué me reclaman.»</p>
+            <p style="border:1px solid #D3E2E9;background:#FFFFFF;padding:22px;font-family:'Cormorant Garamond',serif;font-size:20px;line-height:1.45">«Tengo un desacuerdo con un familiar y no sé cómo resolverlo.»</p>
+            <p style="border:1px solid #D3E2E9;background:#FFFFFF;padding:22px;font-family:'Cormorant Garamond',serif;font-size:20px;line-height:1.45">«Firmé algo y ahora creo que no debería haberlo firmado.»</p>
+            <p style="border:1px solid #D3E2E9;background:#FFFFFF;padding:22px;font-family:'Cormorant Garamond',serif;font-size:20px;line-height:1.45">«Me reclaman un dinero que no creo que deba.»</p>
+            <p style="border:1px solid #D3E2E9;background:#FFFFFF;padding:22px;font-family:'Cormorant Garamond',serif;font-size:20px;line-height:1.45">«No sé si esto que me ha pasado tiene alguna solución legal.»</p>
+          </div>
+          <button type="button" onClick="{{ irProblema }}" style="margin-top:40px;background:#1C5A73;color:#FFFFFF;border:none;min-height:52px;padding:0 32px;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;cursor:pointer" style-hover="background:#123F52">Cuéntame tu caso</button>
+        </div>
+      </section>
+      <section style="background:#EAF3F7;padding:clamp(64px,9vw,124px) clamp(20px,5vw,56px)">
+        <div style="max-width:1180px;margin:0 auto">
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:clamp(24px,4vw,64px);align-items:end;margin-bottom:clamp(36px,4vw,56px)">
+            <div>
+              <p style="font-size:11.5px;letter-spacing:.3em;text-transform:uppercase;color:#1F6E8C;margin-bottom:20px">Asuntos que llegan al despacho</p>
+              <h2 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(30px,4vw,50px);line-height:1.14">Algunos de los ámbitos en los que trabajo</h2>
+            </div>
+            <p style="font-size:16.5px;line-height:1.8;color:#3B5461">Sirven como orientación. Si tu situación no encaja en ninguno, o no sabes en cuál encaja, cuéntamela igualmente.</p>
+          </div>
+          <div style="display:grid;grid-template-columns:repeat({{ ambitosCols }},minmax(0,1fr));gap:1px;background:#D3E2E9;border:1px solid #D3E2E9">
+            <div style="background:#FFFFFF;padding:clamp(22px,2.6vw,30px)">
+              <h3 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(22px,2.2vw,27px);color:#10313F">Familia y divorcios</h3>
+              <p style="margin-top:10px;font-size:15.5px;line-height:1.7;color:#3B5461">Separaciones, divorcios, custodia de los hijos, pensiones y acuerdos entre familiares.</p>
+            </div>
+            <div style="background:#FFFFFF;padding:clamp(22px,2.6vw,30px)">
+              <h3 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(22px,2.2vw,27px);color:#10313F">Herencias</h3>
+              <p style="margin-top:10px;font-size:15.5px;line-height:1.7;color:#3B5461">Testamentos, aceptación o renuncia de herencias, reparto de bienes y desacuerdos entre herederos.</p>
+            </div>
+            <div style="background:#FFFFFF;padding:clamp(22px,2.6vw,30px)">
+              <h3 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(22px,2.2vw,27px);color:#10313F">Nacionalidad y extranjería</h3>
+              <p style="margin-top:10px;font-size:15.5px;line-height:1.7;color:#3B5461">Permisos de residencia y trabajo, arraigo, reagrupación familiar y solicitudes de nacionalidad.</p>
+            </div>
+            <div style="background:#FFFFFF;padding:clamp(22px,2.6vw,30px)">
+              <h3 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(22px,2.2vw,27px);color:#10313F">Financiero y tributario</h3>
+              <p style="margin-top:10px;font-size:15.5px;line-height:1.7;color:#3B5461">Reclamaciones a entidades bancarias, requerimientos de Hacienda, sanciones y deudas tributarias.</p>
+            </div>
+            <div style="background:#FFFFFF;padding:clamp(22px,2.6vw,30px)">
+              <h3 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(22px,2.2vw,27px);color:#10313F">Mercantil</h3>
+              <p style="margin-top:10px;font-size:15.5px;line-height:1.7;color:#3B5461">Contratos entre empresas, sociedades, impagos comerciales y conflictos entre socios.</p>
+            </div>
+            <div style="background:#FFFFFF;padding:clamp(22px,2.6vw,30px)">
+              <h3 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(22px,2.2vw,27px);color:#10313F">Administrativo</h3>
+              <p style="margin-top:10px;font-size:15.5px;line-height:1.7;color:#3B5461">Multas y sanciones, recursos frente a la Administración, licencias y procedimientos con organismos públicos.</p>
+            </div>
+            <div style="background:#FFFFFF;padding:clamp(22px,2.6vw,30px)">
+              <h3 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(22px,2.2vw,27px);color:#10313F">Laboral</h3>
+              <p style="margin-top:10px;font-size:15.5px;line-height:1.7;color:#3B5461">Para trabajadores: despidos, reclamaciones de salarios, condiciones de trabajo y finiquitos. Para empresas: contratación, sanciones disciplinarias, extinciones de contrato y relación con la plantilla.</p>
+            </div>
+            <div style="background:#1C5A73;padding:clamp(22px,2.6vw,30px);display:flex;flex-direction:column;justify-content:space-between;gap:20px">
+              <div>
+                <h3 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(22px,2.2vw,27px);color:#FFFFFF">¿No ves tu caso?</h3>
+                <p style="margin-top:10px;font-size:15.5px;line-height:1.7;color:#FFFFFF">No hace falta que encaje en ninguna categoría. Cuéntame qué ha ocurrido y lo analizaré.</p>
+              </div>
+              <button type="button" onClick="{{ irProblema }}" style="align-self:flex-start;background:#FFFFFF;color:#1C5A73;border:none;min-height:46px;padding:0 22px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;cursor:pointer" style-hover="background:#EAF3F7">Cuéntame tu caso</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section style="background:#EAF3F7;color:#10313F;padding:clamp(64px,9vw,110px) clamp(20px,5vw,56px)">
+        <div style="max-width:1180px;margin:0 auto">
+          <p style="font-size:11.5px;letter-spacing:.3em;text-transform:uppercase;color:#1F6E8C;margin-bottom:34px">Dónde atiendo</p>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1px;background:rgba(31,110,140,.24)">
+            <div style="background:#EAF3F7;padding:clamp(28px,4vw,44px)">
+              <h3 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(26px,3vw,36px)">Girona</h3>
+              <p style="margin-top:16px;font-size:16px;line-height:1.75;color:rgba(16,49,63,.78)">Atención a personas y familias de la ciudad y su área, con cita previa.</p>
+              <button type="button" onClick="{{ irGirona }}" style="margin-top:24px;background:none;border:none;border-bottom:1px solid rgba(31,110,140,.5);color:#1F6E8C;padding:8px 0;font-size:12px;letter-spacing:.16em;text-transform:uppercase;cursor:pointer;min-height:44px" style-hover="border-bottom-color:#1F6E8C">Ver Girona</button>
+            </div>
+            <div style="background:#EAF3F7;padding:clamp(28px,4vw,44px)">
+              <h3 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(26px,3vw,36px)">Sant Feliu de Guíxols</h3>
+              <p style="margin-top:16px;font-size:16px;line-height:1.75;color:rgba(16,49,63,.78)">Atención en la costa del Baix Empordà, con cita previa.</p>
+              <button type="button" onClick="{{ irSfg }}" style="margin-top:24px;background:none;border:none;border-bottom:1px solid rgba(31,110,140,.5);color:#1F6E8C;padding:8px 0;font-size:12px;letter-spacing:.16em;text-transform:uppercase;cursor:pointer;min-height:44px" style-hover="border-bottom-color:#1F6E8C">Ver Sant Feliu</button>
+            </div>
+          </div>
+          <p style="margin-top:34px;font-size:14px;line-height:1.7;color:rgba(16,49,63,.72);max-width:70ch">Una valoración inicial no supone garantía de resultado. El objetivo de la primera conversación es entender tu situación y explicarte qué opciones existen.</p>
+        </div>
+      </section>
+    </sc-if>
+
+    <!-- ══════════ EL DESPACHO ══════════ -->
+    <sc-if value="{{ pDespacho }}">
+      <section style="background:#EAF3F7;color:#10313F;padding:clamp(56px,7vw,96px) clamp(20px,5vw,56px)">
+        <div style="max-width:1180px;margin:0 auto">
+          <p style="font-size:11.5px;letter-spacing:.3em;text-transform:uppercase;color:#1F6E8C;margin-bottom:22px">El despacho</p>
+          <h1 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(34px,5vw,60px);line-height:1.1;max-width:26ch">11 segundos.</h1>
+          <p style="margin-top:24px;max-width:60ch;font-size:clamp(16px,1.5vw,19px);line-height:1.75;color:rgba(16,49,63,.82)">Es el tiempo medio que tarda un médico en interrumpir a un paciente que empieza a explicar por qué ha acudido a consulta, según un estudio publicado en el <em>Journal of General Internal Medicine</em> (2018). Contar un problema sin interrupciones es menos habitual de lo que parece. En este despacho, la primera conversación empieza por escucharte hasta el final.</p>
+        </div>
+      </section>
+      <section style="background:#FBFAF7;padding:clamp(56px,8vw,110px) clamp(20px,5vw,56px)">
+        <div style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:clamp(36px,5vw,72px);align-items:start">
+          <div>
+            <div style="border:1px solid #D3E2E9;background:#FFFFFF;padding:24px">
+              <div style="display:flex;align-items:center;gap:18px">
+                <img src="assets/antonio-retrato.jpg" alt="Retrato de Antonio Villegas" width="96" height="96" loading="lazy" style="display:block;width:96px;height:96px;flex:none;border-radius:50%;object-fit:cover;object-position:50% 18%;border:1px solid #D3E2E9" />
+                <div>
+                  <p style="font-family:'Cormorant Garamond',serif;font-size:26px;line-height:1.15">Antonio Villegas</p>
+                  <p style="font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:#1F6E8C;margin-top:8px">Abogado · ICAG núm. 3913</p>
+                </div>
+              </div>
+              <p style="margin-top:18px;font-size:15px;line-height:1.7;color:#3B5461">Gestió Legal Jurídica<br />Girona · Sant Feliu de Guíxols</p>
+              <p style="margin-top:18px;font-size:15px;line-height:1.9"><a href="tel:+34645877276">645 877 276</a><br /><a href="mailto:geslejuridica@gmail.com">geslejuridica@gmail.com</a></p>
+            </div>
+          </div>
+          <div style="display:grid;gap:26px;font-size:17px;line-height:1.8;color:#3B5461">
+            <p style="font-family:'Cormorant Garamond',serif;font-size:clamp(22px,2.4vw,30px);line-height:1.45;color:#10313F">Abogado ejerciente en Girona y Sant Feliu de Guíxols. Gestió Legal Jurídica es mi despacho.</p>
+            <p>Mi forma de trabajar parte de una convicción sencilla: la persona que llega con un problema no tiene por qué saber de Derecho. Lo que necesita es que alguien escuche los hechos, los analice con rigor y le explique, sin tecnicismos innecesarios, qué opciones existen y qué implica cada una.</p>
+            <p>Ese análisis previo es el trabajo real. A partir de ahí, la decisión de actuar la tomamos juntos, con la información sobre la mesa.</p>
+            <div style="display:grid;border-bottom:1px solid #D3E2E9">
+              <div style="display:grid;grid-template-columns:minmax(120px,170px) minmax(0,1fr);gap:12px 24px;padding:20px 0;border-top:1px solid #D3E2E9">
+                <h3 style="font-size:11.5px;letter-spacing:.22em;text-transform:uppercase;color:#1F6E8C;font-weight:500;padding-top:4px">Formación</h3>
+                <ul style="list-style:none;padding:0;display:grid;gap:6px;color:#10313F">
+                  <li>Graduado en Derecho</li>
+                  <li>Máster Universitario en Abogacía y Capacitación Profesional para el Ejercicio de la Abogacía</li>
+                  <li>Conciliador privado titulado por el Consell dels Il·lustres Col·legis de l'Advocacia de Catalunya</li>
+                  <li>Diplomado en Competencias Digitales Profesionales por el Consejo General de la Abogacía Española</li>
+                </ul>
+              </div>
+            </div>
+            <div style="display:grid;gap:1px;background:#D3E2E9;border:1px solid #D3E2E9">
+              <div style="background:#FBFAF7;padding:22px">
+                <h3 style="font-size:12.5px;letter-spacing:.2em;text-transform:uppercase;color:#10313F;font-weight:500">Discreción</h3>
+                <p style="margin-top:10px;font-size:15.5px;line-height:1.7">Contar un problema exige confianza. Todo lo que compartes está protegido por el secreto profesional y se trata con la reserva que tu situación merece.</p>
+              </div>
+              <div style="background:#FBFAF7;padding:22px">
+                <h3 style="font-size:12.5px;letter-spacing:.2em;text-transform:uppercase;color:#10313F;font-weight:500">Atención directa</h3>
+                <p style="margin-top:10px;font-size:15.5px;line-height:1.7">Desde la primera conversación hasta el final, tu interlocutor soy yo. Conozco tu caso de primera mano y sigo personalmente cada paso.</p>
+              </div>
+              <div style="background:#FBFAF7;padding:22px">
+                <h3 style="font-size:12.5px;letter-spacing:.2em;text-transform:uppercase;color:#10313F;font-weight:500">Honestidad</h3>
+                <p style="margin-top:10px;font-size:15.5px;line-height:1.7">Te explico tus opciones en un lenguaje comprensible, con sus posibilidades y también sus riesgos. Si una vía no es viable, te lo digo antes de empezar.</p>
+              </div>
+            </div>
+            <button type="button" onClick="{{ irContacto }}" style="justify-self:start;background:#1C5A73;color:#FFFFFF;border:none;min-height:52px;padding:0 30px;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;cursor:pointer" style-hover="background:#123F52">Hablar con Antonio</button>
+          </div>
+        </div>
+      </section>
+    </sc-if>
+
+    <!-- ══════════ CÓMO TRABAJO ══════════ -->
+    <sc-if value="{{ pProceso }}">
+      <section style="background:#EAF3F7;color:#10313F;padding:clamp(56px,7vw,96px) clamp(20px,5vw,56px)">
+        <div style="max-width:1180px;margin:0 auto">
+          <p style="font-size:11.5px;letter-spacing:.3em;text-transform:uppercase;color:#1F6E8C;margin-bottom:22px">Cómo trabajo</p>
+          <h1 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(34px,5vw,60px);line-height:1.1;max-width:24ch">Cinco pasos para entender tu situación y decidir con claridad.</h1>
+          <p style="margin-top:24px;max-width:56ch;font-size:17px;line-height:1.8;color:rgba(16,49,63,.8)">Esta es mi forma de trabajar. El detalle de cada asunto se ajusta a sus circunstancias concretas.</p>
+        </div>
+      </section>
+      <section style="background:#FBFAF7;padding:clamp(56px,8vw,110px) clamp(20px,5vw,56px)">
+        <div style="max-width:940px;margin:0 auto;display:grid;gap:1px;background:#D3E2E9;border-top:1px solid #D3E2E9;border-bottom:1px solid #D3E2E9">
+          <div style="background:#FBFAF7;padding:clamp(26px,4vw,40px) 0;display:grid;grid-template-columns:auto 1fr;gap:clamp(20px,4vw,48px);align-items:start">
+            <span style="font-family:'Cormorant Garamond',serif;font-size:clamp(36px,5vw,58px);color:#1F6E8C;line-height:1">01</span>
+            <div>
+              <h2 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(24px,3vw,34px)">Escuchar</h2>
+              <p style="margin-top:14px;font-size:17px;line-height:1.8;color:#3B5461;max-width:56ch">Me cuentas qué ha ocurrido y conozco las circunstancias de tu caso. No hace falta que uses términos jurídicos ni que sepas de antemano qué tipo de procedimiento te corresponde.</p>
+            </div>
+          </div>
+          <div style="background:#FBFAF7;padding:clamp(26px,4vw,40px) 0;display:grid;grid-template-columns:auto 1fr;gap:clamp(20px,4vw,48px);align-items:start">
+            <span style="font-family:'Cormorant Garamond',serif;font-size:clamp(36px,5vw,58px);color:#1F6E8C;line-height:1">02</span>
+            <div>
+              <h2 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(24px,3vw,34px)">Analizar</h2>
+              <p style="margin-top:14px;font-size:17px;line-height:1.8;color:#3B5461;max-width:56ch">Estudio los hechos, la documentación disponible y las posibilidades jurídicas. Aquí se determina qué materia está realmente en juego y si hay margen de actuación.</p>
+            </div>
+          </div>
+          <div style="background:#FBFAF7;padding:clamp(26px,4vw,40px) 0;display:grid;grid-template-columns:auto 1fr;gap:clamp(20px,4vw,48px);align-items:start">
+            <span style="font-family:'Cormorant Garamond',serif;font-size:clamp(36px,5vw,58px);color:#1F6E8C;line-height:1">03</span>
+            <div>
+              <h2 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(24px,3vw,34px)">Explicar</h2>
+              <p style="margin-top:14px;font-size:17px;line-height:1.8;color:#3B5461;max-width:56ch">Te explico de forma clara las opciones existentes, sus posibilidades, riesgos e implicaciones. También cuándo lo más razonable es no iniciar una actuación.</p>
+            </div>
+          </div>
+          <div style="background:#FBFAF7;padding:clamp(26px,4vw,40px) 0;display:grid;grid-template-columns:auto 1fr;gap:clamp(20px,4vw,48px);align-items:start">
+            <span style="font-family:'Cormorant Garamond',serif;font-size:clamp(36px,5vw,58px);color:#1F6E8C;line-height:1">04</span>
+            <div>
+              <h2 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(24px,3vw,34px)">Decidir</h2>
+              <p style="margin-top:14px;font-size:17px;line-height:1.8;color:#3B5461;max-width:56ch">Valoro contigo si tiene sentido iniciar una actuación. La decisión es tuya, tomada con la información y las condiciones sobre la mesa.</p>
+            </div>
+          </div>
+          <div style="background:#FBFAF7;padding:clamp(26px,4vw,40px) 0;display:grid;grid-template-columns:auto 1fr;gap:clamp(20px,4vw,48px);align-items:start">
+            <span style="font-family:'Cormorant Garamond',serif;font-size:clamp(36px,5vw,58px);color:#1F6E8C;line-height:1">05</span>
+            <div>
+              <h2 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(24px,3vw,34px)">Actuar</h2>
+              <p style="margin-top:14px;font-size:17px;line-height:1.8;color:#3B5461;max-width:56ch">Si decides seguir adelante, comienzo a trabajar en tu caso y te mantengo informado de su evolución.</p>
+            </div>
+          </div>
+        </div>
+        <div style="max-width:940px;margin:clamp(40px,5vw,64px) auto 0;border:1px solid #D3E2E9;background:#FFFFFF;padding:clamp(24px,3vw,34px)">
+          <h2 style="font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:#1F6E8C;font-weight:500">Nota importante</h2>
+          <p style="margin-top:14px;font-size:16px;line-height:1.8;color:#3B5461">Una valoración inicial no supone garantía de resultado. El despacho no promete desenlaces: analiza el caso, expone las posibilidades y los riesgos, y actúa cuando existe una vía jurídica viable.</p>
+          <p style="margin-top:14px;font-size:14.5px;line-height:1.7;color:#56707C">Condiciones de la primera consulta y honorarios: cada asunto es distinto, por lo que las condiciones se valoran de forma individual en función de las circunstancias del caso. Se te explicarán con claridad antes de iniciar cualquier actuación.</p>
+        </div>
+      </section>
+    </sc-if>
+
+    <!-- ══════════ ¿TIENES UN PROBLEMA LEGAL? ══════════ -->
+    <sc-if value="{{ pProblema }}">
+      <section style="background:#EAF3F7;color:#10313F;padding:clamp(56px,7vw,96px) clamp(20px,5vw,56px)">
+        <div style="max-width:1180px;margin:0 auto">
+          <p style="font-size:11.5px;letter-spacing:.3em;text-transform:uppercase;color:#1F6E8C;margin-bottom:22px">¿Tienes un problema legal?</p>
+          <h1 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(34px,5vw,60px);line-height:1.1;max-width:26ch">Cada problema puede tener más de una dimensión jurídica</h1>
+          <div style="margin-top:26px;max-width:60ch;display:grid;gap:16px;font-size:clamp(16px,1.5vw,19px);line-height:1.75;color:rgba(16,49,63,.82)">
+            <p>Es importante identificar qué ámbitos del Derecho afectan a tu situación. Mi trabajo es analizar el conjunto del problema, determinar qué ramas del Derecho pueden intervenir y valorar las diferentes vías jurídicas disponibles.</p>
+            <p>Cuéntame qué ha ocurrido, analizaré tu caso y te explicaré de forma clara qué opciones existen y cuál puede ser la vía más adecuada.</p>
+          </div>
+        </div>
+      </section>
+      <section style="background:#FBFAF7;padding:clamp(56px,8vw,110px) clamp(20px,5vw,56px)">
+        <div style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:clamp(36px,5vw,72px);align-items:start">
+          <div style="display:grid;gap:24px">
+            <h2 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(26px,3.2vw,38px);line-height:1.2">Qué ocurre cuando escribes</h2>
+            <ol style="font-size:16.5px;line-height:1.8;color:#3B5461;display:grid;gap:12px">
+              <li>Leo lo que me cuentas y, si falta algo esencial, te lo pregunto.</li>
+              <li>Contacto contigo por el medio que hayas indicado para concertar una conversación.</li>
+              <li>Analizo la situación y te explico qué opciones existen y qué implica cada una.</li>
+              <li>Decides con esa información. Si hay vía y quieres seguir, empezamos.</li>
+            </ol>
+            <div style="border-left:1px solid #1F6E8C;padding-left:20px;font-size:16.5px;line-height:1.8;color:#10313F">Antes de actuar, analizo tu caso. No prometo resultados: te explico las posibilidades y decidimos juntos cómo avanzar.</div>
+            <div style="border:1px solid #D3E2E9;background:#FFFFFF;padding:22px">
+              <h3 style="font-size:11.5px;letter-spacing:.24em;text-transform:uppercase;color:#1F6E8C;font-weight:500">Por seguridad</h3>
+              <p style="margin-top:12px;font-size:15.5px;line-height:1.75;color:#3B5461">No envíes por el formulario datos especialmente sensibles (salud, ideología, antecedentes, datos de terceros) ni documentación confidencial que no sea imprescindible. Basta un resumen de lo ocurrido; la documentación se revisa después por el canal adecuado.</p>
+            </div>
+          </div>
+
+          <div style="border:1px solid #D3E2E9;background:#FFFFFF;padding:clamp(24px,3.4vw,40px)">
+            <sc-if value="{{ noEnviado }}" hint-placeholder-val="{{ true }}">
+              <form onSubmit="{{ enviar }}" novalidate="" style="display:grid;gap:20px">
+                <h2 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(24px,2.8vw,34px)">Cuéntame tu caso</h2>
+                <div style="display:grid;gap:8px">
+                  <label for="glj-nombre" style="font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#3B5461">Nombre</label>
+                  <input id="glj-nombre" name="nombre" type="text" autocomplete="name" required="" style="border:1px solid #BCD2DC;background:#FBFAF7;padding:14px;font-size:16px;min-height:50px;color:#10313F" />
+                </div>
+                <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px">
+                  <div style="display:grid;gap:8px">
+                    <label for="glj-tel" style="font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#3B5461">Teléfono</label>
+                    <input id="glj-tel" name="telefono" type="tel" autocomplete="tel" style="border:1px solid #BCD2DC;background:#FBFAF7;padding:14px;font-size:16px;min-height:50px;color:#10313F" />
+                  </div>
+                  <div style="display:grid;gap:8px">
+                    <label for="glj-email" style="font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#3B5461">Email</label>
+                    <input id="glj-email" name="email" type="email" autocomplete="email" style="border:1px solid #BCD2DC;background:#FBFAF7;padding:14px;font-size:16px;min-height:50px;color:#10313F" />
+                  </div>
+                </div>
+                <div style="display:grid;gap:8px">
+                  <label for="glj-caso" style="font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#3B5461">Cuéntame brevemente qué ha ocurrido</label>
+                  <textarea id="glj-caso" name="caso" rows="6" required="" style="border:1px solid #BCD2DC;background:#FBFAF7;padding:14px;font-size:16px;line-height:1.6;color:#10313F;resize:vertical"></textarea>
+                  <p style="font-size:13.5px;color:#56707C;line-height:1.6">Con tus palabras. No hace falta ningún término jurídico.</p>
+                </div>
+                <fieldset style="border:1px solid #DCE8EE;padding:16px;margin:0">
+                  <legend style="font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#3B5461;padding:0 6px">Preferencia de contacto</legend>
+                  <div style="display:flex;gap:24px;flex-wrap:wrap;margin-top:6px">
+                    <label style="display:flex;align-items:center;gap:10px;font-size:16px;min-height:44px"><input type="radio" name="preferencia" value="telefono" defaultChecked="{{ false }}" style="width:18px;height:18px;accent-color:#1F6E8C" />Teléfono</label>
+                    <label style="display:flex;align-items:center;gap:10px;font-size:16px;min-height:44px"><input type="radio" name="preferencia" value="email" style="width:18px;height:18px;accent-color:#1F6E8C" />Email</label>
+                  </div>
+                </fieldset>
+                <label style="display:flex;gap:12px;align-items:flex-start;font-size:14.5px;line-height:1.65;color:#3B5461">
+                  <input type="checkbox" name="rgpd" required="" style="width:20px;height:20px;margin-top:2px;accent-color:#1F6E8C;flex:none" />
+                  <span>He leído la <button type="button" onClick="{{ irPrivacidad }}" style="background:none;border:none;border-bottom:1px solid rgba(31,110,140,.5);color:#1F6E8C;padding:0;cursor:pointer;font-size:14.5px">política de privacidad</button> y la información sobre el tratamiento de mis datos.</span>
+                </label>
+                <p style="font-size:13px;line-height:1.65;color:#56707C">Responsable: Antonio Villegas — Gestió Legal Jurídica. Finalidad: atender tu consulta. Base jurídica: aplicación de medidas precontractuales a petición del interesado. Derechos: acceso, rectificación, supresión, oposición, limitación y portabilidad escribiendo a geslejuridica@gmail.com. Más información en la política de privacidad.</p>
+                <button type="submit" style="background:#1C5A73;color:#FFFFFF;border:none;min-height:54px;padding:0 32px;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;cursor:pointer;justify-self:start" style-hover="background:#123F52">Enviar consulta</button>
+              </form>
+            </sc-if>
+            <sc-if value="{{ enviado }}">
+              <div role="status" style="display:grid;gap:16px">
+                <p style="font-size:11.5px;letter-spacing:.24em;text-transform:uppercase;color:#1F6E8C">Consulta registrada</p>
+                <h2 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(24px,2.8vw,34px);line-height:1.2">Gracias. He recibido tu mensaje.</h2>
+                <p style="font-size:16.5px;line-height:1.8;color:#3B5461">Contactaré contigo por el medio que has indicado. Si tu asunto es urgente, puedes llamar al <a href="tel:+34645877276">645 877 276</a>.</p>
+                <p style="font-size:13.5px;color:#56707C;line-height:1.7">[PENDIENTE: conectar el formulario al correo o gestor del despacho antes de publicar.]</p>
+              </div>
+            </sc-if>
+          </div>
+        </div>
+      </section>
+    </sc-if>
+
+    <!-- ══════════ GIRONA ══════════ -->
+    <sc-if value="{{ pGirona }}">
+      <section style="background:#EAF3F7;color:#10313F;padding:clamp(56px,7vw,96px) clamp(20px,5vw,56px)">
+        <div style="max-width:1180px;margin:0 auto">
+          <p style="font-size:11.5px;letter-spacing:.3em;text-transform:uppercase;color:#1F6E8C;margin-bottom:22px">Girona</p>
+          <h1 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(34px,5vw,60px);line-height:1.1;max-width:24ch">Abogado en el centro de Girona. A pocos pasos de ti, cuando más lo necesitas.</h1>
+        </div>
+      </section>
+      <section style="background:#FBFAF7;padding:clamp(56px,8vw,110px) clamp(20px,5vw,56px)">
+        <div style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:clamp(36px,5vw,72px);align-items:start">
+          <div style="display:grid;gap:22px;font-size:17px;line-height:1.8;color:#3B5461">
+            <p style="font-family:'Cormorant Garamond',serif;font-size:clamp(22px,2.4vw,30px);line-height:1.45;color:#10313F">En Girona atiendo a quien llega con un problema y todavía no sabe cómo se llama jurídicamente.</p>
+            <p>Muchas de las personas que acuden a mi despacho en Girona lo hacen después de recibir una carta, una notificación o una comunicación que no entienden, o tras un conflicto que se ha alargado más de lo que esperaban. Cada consulta empieza siempre igual: me explicas lo que ha pasado.</p>
+            <p>Si vives o trabajas en Girona, la primera conversación puede resolverse en persona, con cita previa. Mi objetivo en esa cita no es venderte un procedimiento, sino determinar contigo si existe una vía jurídica y qué supondría recorrerla.</p>
+            <h2 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(24px,2.8vw,32px);color:#10313F;margin-top:10px">Qué llevar a la primera cita</h2>
+            <ul style="display:grid;gap:10px">
+              <li>Cualquier documento que hayas recibido y no entiendas, con sus fechas.</li>
+              <li>Contratos, correos o mensajes relacionados con el asunto, si los tienes.</li>
+              <li>Un resumen de lo ocurrido en orden cronológico, aunque sea a mano.</li>
+            </ul>
+          </div>
+          <div style="display:grid;gap:16px">
+            <div style="border:1px solid #D3E2E9;background:#FFFFFF;padding:clamp(24px,3vw,34px)">
+              <h2 style="font-size:11.5px;letter-spacing:.24em;text-transform:uppercase;color:#1F6E8C;font-weight:500">Atención en Girona</h2>
+              <p style="margin-top:18px;font-family:'Cormorant Garamond',serif;font-size:24px;line-height:1.35">Carrer Sèquia, 3<br />Girona</p>
+              <p style="margin-top:10px;font-size:15.5px;line-height:1.8;color:#3B5461">Cita previa: <a href="tel:+34645877276">645 877 276</a><br /><a href="mailto:geslejuridica@gmail.com">geslejuridica@gmail.com</a></p>
+              <button type="button" onClick="{{ irContacto }}" style="margin-top:24px;background:#1C5A73;color:#FFFFFF;border:none;min-height:50px;padding:0 26px;font-size:12px;letter-spacing:.16em;text-transform:uppercase;cursor:pointer" style-hover="background:#123F52">Solicitar consulta</button>
+            </div>
+            <figure style="margin:0">
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/041_L'Onyar,_el_pont_de_les_Peixateries_Velles_i_la_Catedral_(Girona).JPG?width=1400" alt="El río Onyar y el puente de les Peixateries Velles, con la Catedral de Girona al fondo" width="2816" height="2112" loading="lazy" style="display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;border:1px solid #D3E2E9" />
+              <figcaption style="margin-top:8px;font-size:12px;color:#56707C">El Onyar, el pont de les Peixateries Velles i la Catedral (Girona) · Foto: Wikimedia Commons, CC BY-SA</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+    </sc-if>
+
+    <!-- ══════════ SANT FELIU ══════════ -->
+    <sc-if value="{{ pSfg }}">
+      <section style="background:#EAF3F7;color:#10313F;padding:clamp(56px,7vw,96px) clamp(20px,5vw,56px)">
+        <div style="max-width:1180px;margin:0 auto">
+          <p style="font-size:11.5px;letter-spacing:.3em;text-transform:uppercase;color:#1F6E8C;margin-bottom:22px">Sant Feliu de Guíxols</p>
+          <h1 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(34px,5vw,60px);line-height:1.1;max-width:26ch">Abogado en Sant Feliu de Guíxols y zona de la Costa Brava.</h1>
+        </div>
+      </section>
+      <section style="background:#FBFAF7;padding:clamp(56px,8vw,110px) clamp(20px,5vw,56px)">
+        <div style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:clamp(36px,5vw,72px);align-items:start">
+          <div style="display:grid;gap:22px;font-size:17px;line-height:1.8;color:#3B5461">
+            <p style="font-family:'Cormorant Garamond',serif;font-size:clamp(22px,2.4vw,30px);line-height:1.45;color:#10313F">En la costa del Baix Empordà, tener el despacho cerca cambia cómo se afronta un problema.</p>
+            <p>Sant Feliu de Guíxols vive con dos ritmos: el de todo el año y el de la temporada. Eso se nota en los asuntos que llegan al despacho, en las relaciones de vecindad y en la vivienda, y también en la dificultad de encontrar tiempo para tratar un problema legal con calma.</p>
+            <p>Atender aquí permite que la primera conversación no dependa de un desplazamiento a Girona. Se concierta cita, se explica lo ocurrido y se analiza con el mismo criterio.</p>
+            <h2 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(24px,2.8vw,32px);color:#10313F;margin-top:10px">Cuándo conviene no esperar</h2>
+            <ul style="display:grid;gap:10px">
+              <li>Cuando el documento que has recibido menciona un plazo.</li>
+              <li>Cuando la otra parte ya ha pedido asesoramiento.</li>
+              <li>Cuando estás a punto de firmar algo que no acabas de entender.</li>
+            </ul>
+            <p style="font-size:15px;color:#56707C">Ante un plazo, la primera llamada es lo más urgente: <a href="tel:+34645877276">645 877 276</a>.</p>
+          </div>
+          <div style="display:grid;gap:16px">
+            <div style="border:1px solid #D3E2E9;background:#FFFFFF;padding:clamp(24px,3vw,34px)">
+              <h2 style="font-size:11.5px;letter-spacing:.24em;text-transform:uppercase;color:#1F6E8C;font-weight:500">Atención en Sant Feliu</h2>
+              <p style="margin-top:18px;font-family:'Cormorant Garamond',serif;font-size:24px;line-height:1.35">Sant Feliu de Guíxols</p>
+              <p style="margin-top:10px;font-size:15.5px;line-height:1.8;color:#3B5461">Cita previa: <a href="tel:+34645877276">645 877 276</a><br /><a href="mailto:geslejuridica@gmail.com">geslejuridica@gmail.com</a></p>
+              <button type="button" onClick="{{ irContacto }}" style="margin-top:24px;background:#1C5A73;color:#FFFFFF;border:none;min-height:50px;padding:0 26px;font-size:12px;letter-spacing:.16em;text-transform:uppercase;cursor:pointer" style-hover="background:#123F52">Solicitar consulta</button>
+            </div>
+            <figure style="margin:0">
+              <img src="assets/cala-salguer.png" alt="Vista de la Punta del Castell desde s'Alguer, en la Costa Brava" width="1870" height="841" loading="lazy" style="display:block;width:100%;height:auto;aspect-ratio:1870/841;object-fit:cover;border:1px solid #D3E2E9" />
+              <figcaption style="margin-top:8px;font-size:12px;color:#56707C">Punta del Castell des de s'Alguer (Costa Brava) · Fotografia: Antonio Villegas</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+    </sc-if>
+
+    <!-- ══════════ BLOG ══════════ -->
+    <sc-if value="{{ pBlog }}">
+      <section style="background:#EAF3F7;color:#10313F;padding:clamp(56px,7vw,96px) clamp(20px,5vw,56px)">
+        <div style="max-width:1180px;margin:0 auto">
+          <p style="font-size:11.5px;letter-spacing:.3em;text-transform:uppercase;color:#1F6E8C;margin-bottom:22px">Información jurídica</p>
+          <h1 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(38px,5.4vw,66px);line-height:1.06">El Derecho, más cerca</h1>
+          <p style="margin-top:22px;max-width:52ch;font-size:clamp(17px,1.6vw,20px);line-height:1.7;color:rgba(16,49,63,.86)">Información jurídica y recursos de interés para ayudarte a conocer mejor tus derechos.</p>
+        </div>
+      </section>
+
+      <section style="background:#FBFAF7;padding:clamp(56px,8vw,104px) clamp(20px,5vw,56px)">
+        <div style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:clamp(28px,5vw,80px);align-items:start">
+          <h2 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(28px,3.6vw,44px);line-height:1.15;color:#10313F">El Derecho está en constante evolución.</h2>
+          <div style="display:grid;gap:20px;font-size:17px;line-height:1.8;color:#3B5461">
+            <p>En este espacio encontrarás información y recursos de interés para conocer mejor tus derechos, entender algunas situaciones jurídicas habituales y acceder directamente a fuentes jurídicas fiables y oficiales.</p>
+            <p>Mi objetivo es acercar la información jurídica a las personas de una forma clara, sencilla y comprensible.</p>
+            <p style="padding-left:20px;border-left:1px solid #1F6E8C;font-size:15.5px;line-height:1.75;color:#10313F;font-weight:500">La información contenida en esta sección tiene carácter general y divulgativo y no sustituye el asesoramiento jurídico personalizado. Cada situación debe analizarse atendiendo a sus circunstancias concretas.</p>
+          </div>
+        </div>
+      </section>
+
+      <section style="background:#EAF3F7;padding:clamp(56px,8vw,104px) clamp(20px,5vw,56px)">
+        <div style="max-width:1180px;margin:0 auto">
+          <p style="font-size:11.5px;letter-spacing:.3em;text-transform:uppercase;color:#1F6E8C;margin-bottom:18px">Recursos oficiales</p>
+          <h2 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(28px,3.6vw,44px);line-height:1.15;color:#10313F">Fuentes jurídicas de interés</h2>
+          <p style="margin-top:18px;max-width:62ch;font-size:16.5px;line-height:1.8;color:#3B5461">Pongo a tu alcance algunas de las principales fuentes oficiales de información jurídica para que puedas consultar legislación, jurisprudencia y recursos relacionados con la Justicia.</p>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:1px;background:#D3E2E9;border:1px solid #D3E2E9;margin-top:40px">
+            <div style="background:#FFFFFF;padding:clamp(24px,2.8vw,32px);display:flex;flex-direction:column;gap:14px">
+              <span style="font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:#1F6E8C;padding-bottom:12px;border-bottom:1px solid #D3E2E9">Legislación</span>
+              <h3 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:24px;line-height:1.22;color:#10313F">BOE – Boletín Oficial del Estado</h3>
+              <p style="font-size:15.5px;line-height:1.7;color:#3B5461">Consulta de legislación, normativa y disposiciones oficiales del Estado.</p>
+              <a href="https://www.boe.es/" target="_blank" rel="noopener noreferrer" style="margin-top:auto;align-self:flex-start;display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:0 18px;border:1px solid rgba(31,110,140,.45);color:#1C5A73;font-size:12px;letter-spacing:.13em;text-transform:uppercase" style-hover="background:#1C5A73;color:#FFFFFF;border-color:#1C5A73">Acceder al BOE <span aria-hidden="true">↗</span></a>
+            </div>
+            <div style="background:#FFFFFF;padding:clamp(24px,2.8vw,32px);display:flex;flex-direction:column;gap:14px">
+              <span style="font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:#1F6E8C;padding-bottom:12px;border-bottom:1px solid #D3E2E9">Jurisprudencia</span>
+              <h3 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:24px;line-height:1.22;color:#10313F">CENDOJ – Centro de Documentación Judicial</h3>
+              <p style="font-size:15.5px;line-height:1.7;color:#3B5461">Acceso a información sobre jurisprudencia y resoluciones judiciales.</p>
+              <a href="https://www.poderjudicial.es/search/indexAN.jsp" target="_blank" rel="noopener noreferrer" style="margin-top:auto;align-self:flex-start;display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:0 18px;border:1px solid rgba(31,110,140,.45);color:#1C5A73;font-size:12px;letter-spacing:.13em;text-transform:uppercase" style-hover="background:#1C5A73;color:#FFFFFF;border-color:#1C5A73">Consultar jurisprudencia <span aria-hidden="true">↗</span></a>
+            </div>
+            <div style="background:#FFFFFF;padding:clamp(24px,2.8vw,32px);display:flex;flex-direction:column;gap:14px">
+              <span style="font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:#1F6E8C;padding-bottom:12px;border-bottom:1px solid #D3E2E9">Profesión</span>
+              <h3 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:24px;line-height:1.22;color:#10313F">Consejo General de la Abogacía Española</h3>
+              <p style="font-size:15.5px;line-height:1.7;color:#3B5461">Información institucional, actualidad jurídica y recursos relacionados con la profesión de la Abogacía.</p>
+              <a href="https://www.abogacia.es/" target="_blank" rel="noopener noreferrer" style="margin-top:auto;align-self:flex-start;display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:0 18px;border:1px solid rgba(31,110,140,.45);color:#1C5A73;font-size:12px;letter-spacing:.13em;text-transform:uppercase" style-hover="background:#1C5A73;color:#FFFFFF;border-color:#1C5A73">Visitar la Abogacía <span aria-hidden="true">↗</span></a>
+            </div>
+            <div style="background:#FFFFFF;padding:clamp(24px,2.8vw,32px);display:flex;flex-direction:column;gap:14px">
+              <span style="font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:#1F6E8C;padding-bottom:12px;border-bottom:1px solid #D3E2E9">Tribunales</span>
+              <h3 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:24px;line-height:1.22;color:#10313F">Poder Judicial</h3>
+              <p style="font-size:15.5px;line-height:1.7;color:#3B5461">Información institucional, actualidad de los tribunales y recursos relacionados con la Administración de Justicia.</p>
+              <a href="https://www.poderjudicial.es/" target="_blank" rel="noopener noreferrer" style="margin-top:auto;align-self:flex-start;display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:0 18px;border:1px solid rgba(31,110,140,.45);color:#1C5A73;font-size:12px;letter-spacing:.13em;text-transform:uppercase" style-hover="background:#1C5A73;color:#FFFFFF;border-color:#1C5A73">Acceder al Poder Judicial <span aria-hidden="true">↗</span></a>
+            </div>
+            <div style="background:#FFFFFF;padding:clamp(24px,2.8vw,32px);display:flex;flex-direction:column;gap:14px">
+              <span style="font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:#1F6E8C;padding-bottom:12px;border-bottom:1px solid #D3E2E9">Normativa catalana</span>
+              <h3 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:24px;line-height:1.22;color:#10313F">Portal Jurídic de Catalunya</h3>
+              <p style="font-size:15.5px;line-height:1.7;color:#3B5461">Consulta de legislación y normativa aplicable en Cataluña.</p>
+              <a href="https://portaljuridic.gencat.cat/" target="_blank" rel="noopener noreferrer" style="margin-top:auto;align-self:flex-start;display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:0 18px;border:1px solid rgba(31,110,140,.45);color:#1C5A73;font-size:12px;letter-spacing:.13em;text-transform:uppercase" style-hover="background:#1C5A73;color:#FFFFFF;border-color:#1C5A73">Consultar normativa catalana <span aria-hidden="true">↗</span></a>
+            </div>
+            <div style="background:#FFFFFF;padding:clamp(24px,2.8vw,32px);display:flex;flex-direction:column;gap:14px">
+              <span style="font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:#1F6E8C;padding-bottom:12px;border-bottom:1px solid #D3E2E9">Trámites</span>
+              <h3 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:24px;line-height:1.22;color:#10313F">Justícia – Generalitat de Catalunya</h3>
+              <p style="font-size:15.5px;line-height:1.7;color:#3B5461">Información sobre Justicia, trámites, servicios y recursos de la Generalitat de Catalunya.</p>
+              <a href="https://justicia.gencat.cat/" target="_blank" rel="noopener noreferrer" style="margin-top:auto;align-self:flex-start;display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:0 18px;border:1px solid rgba(31,110,140,.45);color:#1C5A73;font-size:12px;letter-spacing:.13em;text-transform:uppercase" style-hover="background:#1C5A73;color:#FFFFFF;border-color:#1C5A73">Acceder a Justícia <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+          <h3 style="margin-top:clamp(48px,6vw,72px);font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(24px,2.8vw,32px);color:#10313F">Editoriales y bases de datos jurídicas</h3>
+          <p style="margin-top:12px;max-width:62ch;font-size:16px;line-height:1.75;color:#3B5461">Editoriales especializadas con legislación, jurisprudencia y doctrina. Algunos contenidos requieren suscripción.</p>
+          <div style="margin-top:28px;border-top:1px solid #BCD2DC;background:#EAF3F7">
+            <div style="display:flex;flex-wrap:wrap;align-items:center;gap:10px 28px;padding:20px 0;border-bottom:1px solid #D3E2E9">
+              <h4 style="margin:0;flex:0 0 200px;font-family:'Cormorant Garamond',serif;font-weight:400;font-size:23px;line-height:1.2;color:#10313F">vLex</h4>
+              <p style="flex:1 1 300px;font-size:15.5px;line-height:1.65;color:#3B5461">Base de datos jurídica con jurisprudencia, legislación y doctrina.</p>
+              <a href="https://vlex.es/" target="_blank" rel="noopener noreferrer" style="flex:none;display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:0 18px;border:1px solid rgba(31,110,140,.45);color:#1C5A73;font-size:12px;letter-spacing:.13em;text-transform:uppercase" style-hover="background:#1C5A73;color:#FFFFFF;border-color:#1C5A73">Visitar <span aria-hidden="true">↗</span></a>
+            </div>
+            <div style="display:flex;flex-wrap:wrap;align-items:center;gap:10px 28px;padding:20px 0;border-bottom:1px solid #D3E2E9">
+              <h4 style="margin:0;flex:0 0 200px;font-family:'Cormorant Garamond',serif;font-weight:400;font-size:23px;line-height:1.2;color:#10313F">Colex</h4>
+              <p style="flex:1 1 300px;font-size:15.5px;line-height:1.65;color:#3B5461">Editorial jurídica con códigos, publicaciones y novedades normativas.</p>
+              <a href="https://www.colex.es/" target="_blank" rel="noopener noreferrer" style="flex:none;display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:0 18px;border:1px solid rgba(31,110,140,.45);color:#1C5A73;font-size:12px;letter-spacing:.13em;text-transform:uppercase" style-hover="background:#1C5A73;color:#FFFFFF;border-color:#1C5A73">Visitar <span aria-hidden="true">↗</span></a>
+            </div>
+            <div style="display:flex;flex-wrap:wrap;align-items:center;gap:10px 28px;padding:20px 0;border-bottom:1px solid #D3E2E9">
+              <h4 style="margin:0;flex:0 0 200px;font-family:'Cormorant Garamond',serif;font-weight:400;font-size:23px;line-height:1.2;color:#10313F">Lefebvre</h4>
+              <p style="flex:1 1 300px;font-size:15.5px;line-height:1.65;color:#3B5461">Información jurídica, bases de datos y actualidad legal.</p>
+              <a href="https://lefebvre.es/" target="_blank" rel="noopener noreferrer" style="flex:none;display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:0 18px;border:1px solid rgba(31,110,140,.45);color:#1C5A73;font-size:12px;letter-spacing:.13em;text-transform:uppercase" style-hover="background:#1C5A73;color:#FFFFFF;border-color:#1C5A73">Visitar <span aria-hidden="true">↗</span></a>
+            </div>
+            <div style="display:flex;flex-wrap:wrap;align-items:center;gap:10px 28px;padding:20px 0;border-bottom:1px solid #D3E2E9">
+              <h4 style="margin:0;flex:0 0 200px;font-family:'Cormorant Garamond',serif;font-weight:400;font-size:23px;line-height:1.2;color:#10313F">Aranzadi La Ley</h4>
+              <p style="flex:1 1 300px;font-size:15.5px;line-height:1.65;color:#3B5461">Bases de datos de legislación, jurisprudencia y doctrina, y publicaciones jurídicas.</p>
+              <a href="https://www.aranzadilaley.es/" target="_blank" rel="noopener noreferrer" style="flex:none;display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:0 18px;border:1px solid rgba(31,110,140,.45);color:#1C5A73;font-size:12px;letter-spacing:.13em;text-transform:uppercase" style-hover="background:#1C5A73;color:#FFFFFF;border-color:#1C5A73">Visitar <span aria-hidden="true">↗</span></a>
+            </div>
+            <div style="display:flex;flex-wrap:wrap;align-items:center;gap:10px 28px;padding:20px 0;border-bottom:1px solid #D3E2E9">
+              <h4 style="margin:0;flex:0 0 200px;font-family:'Cormorant Garamond',serif;font-weight:400;font-size:23px;line-height:1.2;color:#10313F">Tirant lo Blanch</h4>
+              <p style="flex:1 1 300px;font-size:15.5px;line-height:1.65;color:#3B5461">Editorial jurídica con bases de datos, legislación y jurisprudencia.</p>
+              <a href="https://www.tirant.com/" target="_blank" rel="noopener noreferrer" style="flex:none;display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:0 18px;border:1px solid rgba(31,110,140,.45);color:#1C5A73;font-size:12px;letter-spacing:.13em;text-transform:uppercase" style-hover="background:#1C5A73;color:#FFFFFF;border-color:#1C5A73">Visitar <span aria-hidden="true">↗</span></a>
+            </div>
+            <div style="display:flex;flex-wrap:wrap;align-items:center;gap:10px 28px;padding:20px 0;border-bottom:1px solid #D3E2E9">
+              <h4 style="margin:0;flex:0 0 200px;font-family:'Cormorant Garamond',serif;font-weight:400;font-size:23px;line-height:1.2;color:#10313F">Iberley</h4>
+              <p style="flex:1 1 300px;font-size:15.5px;line-height:1.65;color:#3B5461">Información jurídica práctica: legislación, jurisprudencia y formularios.</p>
+              <a href="https://www.iberley.es/" target="_blank" rel="noopener noreferrer" style="flex:none;display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:0 18px;border:1px solid rgba(31,110,140,.45);color:#1C5A73;font-size:12px;letter-spacing:.13em;text-transform:uppercase" style-hover="background:#1C5A73;color:#FFFFFF;border-color:#1C5A73">Visitar <span aria-hidden="true">↗</span></a>
+            </div>
+            <div style="display:flex;flex-wrap:wrap;align-items:center;gap:10px 28px;padding:20px 0;border-bottom:1px solid #D3E2E9">
+              <h4 style="margin:0;flex:0 0 200px;font-family:'Cormorant Garamond',serif;font-weight:400;font-size:23px;line-height:1.2;color:#10313F">Sepín</h4>
+              <p style="flex:1 1 300px;font-size:15.5px;line-height:1.65;color:#3B5461">Editorial jurídica especializada en bases de datos y publicaciones por materias.</p>
+              <a href="https://www.sepin.es/" target="_blank" rel="noopener noreferrer" style="flex:none;display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:0 18px;border:1px solid rgba(31,110,140,.45);color:#1C5A73;font-size:12px;letter-spacing:.13em;text-transform:uppercase" style-hover="background:#1C5A73;color:#FFFFFF;border-color:#1C5A73">Visitar <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+          <p style="margin-top:14px;font-size:13px;line-height:1.6;color:#56707C">Gestió Legal Jurídica no está vinculada a estas entidades.</p>
+        </div>
+      </section>
+
+      <section style="background:#FBFAF7;padding:clamp(56px,8vw,104px) clamp(20px,5vw,56px)">
+        <div style="max-width:1180px;margin:0 auto">
+          <p style="font-size:11.5px;letter-spacing:.3em;text-transform:uppercase;color:#1F6E8C;margin-bottom:18px">Píldoras jurídicas</p>
+          <h2 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(28px,3.6vw,44px);line-height:1.15;color:#10313F">¿Lo sabías?</h2>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(14px,1.6vw,20px);margin-top:40px">
+            <div style="background:#FFFFFF;border:1px solid #D3E2E9;border-top:3px solid #1F6E8C;padding:clamp(24px,2.8vw,32px);display:flex;flex-direction:column;gap:14px">
+              <div style="display:flex;align-items:baseline;justify-content:space-between;gap:12px">
+                <span style="font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:#1F6E8C">¿Lo sabías?</span>
+                <span style="font-family:'Cormorant Garamond',serif;font-size:28px;line-height:1;color:#BCD2DC">01</span>
+              </div>
+              <h3 style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(22px,2.2vw,26px);line-height:1.25;color:#10313F">No todos los conflictos tienen que acabar en los tribunales.</h3>
+              <p style="font-size:15.5px;line-height:1.7;color:#3B5461">En determinados asuntos, la negociación, la mediación o las vías extrajudiciales pueden permitir alcanzar una solución adecuada sin necesidad de iniciar un procedimiento judicial.</p>
+            </div>
+            <div style="background:#FFFFFF;border:1px solid #D3E2E9;border-top:3px solid #1F6E8C;padding:clamp(24px,2.8vw,32px);display:flex;flex-direction:column;gap:14px">
+              <div style="display:flex;align-items:baseline;justify-content:space-between;gap:12px">
+                <span style="font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:#1F6E8C">¿Lo sabías?</span>
+                <span style="font-family:'Cormorant Garamond',serif;font-size:28px;line-height:1;color:#BCD2DC">02</span>
+              </div>
+              <h3 style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(22px,2.2vw,26px);line-height:1.25;color:#10313F">Antes de firmar un documento, es importante conocer sus consecuencias.</h3>
+              <p style="font-size:15.5px;line-height:1.7;color:#3B5461">Un contrato, acuerdo o documento puede generar derechos y obligaciones. Ante cualquier duda, consultar previamente con un profesional puede evitar problemas posteriores.</p>
+            </div>
+            <div style="background:#FFFFFF;border:1px solid #D3E2E9;border-top:3px solid #1F6E8C;padding:clamp(24px,2.8vw,32px);display:flex;flex-direction:column;gap:14px">
+              <div style="display:flex;align-items:baseline;justify-content:space-between;gap:12px">
+                <span style="font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:#1F6E8C">¿Lo sabías?</span>
+                <span style="font-family:'Cormorant Garamond',serif;font-size:28px;line-height:1;color:#BCD2DC">03</span>
+              </div>
+              <h3 style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(22px,2.2vw,26px);line-height:1.25;color:#10313F">Una notificación judicial no debería ignorarse.</h3>
+              <p style="font-size:15.5px;line-height:1.7;color:#3B5461">Los procedimientos judiciales están sujetos a plazos. Si recibes una notificación judicial, es importante conocer qué significa y qué actuaciones pueden ser necesarias.</p>
+            </div>
+            <div style="background:#FFFFFF;border:1px solid #D3E2E9;border-top:3px solid #1F6E8C;padding:clamp(24px,2.8vw,32px);display:flex;flex-direction:column;gap:14px">
+              <div style="display:flex;align-items:baseline;justify-content:space-between;gap:12px">
+                <span style="font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:#1F6E8C">¿Lo sabías?</span>
+                <span style="font-family:'Cormorant Garamond',serif;font-size:28px;line-height:1;color:#BCD2DC">04</span>
+              </div>
+              <h3 style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(22px,2.2vw,26px);line-height:1.25;color:#10313F">La prueba puede ser determinante en un procedimiento.</h3>
+              <p style="font-size:15.5px;line-height:1.7;color:#3B5461">Documentos, comunicaciones, contratos, fotografías, correos electrónicos u otros elementos pueden tener relevancia en función del caso y de las circunstancias en las que se hayan obtenido.</p>
+            </div>
+            <div style="background:#FFFFFF;border:1px solid #D3E2E9;border-top:3px solid #1F6E8C;padding:clamp(24px,2.8vw,32px);display:flex;flex-direction:column;gap:14px">
+              <div style="display:flex;align-items:baseline;justify-content:space-between;gap:12px">
+                <span style="font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:#1F6E8C">¿Lo sabías?</span>
+                <span style="font-family:'Cormorant Garamond',serif;font-size:28px;line-height:1;color:#BCD2DC">05</span>
+              </div>
+              <h3 style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(22px,2.2vw,26px);line-height:1.25;color:#10313F">Consultar con un abogado no significa necesariamente iniciar un procedimiento judicial.</h3>
+              <p style="font-size:15.5px;line-height:1.7;color:#3B5461">Una consulta puede servir simplemente para conocer tus derechos, valorar las diferentes opciones disponibles y decidir cuál es la actuación más adecuada.</p>
+            </div>
+            <div style="background:#FFFFFF;border:1px solid #D3E2E9;border-top:3px solid #1F6E8C;padding:clamp(24px,2.8vw,32px);display:flex;flex-direction:column;gap:14px">
+              <div style="display:flex;align-items:baseline;justify-content:space-between;gap:12px">
+                <span style="font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:#1F6E8C">¿Lo sabías?</span>
+                <span style="font-family:'Cormorant Garamond',serif;font-size:28px;line-height:1;color:#BCD2DC">06</span>
+              </div>
+              <h3 style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(22px,2.2vw,26px);line-height:1.25;color:#10313F">Actuar a tiempo puede ser importante.</h3>
+              <p style="font-size:15.5px;line-height:1.7;color:#3B5461">Determinadas acciones y reclamaciones están sujetas a plazos. Por ello, ante un problema jurídico, obtener asesoramiento con suficiente antelación puede resultar fundamental.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section style="background:#EAF3F7;padding:clamp(56px,8vw,104px) clamp(20px,5vw,56px)">
+        <div style="max-width:900px;margin:0 auto">
+          <p style="font-size:11.5px;letter-spacing:.3em;text-transform:uppercase;color:#1F6E8C;margin-bottom:18px">Dudas habituales</p>
+          <h2 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(28px,3.6vw,44px);line-height:1.15;color:#10313F">Preguntas jurídicas frecuentes</h2>
+          <p style="margin-top:18px;max-width:60ch;font-size:16.5px;line-height:1.8;color:#3B5461">Algunas dudas aparecen con frecuencia. Aquí encontrarás respuestas generales a cuestiones jurídicas habituales.</p>
+          <div style="margin-top:36px;border-top:1px solid #BCD2DC">
+            <sc-for list="{{ faqs }}" as="f" hint-placeholder-count="7">
+              <div style="border-bottom:1px solid #BCD2DC">
+                <h3 style="margin:0">
+                  <button type="button" onClick="{{ f.toggle }}" aria-expanded="{{ f.open }}" style="width:100%;display:flex;align-items:center;justify-content:space-between;gap:20px;background:none;border:none;padding:22px 0;min-height:64px;text-align:left;cursor:pointer;color:#10313F;font-family:'Cormorant Garamond',serif;font-size:clamp(20px,2.2vw,24px);line-height:1.3" style-hover="color:#1F6E8C">
+                    <span>{{ f.q }}</span>
+                    <span aria-hidden="true" style="flex:none;width:34px;height:34px;display:flex;align-items:center;justify-content:center;border:1px solid rgba(31,110,140,.45);color:#1F6E8C;font-family:'Jost',sans-serif;font-size:20px;line-height:1">{{ f.sign }}</span>
+                  </button>
+                </h3>
+                <sc-if value="{{ f.open }}">
+                  <p style="padding:0 54px 24px 0;font-size:16.5px;line-height:1.8;color:#3B5461">{{ f.a }}</p>
+                </sc-if>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+      </section>
+
+      <section style="background:#1C5A73;color:#FFFFFF;padding:clamp(56px,8vw,100px) clamp(20px,5vw,56px)">
+        <div style="max-width:820px;margin:0 auto;text-align:center;display:grid;gap:22px;justify-items:center">
+          <h2 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(30px,4vw,48px);line-height:1.15;color:#FFFFFF">¿Tienes una duda jurídica?</h2>
+          <p style="max-width:58ch;font-size:17px;line-height:1.8;color:#FFFFFF">Cada situación es diferente. Si necesitas orientación sobre tu caso, puedo estudiar contigo las opciones disponibles y ayudarte a determinar cuál puede ser el siguiente paso.</p>
+          <button type="button" onClick="{{ irContacto }}" style="margin-top:8px;background:#FFFFFF;color:#1C5A73;border:none;min-height:54px;padding:0 32px;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;cursor:pointer" style-hover="background:#EAF3F7">Consultar conmigo</button>
+          <p style="font-size:13px;line-height:1.7;color:#FFFFFF;max-width:60ch">La información publicada en esta sección tiene carácter general y divulgativo y no constituye asesoramiento jurídico.</p>
+        </div>
+      </section>
+    </sc-if>
+
+    <!-- ══════════ CONTACTO ══════════ -->
+    <sc-if value="{{ pContacto }}">
+      <section style="background:#EAF3F7;color:#10313F;padding:clamp(56px,7vw,96px) clamp(20px,5vw,56px)">
+        <div style="max-width:1180px;margin:0 auto">
+          <p style="font-size:11.5px;letter-spacing:.3em;text-transform:uppercase;color:#1F6E8C;margin-bottom:22px">Contacto</p>
+          <h1 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(34px,5vw,60px);line-height:1.1;max-width:24ch">Solicitar consulta</h1>
+          <p style="margin-top:24px;max-width:52ch;font-size:17px;line-height:1.8;color:rgba(16,49,63,.8)">Por teléfono, por email o dejándome escrito lo que ha ocurrido. Como te resulte más fácil.</p>
+        </div>
+      </section>
+      <section style="background:#FBFAF7;padding:clamp(56px,8vw,110px) clamp(20px,5vw,56px)">
+        <div style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:clamp(36px,5vw,72px);align-items:start">
+          <div style="display:grid;gap:16px">
+            <div style="border:1px solid #D3E2E9;background:#FFFFFF;padding:clamp(24px,3vw,34px)">
+              <p style="font-family:'Cormorant Garamond',serif;font-size:22px;letter-spacing:.14em;text-transform:uppercase">Gestió Legal Jurídica</p>
+              <p style="margin-top:10px;font-size:15.5px;line-height:1.7;color:#3B5461">Antonio Villegas<br />Abogado · ICAG núm. 3913</p>
+              <div style="height:1px;background:#D3E2E9;margin:22px 0"></div>
+              <p style="font-size:11.5px;letter-spacing:.24em;text-transform:uppercase;color:#1F6E8C">Teléfono</p>
+              <p style="margin-top:8px;font-size:24px;font-family:'Cormorant Garamond',serif"><a href="tel:+34645877276">645 877 276</a></p>
+              <p style="margin-top:20px;font-size:11.5px;letter-spacing:.24em;text-transform:uppercase;color:#1F6E8C">Email</p>
+              <p style="margin-top:8px;font-size:17px"><a href="mailto:geslejuridica@gmail.com">geslejuridica@gmail.com</a></p>
+              <div style="height:1px;background:#D3E2E9;margin:22px 0"></div>
+              <p style="font-size:11.5px;letter-spacing:.24em;text-transform:uppercase;color:#1F6E8C">Atención en</p>
+              <p style="margin-top:10px;font-size:15.5px;line-height:1.9;color:#3B5461">Girona — Carrer Sèquia, 3<br />Sant Feliu de Guíxols</p>
+            </div>
+            <a href="tel:+34645877276" style="display:flex;align-items:center;justify-content:center;min-height:56px;background:#1C5A73;color:#FFFFFF;border:none;border-bottom:none;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase">Llamar ahora</a>
+          </div>
+          <div style="border:1px solid #D3E2E9;background:#FFFFFF;padding:clamp(24px,3.4vw,40px)">
+            <h2 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(24px,2.8vw,34px)">Escríbeme</h2>
+            <p style="margin-top:14px;font-size:16px;line-height:1.75;color:#3B5461">Un resumen breve es suficiente para empezar.</p>
+            <button type="button" onClick="{{ irProblema }}" style="margin-top:26px;background:#1C5A73;color:#FFFFFF;border:none;min-height:54px;padding:0 30px;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;cursor:pointer" style-hover="background:#123F52">Ir al formulario</button>
+            <div style="height:1px;background:#D3E2E9;margin:32px 0"></div>
+            <p style="font-size:14px;line-height:1.75;color:#56707C">Los datos que facilites se tratan únicamente para atender tu consulta. No envíes documentación confidencial innecesaria ni datos especialmente sensibles por canales no seguros. Una valoración inicial no supone garantía de resultado.</p>
+          </div>
+        </div>
+      </section>
+    </sc-if>
+
+    <!-- ══════════ AVISO LEGAL ══════════ -->
+    <sc-if value="{{ pAviso }}">
+      <section style="background:#EAF3F7;color:#10313F;padding:clamp(48px,6vw,80px) clamp(20px,5vw,56px)">
+        <div style="max-width:820px;margin:0 auto">
+          <p style="font-size:11.5px;letter-spacing:.3em;text-transform:uppercase;color:#1F6E8C;margin-bottom:18px">Información legal</p>
+          <h1 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(32px,4.4vw,50px);line-height:1.12">Aviso legal</h1>
+        </div>
+      </section>
+      <section style="background:#FBFAF7;padding:clamp(48px,7vw,90px) clamp(20px,5vw,56px)">
+        <div style="max-width:820px;margin:0 auto;font-size:16.5px;line-height:1.85;color:#3B5461;display:grid;gap:28px">
+          <div>
+            <h2 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:26px;color:#10313F">1. Titular del sitio web</h2>
+            <p style="margin-top:12px">En cumplimiento del artículo 10 de la Ley 34/2002, de 11 de julio, de servicios de la sociedad de la información y de comercio electrónico (LSSI-CE), se facilitan los siguientes datos:</p>
+            <p style="margin-top:12px"><strong style="color:#10313F;font-weight:500">Titular:</strong> Antonio Villegas<br /><strong style="color:#10313F;font-weight:500">Nombre comercial:</strong> Gestió Legal Jurídica<br /><strong style="color:#10313F;font-weight:500">Domicilio profesional:</strong> Carrer Sèquia, 3, Girona<br /><strong style="color:#10313F;font-weight:500">Teléfono:</strong> <a href="tel:+34645877276">645 877 276</a><br /><strong style="color:#10313F;font-weight:500">Correo electrónico:</strong> <a href="mailto:geslejuridica@gmail.com">geslejuridica@gmail.com</a><br /><strong style="color:#10313F;font-weight:500">Profesión:</strong> abogado en ejercicio<br /><strong style="color:#10313F;font-weight:500">Titulación:</strong> Graduado en Derecho y Máster Universitario en Abogacía, títulos expedidos en España<br /><strong style="color:#10313F;font-weight:500">Colegio profesional:</strong> Il·lustre Col·legi de l'Advocacia de Girona (ICAG), número de colegiado 3913<br /><strong style="color:#10313F;font-weight:500">Normas profesionales aplicables:</strong> Estatuto General de la Abogacía Española, aprobado por el Real Decreto 135/2021, de 2 de marzo; Código Deontológico de la Abogacía Española; y normativa del Consell dels Il·lustres Col·legis de l'Advocacia de Catalunya y del ICAG, consultables en <a href="https://www.abogacia.es" target="_blank" rel="noopener noreferrer">www.abogacia.es</a> y <a href="https://www.icag.cat" target="_blank" rel="noopener noreferrer">www.icag.cat</a></p>
+          </div>
+          <div>
+            <h2 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:26px;color:#10313F">2. Objeto</h2>
+            <p style="margin-top:12px">El presente Aviso Legal tiene por objeto regular el acceso, navegación y uso del sitio web, así como informar a los usuarios sobre las condiciones aplicables a los contenidos y servicios ofrecidos a través del mismo.</p>
+            <p style="margin-top:12px">El acceso y navegación por este sitio web atribuyen la condición de usuario e implican la aceptación de las condiciones establecidas en el presente Aviso Legal.</p>
+            <p style="margin-top:12px">La información contenida en esta web tiene carácter meramente informativo y está destinada a facilitar el conocimiento de los servicios profesionales ofrecidos por el despacho. La información publicada no constituye, por sí misma, asesoramiento jurídico ni sustituye el análisis individualizado de cada caso por parte de un profesional de la abogacía.</p>
+          </div>
+          <div>
+            <h2 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:26px;color:#10313F">3. Normativa profesional</h2>
+            <p style="margin-top:12px">La actividad profesional desarrollada a través de este sitio web se encuentra sujeta a la normativa vigente aplicable al ejercicio de la abogacía en España, así como a las normas deontológicas y profesionales que resulten de aplicación.</p>
+            <p style="margin-top:12px">En particular, el ejercicio profesional se desarrolla de conformidad con la legislación reguladora de la profesión de la Abogacía, las normas deontológicas de la Abogacía Española y, en su caso, las disposiciones y normas del Colegio de la Abogacía correspondiente.</p>
+            <p style="margin-top:12px">La relación profesional entre el abogado y el cliente se regirá por la normativa aplicable y por las condiciones que, en cada caso, se establezcan específicamente entre las partes.</p>
+          </div>
+          <div>
+            <h2 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:26px;color:#10313F">4. Propiedad intelectual</h2>
+            <p style="margin-top:12px">Todos los contenidos de este sitio web, incluyendo, a título enunciativo y no limitativo, textos, fotografías, imágenes, logotipos, gráficos, diseños, elementos audiovisuales, estructura, código fuente y demás elementos que formen parte de la web, están protegidos por la normativa vigente en materia de propiedad intelectual e industrial.</p>
+            <p style="margin-top:12px">Salvo que se indique expresamente lo contrario o exista autorización previa del titular de los derechos, queda prohibida la reproducción, distribución, transformación, comunicación pública, puesta a disposición o cualquier otra forma de explotación, total o parcial, de los contenidos de este sitio web.</p>
+            <p style="margin-top:12px">El acceso al sitio web no implica, en ningún caso, la adquisición por parte del usuario de ningún derecho de propiedad sobre los contenidos, diseños o elementos que lo integran.</p>
+          </div>
+          <div>
+            <h2 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:26px;color:#10313F">5. Condiciones de uso y responsabilidad</h2>
+            <p style="margin-top:12px">El usuario se compromete a utilizar el sitio web de forma diligente, lícita y conforme a la legislación vigente, al presente Aviso Legal y a las normas generalmente aceptadas de convivencia y buena fe.</p>
+            <p style="margin-top:12px">Queda prohibido utilizar el sitio web para realizar actividades ilícitas, fraudulentas o contrarias a la buena fe, así como para introducir o transmitir contenidos que puedan resultar lesivos para los derechos o intereses de terceros.</p>
+            <p style="margin-top:12px">El titular del sitio web procura que la información publicada sea correcta, actualizada y accesible. No obstante, no garantiza la inexistencia de errores, omisiones o posibles desactualizaciones de los contenidos, ni asume responsabilidad por los daños que pudieran derivarse del uso de la información contenida en la web cuando esta se utilice sin el correspondiente asesoramiento profesional.</p>
+            <p style="margin-top:12px">El titular tampoco será responsable de los daños o perjuicios que pudieran derivarse de circunstancias ajenas a su control, incluyendo, entre otras, fallos técnicos, interrupciones del servicio, errores de conexión, virus informáticos o actuaciones de terceros.</p>
+            <p style="margin-top:12px">La existencia de enlaces a páginas web de terceros, en su caso, tendrá carácter meramente informativo. El titular no asume responsabilidad por los contenidos, servicios o políticas de privacidad de dichas páginas externas.</p>
+            <p style="margin-top:12px">El envío de una consulta o solicitud de contacto a través de la web no implica por sí mismo la aceptación de un encargo profesional ni establece una relación abogado-cliente. Dicha relación quedará formalmente constituida cuando exista aceptación expresa del encargo y se hayan establecido las condiciones correspondientes.</p>
+          </div>
+          <div>
+            <h2 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:26px;color:#10313F">6. Legislación aplicable y jurisdicción</h2>
+            <p style="margin-top:12px">El presente Aviso Legal se regirá e interpretará de conformidad con la legislación española vigente.</p>
+            <p style="margin-top:12px">Para cualquier controversia que pudiera surgir en relación con el acceso, navegación o utilización del sitio web, las partes se someterán a los juzgados y tribunales que resulten competentes de conformidad con la legislación aplicable.</p>
+            <p style="margin-top:12px">En aquellos casos en los que la normativa permita la elección de fuero, las partes podrán someterse expresamente a los juzgados y tribunales que correspondan al domicilio profesional del titular del sitio web.</p>
+          </div>
+          <div>
+            <h2 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:26px;color:#10313F">7. Protección de datos y cookies</h2>
+            <p style="margin-top:12px">El tratamiento de los datos personales facilitados a través de este sitio web se rige por la <button type="button" onClick="{{ irPrivacidad }}" style="background:none;border:none;border-bottom:1px solid rgba(31,110,140,.5);color:#1F6E8C;padding:0;cursor:pointer;font-size:16.5px">Política de privacidad</button>, y el uso de cookies, por la <button type="button" onClick="{{ irCookies }}" style="background:none;border:none;border-bottom:1px solid rgba(31,110,140,.5);color:#1F6E8C;padding:0;cursor:pointer;font-size:16.5px">Política de cookies</button>.</p>
+          </div>
+          <p style="padding-top:24px;border-top:1px solid #D3E2E9"><strong style="color:#10313F;font-weight:500">Última actualización: octubre de 2026.</strong></p>
+        </div>
+      </section>
+    </sc-if>
+
+    <!-- ══════════ PRIVACIDAD ══════════ -->
+    <sc-if value="{{ pPrivacidad }}">
+      <section style="background:#EAF3F7;color:#10313F;padding:clamp(48px,6vw,80px) clamp(20px,5vw,56px)">
+        <div style="max-width:820px;margin:0 auto">
+          <p style="font-size:11.5px;letter-spacing:.3em;text-transform:uppercase;color:#1F6E8C;margin-bottom:18px">Protección de datos</p>
+          <h1 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(32px,4.4vw,50px);line-height:1.12">Política de privacidad</h1>
+        </div>
+      </section>
+      <section style="background:#FBFAF7;padding:clamp(48px,7vw,90px) clamp(20px,5vw,56px)">
+        <div style="max-width:820px;margin:0 auto;font-size:16.5px;line-height:1.85;color:#3B5461;display:grid;gap:30px">
+          <p>La presente Política de Privacidad tiene como finalidad informar a los usuarios del sitio web sobre el tratamiento de los datos personales que puedan facilitarse a través del mismo, de conformidad con el Reglamento (UE) 2016/679, de 27 de abril de 2016, General de Protección de Datos (RGPD), y la Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos Personales y garantía de los derechos digitales (LOPDGDD), así como cualquier otra normativa que resulte aplicable.</p>
+          <div>
+            <h2 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:26px;color:#10313F">1. Responsable del tratamiento</h2>
+            <p style="margin-top:12px"><strong style="color:#10313F;font-weight:500">Responsable:</strong> Antonio Villegas<br /><strong style="color:#10313F;font-weight:500">Nombre comercial:</strong> Gestió Legal Jurídica<br /><strong style="color:#10313F;font-weight:500">Domicilio profesional:</strong> Carrer Sèquia, 3, Girona<br /><strong style="color:#10313F;font-weight:500">Correo electrónico:</strong> <a href="mailto:geslejuridica@gmail.com">geslejuridica@gmail.com</a><br /><strong style="color:#10313F;font-weight:500">Teléfono:</strong> <a href="tel:+34645877276">645 877 276</a><br /><strong style="color:#10313F;font-weight:500">Colegio profesional:</strong> Il·lustre Col·legi de l'Advocacia de Girona (ICAG)<br /><strong style="color:#10313F;font-weight:500">Número de colegiado:</strong> 3913</p>
+          </div>
+          <div>
+            <h2 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:26px;color:#10313F">2. ¿Qué datos personales se pueden recoger?</h2>
+            <p style="margin-top:12px">A través de este sitio web podrán tratarse los datos personales que el usuario facilite voluntariamente mediante los formularios de contacto, correo electrónico, teléfono u otros medios habilitados en la web.</p>
+            <p style="margin-top:12px">Entre otros, podrán tratarse datos identificativos y de contacto, como nombre y apellidos, dirección de correo electrónico, número de teléfono y cualquier otra información que el usuario decida facilitar voluntariamente en su comunicación.</p>
+            <p style="margin-top:12px">Se recomienda al usuario no incluir en los formularios de contacto información especialmente sensible o documentación que no resulte necesaria para realizar la consulta inicial.</p>
+            <p style="margin-top:12px">Los campos señalados como obligatorios en el formulario son necesarios para poder atender la consulta. Si no se facilitan, no será posible responderla.</p>
+          </div>
+          <div>
+            <h2 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:26px;color:#10313F">3. Finalidades del tratamiento</h2>
+            <p style="margin-top:12px">Los datos personales podrán ser tratados para las siguientes finalidades:</p>
+            <ul style="margin-top:12px;display:grid;gap:8px"><li>Atender y responder las consultas, solicitudes de información o comunicaciones realizadas por el usuario.</li><li>Contactar con el usuario cuando resulte necesario para atender su solicitud.</li><li>Gestionar, en su caso, la relación profesional y contractual derivada de la prestación de servicios jurídicos.</li><li>Elaborar presupuestos o propuestas de servicios profesionales cuando hayan sido solicitados.</li><li>Cumplir las obligaciones legales que resulten aplicables al responsable del tratamiento.</li><li>Gestionar y mantener la seguridad del sitio web y prevenir posibles usos fraudulentos o ilícitos.</li></ul>
+            <p style="margin-top:12px">Los datos no serán utilizados para finalidades incompatibles con aquellas para las que fueron recabados.</p>
+            <p style="margin-top:12px">No se adoptan decisiones automatizadas ni se elaboran perfiles a partir de los datos facilitados.</p>
+          </div>
+          <div>
+            <h2 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:26px;color:#10313F">4. Base jurídica del tratamiento</h2>
+            <p style="margin-top:12px">La base jurídica para el tratamiento de los datos personales dependerá de la finalidad concreta para la que sean recabados.</p>
+            <p style="margin-top:12px">Cuando el usuario contacte voluntariamente con el despacho para solicitar información o realizar una consulta, el tratamiento podrá estar basado en la aplicación de medidas precontractuales a petición del interesado, de conformidad con el artículo 6.1.b) del RGPD.</p>
+            <p style="margin-top:12px">Cuando exista una relación profesional o contractual, el tratamiento de los datos será necesario para la ejecución del contrato y para la gestión de los servicios jurídicos solicitados.</p>
+            <p style="margin-top:12px">Asimismo, determinados tratamientos podrán estar basados en el cumplimiento de obligaciones legales aplicables al responsable del tratamiento, de conformidad con el artículo 6.1.c) del RGPD.</p>
+            <p style="margin-top:12px">Cuando sea necesario y no exista otra base jurídica aplicable, determinados tratamientos podrán realizarse con el consentimiento del usuario, que podrá retirarse en cualquier momento, sin que ello afecte a la licitud del tratamiento realizado con anterioridad.</p>
+          </div>
+          <div>
+            <h2 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:26px;color:#10313F">5. Conservación de los datos</h2>
+            <p style="margin-top:12px">Los datos personales se conservarán durante el tiempo necesario para atender la solicitud realizada por el usuario y, cuando exista una relación profesional, durante el tiempo necesario para gestionar dicha relación.</p>
+            <p style="margin-top:12px">Una vez finalizada la relación o cuando los datos dejen de ser necesarios para la finalidad para la que fueron recabados, podrán mantenerse debidamente bloqueados durante los plazos legalmente establecidos para atender posibles responsabilidades legales o reclamaciones.</p>
+            <p style="margin-top:12px">Transcurridos dichos plazos, los datos serán eliminados o anonimizados cuando corresponda.</p>
+          </div>
+          <div>
+            <h2 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:26px;color:#10313F">6. Destinatarios de los datos</h2>
+            <p style="margin-top:12px">Con carácter general, los datos personales no serán cedidos a terceros salvo que exista una obligación legal, resulte necesario para la prestación del servicio solicitado o el usuario haya prestado su consentimiento cuando este sea necesario.</p>
+            <p style="margin-top:12px">Los datos podrán ser comunicados a organismos públicos, juzgados, tribunales, administraciones públicas, profesionales, colaboradores o proveedores de servicios cuando dicha comunicación resulte necesaria para la gestión del asunto o esté amparada por una obligación legal o por una base jurídica válida.</p>
+            <p style="margin-top:12px">Cuando resulte necesario recurrir a proveedores externos que tengan acceso a datos personales para prestar determinados servicios, estos actuarán, cuando corresponda, como encargados del tratamiento y estarán sujetos a las obligaciones establecidas por la normativa de protección de datos.</p>
+          </div>
+          <div>
+            <h2 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:26px;color:#10313F">7. Transferencias internacionales</h2>
+            <p style="margin-top:12px">Algunos proveedores tecnológicos utilizados por el despacho, como los servicios de correo electrónico, pueden tratar datos fuera del Espacio Económico Europeo.</p>
+            <p style="margin-top:12px">En ese caso, las transferencias internacionales se realizarán únicamente al amparo de una decisión de adecuación de la Comisión Europea o de otras garantías adecuadas previstas en el RGPD, como las cláusulas contractuales tipo.</p>
+          </div>
+          <div>
+            <h2 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:26px;color:#10313F">8. Derechos de los usuarios</h2>
+            <p style="margin-top:12px">El usuario puede ejercer, en los términos establecidos por la normativa aplicable, los siguientes derechos:</p>
+            <ul style="margin-top:12px;display:grid;gap:8px"><li><strong style="color:#10313F;font-weight:500">Derecho de acceso:</strong> conocer si se están tratando sus datos personales y obtener información sobre dicho tratamiento.</li><li><strong style="color:#10313F;font-weight:500">Derecho de rectificación:</strong> solicitar la corrección de los datos inexactos o incompletos.</li><li><strong style="color:#10313F;font-weight:500">Derecho de supresión:</strong> solicitar la eliminación de sus datos cuando concurran los requisitos legalmente establecidos.</li><li><strong style="color:#10313F;font-weight:500">Derecho a la limitación del tratamiento:</strong> solicitar que se limite el tratamiento de sus datos en determinados supuestos.</li><li><strong style="color:#10313F;font-weight:500">Derecho de oposición:</strong> oponerse al tratamiento de sus datos en determinadas circunstancias.</li><li><strong style="color:#10313F;font-weight:500">Derecho a la portabilidad:</strong> recibir determinados datos personales en un formato estructurado, de uso común y lectura mecánica, o solicitar su transmisión a otro responsable cuando resulte aplicable.</li><li><strong style="color:#10313F;font-weight:500">Derecho a retirar el consentimiento:</strong> cuando el tratamiento se base en el consentimiento, podrá retirarse en cualquier momento.</li></ul>
+            <p style="margin-top:12px">Para ejercer estos derechos, el usuario podrá dirigirse al responsable del tratamiento mediante correo electrónico a:</p>
+            <p style="margin-top:12px"><strong style="color:#10313F;font-weight:500"><a href="mailto:geslejuridica@gmail.com">geslejuridica@gmail.com</a></strong></p>
+            <p style="margin-top:12px">La solicitud deberá indicar claramente el derecho que desea ejercer y, cuando resulte necesario para verificar la identidad del solicitante, podrá requerirse documentación identificativa.</p>
+          </div>
+          <div>
+            <h2 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:26px;color:#10313F">9. Derecho a presentar una reclamación</h2>
+            <p style="margin-top:12px">El usuario tiene derecho a presentar una reclamación ante la <strong style="color:#10313F;font-weight:500">Agencia Española de Protección de Datos (AEPD)</strong> si considera que el tratamiento de sus datos personales no se ajusta a la normativa vigente.</p>
+            <p style="margin-top:12px">Más información en:</p>
+            <p style="margin-top:12px"><strong style="color:#10313F;font-weight:500"><a href="https://www.aepd.es" target="_blank" rel="noopener noreferrer">www.aepd.es</a></strong></p>
+          </div>
+          <div>
+            <h2 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:26px;color:#10313F">10. Confidencialidad y seguridad</h2>
+            <p style="margin-top:12px">El responsable del tratamiento se compromete a mantener la confidencialidad de los datos personales y a aplicar las medidas técnicas y organizativas adecuadas para garantizar un nivel de seguridad apropiado al riesgo del tratamiento.</p>
+            <p style="margin-top:12px">El acceso a la información quedará limitado a aquellas personas que necesiten conocerla para el cumplimiento de las finalidades correspondientes y estarán sujetas, cuando proceda, al correspondiente deber de confidencialidad y secreto profesional.</p>
+            <p style="margin-top:12px">No obstante, ningún sistema de almacenamiento o transmisión de información por Internet puede garantizar una seguridad absoluta.</p>
+          </div>
+          <div>
+            <h2 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:26px;color:#10313F">11. Datos facilitados mediante formularios de contacto</h2>
+            <p style="margin-top:12px">El usuario garantiza que los datos que facilite a través de los formularios de contacto son verdaderos, exactos, completos y actualizados.</p>
+            <p style="margin-top:12px">El usuario será responsable de cualquier daño o perjuicio que pudiera ocasionar el suministro de datos falsos, inexactos o pertenecientes a terceras personas sin contar con la correspondiente autorización.</p>
+            <p style="margin-top:12px">Cuando el usuario facilite datos personales de terceras personas, deberá contar previamente con una base legítima para ello y, cuando corresponda, haber informado a dichas personas sobre la comunicación de sus datos.</p>
+          </div>
+          <div>
+            <h2 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:26px;color:#10313F">12. Política de cookies</h2>
+            <p style="margin-top:12px">Este sitio web puede utilizar cookies y tecnologías similares con la finalidad de garantizar su correcto funcionamiento, mejorar la experiencia de navegación del usuario y, cuando corresponda, obtener información sobre el uso que se realiza del sitio web.</p>
+            <p style="margin-top:12px">Las cookies son pequeños archivos que se almacenan en el dispositivo del usuario cuando visita determinadas páginas web y que permiten, entre otras funciones, recordar determinadas preferencias, facilitar la navegación y obtener información sobre el uso del sitio.</p>
+            <p style="margin-top:12px">Las cookies utilizadas en este sitio web podrán clasificarse, según su finalidad, en:</p>
+            <ul style="margin-top:12px;display:grid;gap:8px"><li><strong style="color:#10313F;font-weight:500">Cookies técnicas o necesarias:</strong> son aquellas imprescindibles para el correcto funcionamiento del sitio web y para permitir la navegación y utilización de sus diferentes opciones o servicios.</li><li><strong style="color:#10313F;font-weight:500">Cookies de preferencias o personalización:</strong> permiten recordar determinadas preferencias del usuario y adaptar determinados elementos de la navegación.</li><li><strong style="color:#10313F;font-weight:500">Cookies de análisis o medición:</strong> permiten obtener información sobre la forma en que los usuarios interactúan con el sitio web, con el objetivo de analizar y mejorar su funcionamiento.</li><li><strong style="color:#10313F;font-weight:500">Cookies de terceros:</strong> podrán ser instaladas por servicios externos utilizados en el sitio web, siempre que corresponda y se haya obtenido el consentimiento cuando resulte legalmente necesario.</li></ul>
+            <p style="margin-top:12px">Las cookies que no sean estrictamente necesarias para el funcionamiento del sitio web se instalarán únicamente cuando el usuario haya prestado su consentimiento, cuando este sea legalmente exigible.</p>
+            <p style="margin-top:12px">El usuario podrá aceptar, rechazar o configurar las cookies a través del panel de configuración habilitado en el sitio web. Asimismo, podrá modificar sus preferencias en cualquier momento.</p>
+            <p style="margin-top:12px">La desactivación de determinadas cookies puede afectar al funcionamiento de algunos servicios o funcionalidades de la página web.</p>
+            <p style="margin-top:12px">Para obtener información detallada sobre las cookies concretamente utilizadas, su finalidad, duración, titularidad y forma de gestión, el usuario podrá consultar la <button type="button" onClick="{{ irCookies }}" style="background:none;border:none;border-bottom:1px solid rgba(31,110,140,.5);color:#1F6E8C;padding:0;cursor:pointer;font-size:16.5px;font-weight:500">Política de Cookies</button> disponible en este sitio web.</p>
+            <p style="margin-top:12px">El tratamiento de datos personales que, en su caso, pueda derivarse del uso de determinadas cookies se realizará de conformidad con la normativa vigente en materia de protección de datos y con las condiciones establecidas en la presente Política de Privacidad.</p>
+            <button type="button" onClick="{{ abrirPanel }}" style="margin-top:22px;background:#1C5A73;color:#FFFFFF;border:none;min-height:50px;padding:0 26px;font-size:12px;letter-spacing:.16em;text-transform:uppercase;cursor:pointer" style-hover="background:#123F52">Configurar cookies</button>
+          </div>
+          <div>
+            <h2 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:26px;color:#10313F">13. Actualización de la Política de Privacidad</h2>
+            <p style="margin-top:12px">Esta Política de Privacidad podrá ser modificada cuando resulte necesario para adaptarla a cambios legislativos, jurisprudenciales, técnicos o en los tratamientos realizados a través del sitio web.</p>
+            <p style="margin-top:12px">La versión publicada en cada momento será la que resulte aplicable.</p>
+          </div>
+          <p style="padding-top:24px;border-top:1px solid #D3E2E9"><strong style="color:#10313F;font-weight:500">Última actualización: octubre de 2026.</strong></p>
+        </div>
+      </section>
+    </sc-if>
+
+    <!-- ══════════ COOKIES ══════════ -->
+    <sc-if value="{{ pCookies }}">
+      <section style="background:#EAF3F7;color:#10313F;padding:clamp(48px,6vw,80px) clamp(20px,5vw,56px)">
+        <div style="max-width:820px;margin:0 auto">
+          <p style="font-size:11.5px;letter-spacing:.3em;text-transform:uppercase;color:#1F6E8C;margin-bottom:18px">Cookies</p>
+          <h1 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(32px,4.4vw,50px);line-height:1.12">Política de cookies</h1>
+        </div>
+      </section>
+      <section style="background:#FBFAF7;padding:clamp(48px,7vw,90px) clamp(20px,5vw,56px)">
+        <div style="max-width:820px;margin:0 auto;font-size:16.5px;line-height:1.85;color:#3B5461;display:grid;gap:30px">
+          <p>La presente Política de cookies informa sobre el uso de cookies y tecnologías similares en este sitio web, de conformidad con el artículo 22.2 de la Ley 34/2002, de servicios de la sociedad de la información y de comercio electrónico (LSSI-CE), y con la normativa de protección de datos aplicable.</p>
+          <div>
+            <h2 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:26px;color:#10313F">1. ¿Qué son las cookies?</h2>
+            <p style="margin-top:12px">Las cookies son pequeños archivos que se almacenan en el dispositivo del usuario cuando visita determinadas páginas web. Permiten, entre otras funciones, recordar preferencias, facilitar la navegación u obtener información sobre el uso del sitio.</p>
+          </div>
+          <div>
+            <h2 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:26px;color:#10313F">2. Responsable</h2>
+            <p style="margin-top:12px">Antonio Villegas (Gestió Legal Jurídica). Correo electrónico: <a href="mailto:geslejuridica@gmail.com">geslejuridica@gmail.com</a>.</p>
+          </div>
+          <div>
+            <h2 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:26px;color:#10313F">3. Cookies utilizadas en este sitio web</h2>
+            <div style="margin-top:16px;display:grid;gap:1px;background:#D3E2E9;border:1px solid #D3E2E9">
+              <div style="background:#FFFFFF;padding:18px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,160px),1fr));gap:10px 24px">
+                <div><p style="font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;color:#1F6E8C">Tipo</p><p style="margin-top:4px;font-size:15.5px;line-height:1.6;color:#10313F">Técnica o necesaria</p></div>
+                <div><p style="font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;color:#1F6E8C">Finalidad</p><p style="margin-top:4px;font-size:15.5px;line-height:1.6">Recordar la decisión del usuario sobre la aceptación o el rechazo de cookies.</p></div>
+                <div><p style="font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;color:#1F6E8C">Titular</p><p style="margin-top:4px;font-size:15.5px;line-height:1.6">Propia</p></div>
+                <div><p style="font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;color:#1F6E8C">Duración</p><p style="margin-top:4px;font-size:15.5px;line-height:1.6">12 meses</p></div>
+              </div>
+              <div style="background:#FFFFFF;padding:18px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,160px),1fr));gap:10px 24px">
+                <div><p style="font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;color:#1F6E8C">Tipo</p><p style="margin-top:4px;font-size:15.5px;line-height:1.6;color:#10313F">Análisis o medición</p></div>
+                <div><p style="font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;color:#1F6E8C">Finalidad</p><p style="margin-top:4px;font-size:15.5px;line-height:1.6">Actualmente no se utilizan.</p></div>
+                <div><p style="font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;color:#1F6E8C">Titular</p><p style="margin-top:4px;font-size:15.5px;line-height:1.6">—</p></div>
+                <div><p style="font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;color:#1F6E8C">Duración</p><p style="margin-top:4px;font-size:15.5px;line-height:1.6">—</p></div>
+              </div>
+              <div style="background:#FFFFFF;padding:18px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,160px),1fr));gap:10px 24px">
+                <div><p style="font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;color:#1F6E8C">Tipo</p><p style="margin-top:4px;font-size:15.5px;line-height:1.6;color:#10313F">Publicidad</p></div>
+                <div><p style="font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;color:#1F6E8C">Finalidad</p><p style="margin-top:4px;font-size:15.5px;line-height:1.6">No se utilizan.</p></div>
+                <div><p style="font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;color:#1F6E8C">Titular</p><p style="margin-top:4px;font-size:15.5px;line-height:1.6">—</p></div>
+                <div><p style="font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;color:#1F6E8C">Duración</p><p style="margin-top:4px;font-size:15.5px;line-height:1.6">—</p></div>
+              </div>
+            </div>
+            <p style="margin-top:12px">Las cookies técnicas son imprescindibles para el funcionamiento del sitio y no requieren consentimiento. Si en el futuro se incorporan cookies de análisis u otras no necesarias, se informará en esta tabla y solo se instalarán con el consentimiento previo del usuario.</p>
+          </div>
+          <div>
+            <h2 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:26px;color:#10313F">4. Gestión del consentimiento</h2>
+            <p style="margin-top:12px">El usuario puede aceptar, rechazar o configurar las cookies no necesarias a través del aviso que aparece en su primera visita y modificar su decisión en cualquier momento desde el enlace «Configuración de cookies» del pie de página. Rechazar las cookies es tan sencillo como aceptarlas.</p>
+            <button type="button" onClick="{{ abrirPanel }}" style="margin-top:22px;background:#1C5A73;color:#FFFFFF;border:none;min-height:50px;padding:0 26px;font-size:12px;letter-spacing:.16em;text-transform:uppercase;cursor:pointer" style-hover="background:#123F52">Cambiar preferencias</button>
+          </div>
+          <div>
+            <h2 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:26px;color:#10313F">5. Desactivación desde el navegador</h2>
+            <p style="margin-top:12px">El usuario también puede bloquear o eliminar las cookies desde la configuración de privacidad de su navegador (Chrome, Firefox, Safari, Edge u otros). La desactivación de las cookies técnicas puede afectar al funcionamiento de algunas partes del sitio web.</p>
+          </div>
+          <div>
+            <h2 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:26px;color:#10313F">6. Más información</h2>
+            <p style="margin-top:12px">El tratamiento de los datos personales que pueda derivarse del uso de cookies se rige por la <button type="button" onClick="{{ irPrivacidad }}" style="background:none;border:none;border-bottom:1px solid rgba(31,110,140,.5);color:#1F6E8C;padding:0;cursor:pointer;font-size:16.5px">Política de privacidad</button>. Para cualquier consulta, el usuario puede escribir a <a href="mailto:geslejuridica@gmail.com">geslejuridica@gmail.com</a>.</p>
+          </div>
+          <p style="padding-top:24px;border-top:1px solid #D3E2E9"><strong style="color:#10313F;font-weight:500">Última actualización: octubre de 2026.</strong></p>
+        </div>
+      </section>
+    </sc-if>
+
+  </main>
+
+  <footer style="background:#DCEBF2;color:#10313F;padding:clamp(48px,6vw,84px) clamp(20px,5vw,56px) 32px;border-top:1px solid rgba(31,110,140,.28)">
+    <div style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:clamp(32px,4vw,64px)">
+      <div>
+        <div style="display:flex;align-items:center;gap:14px">
+          <img src="assets/logo-gl.png" alt="" width="96" height="96" style="width:96px;height:96px;object-fit:cover;object-position:50% 26%;border:1px solid rgba(31,110,140,.5)" />
+          <span style="font-family:'Cormorant Garamond',serif;font-size:17px;letter-spacing:.18em;text-transform:uppercase;line-height:1.2">Gestió Legal<br />Jurídica</span>
+        </div>
+        <p style="margin-top:22px;font-size:15px;line-height:1.8;color:rgba(16,49,63,.78)">Antonio Villegas<br />Abogado · ICAG núm. 3913</p>
+        <p style="margin-top:16px;font-size:15px;line-height:1.9"><a href="tel:+34645877276" style="color:#1F6E8C;border-bottom-color:rgba(31,110,140,.4)">645 877 276</a><br /><a href="mailto:geslejuridica@gmail.com" style="color:#1F6E8C;border-bottom-color:rgba(31,110,140,.4)">geslejuridica@gmail.com</a></p>
+        <p style="margin-top:16px;font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:rgba(16,49,63,.72)">Girona · Sant Feliu de Guíxols</p>
+      </div>
+      <nav aria-label="Secciones" style="display:grid;gap:2px;align-content:start">
+        <p style="font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:#1F6E8C;margin-bottom:12px">Web</p>
+        <button type="button" onClick="{{ irInicio }}" style="background:none;border:none;color:rgba(16,49,63,.8);font-size:15px;text-align:left;padding:8px 0;min-height:40px;cursor:pointer" style-hover="color:#1F6E8C">Inicio</button>
+        <button type="button" onClick="{{ irDespacho }}" style="background:none;border:none;color:rgba(16,49,63,.8);font-size:15px;text-align:left;padding:8px 0;min-height:40px;cursor:pointer" style-hover="color:#1F6E8C">El despacho</button>
+        <button type="button" onClick="{{ irProceso }}" style="background:none;border:none;color:rgba(16,49,63,.8);font-size:15px;text-align:left;padding:8px 0;min-height:40px;cursor:pointer" style-hover="color:#1F6E8C">Cómo trabajo</button>
+        <button type="button" onClick="{{ irProblema }}" style="background:none;border:none;color:rgba(16,49,63,.8);font-size:15px;text-align:left;padding:8px 0;min-height:40px;cursor:pointer" style-hover="color:#1F6E8C">¿Tienes un problema legal?</button>
+        <button type="button" onClick="{{ irGirona }}" style="background:none;border:none;color:rgba(16,49,63,.8);font-size:15px;text-align:left;padding:8px 0;min-height:40px;cursor:pointer" style-hover="color:#1F6E8C">Girona</button>
+        <button type="button" onClick="{{ irSfg }}" style="background:none;border:none;color:rgba(16,49,63,.8);font-size:15px;text-align:left;padding:8px 0;min-height:40px;cursor:pointer" style-hover="color:#1F6E8C">Sant Feliu de Guíxols</button>
+        <sc-if value="{{ blogVisible }}" hint-placeholder-val="{{ true }}">
+          <button type="button" onClick="{{ irBlog }}" style="background:none;border:none;color:rgba(16,49,63,.8);font-size:15px;text-align:left;padding:8px 0;min-height:40px;cursor:pointer" style-hover="color:#1F6E8C">El Derecho, más cerca</button>
+        </sc-if>
+        <button type="button" onClick="{{ irContacto }}" style="background:none;border:none;color:rgba(16,49,63,.8);font-size:15px;text-align:left;padding:8px 0;min-height:40px;cursor:pointer" style-hover="color:#1F6E8C">Contacto</button>
+      </nav>
+      <nav aria-label="Información legal" style="display:grid;gap:2px;align-content:start">
+        <p style="font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:#1F6E8C;margin-bottom:12px">Legal</p>
+        <button type="button" onClick="{{ irAviso }}" style="background:none;border:none;color:rgba(16,49,63,.8);font-size:15px;text-align:left;padding:8px 0;min-height:40px;cursor:pointer" style-hover="color:#1F6E8C">Aviso legal</button>
+        <button type="button" onClick="{{ irPrivacidad }}" style="background:none;border:none;color:rgba(16,49,63,.8);font-size:15px;text-align:left;padding:8px 0;min-height:40px;cursor:pointer" style-hover="color:#1F6E8C">Privacidad</button>
+        <button type="button" onClick="{{ irCookies }}" style="background:none;border:none;color:rgba(16,49,63,.8);font-size:15px;text-align:left;padding:8px 0;min-height:40px;cursor:pointer" style-hover="color:#1F6E8C">Cookies</button>
+        <button type="button" onClick="{{ abrirPanel }}" style="background:none;border:none;color:rgba(16,49,63,.8);font-size:15px;text-align:left;padding:8px 0;min-height:40px;cursor:pointer" style-hover="color:#1F6E8C">Configuración de cookies</button>
+      </nav>
+    </div>
+    <div style="max-width:1180px;margin:clamp(36px,4vw,56px) auto 0;padding-top:24px;border-top:1px solid rgba(31,110,140,.2);display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;font-size:12.5px;color:rgba(16,49,63,.7);line-height:1.7">
+      <span>© 2026 Gestió Legal Jurídica · Antonio Villegas</span>
+      <span>La información de este sitio es general y no constituye asesoramiento jurídico personalizado.</span>
+    </div>
+  </footer>
+
+  <sc-if value="{{ bannerVisible }}">
+    <div role="dialog" aria-modal="false" aria-label="Aviso de cookies" style="position:fixed;left:0;right:0;bottom:0;z-index:150;background:#EAF3F7;border-top:1px solid rgba(31,110,140,.4);padding:20px clamp(18px,4vw,44px)">
+      <div style="max-width:1180px;margin:0 auto;display:flex;flex-wrap:wrap;gap:18px;align-items:center;justify-content:space-between">
+        <p style="font-size:14.5px;line-height:1.7;color:rgba(16,49,63,.86);max-width:62ch">Este sitio solo utiliza cookies técnicas necesarias para su funcionamiento. Más información en la <button type="button" onClick="{{ irCookies }}" style="background:none;border:none;border-bottom:1px solid rgba(31,110,140,.5);color:#1F6E8C;padding:0;cursor:pointer;font-size:14.5px">política de cookies</button>.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:10px">
+          <button type="button" onClick="{{ rechazar }}" style="background:transparent;color:#10313F;border:1px solid rgba(16,49,63,.7);min-height:48px;padding:0 22px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;cursor:pointer" style-hover="border-color:#10313F">Rechazar</button>
+          <button type="button" onClick="{{ abrirPanel }}" style="background:transparent;color:#10313F;border:1px solid rgba(16,49,63,.7);min-height:48px;padding:0 22px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;cursor:pointer" style-hover="border-color:#10313F">Configurar</button>
+          <button type="button" onClick="{{ aceptar }}" style="background:#1C5A73;color:#FFFFFF;border:none;min-height:48px;padding:0 26px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;cursor:pointer" style-hover="background:#123F52">Aceptar</button>
+        </div>
+      </div>
+    </div>
+  </sc-if>
+
+  <sc-if value="{{ panelVisible }}">
+    <div role="dialog" aria-modal="true" aria-label="Configuración de cookies" style="position:fixed;inset:0;z-index:160;background:rgba(16,49,63,.5);display:flex;align-items:center;justify-content:center;padding:20px">
+      <div style="background:#FBFAF7;max-width:560px;width:100%;padding:clamp(24px,3.4vw,38px);border:1px solid rgba(31,110,140,.5);max-height:86vh;overflow:auto">
+        <h2 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:30px">Configuración de cookies</h2>
+        <p style="margin-top:14px;font-size:15.5px;line-height:1.75;color:#3B5461">Elige qué cookies permites. Puedes cambiar esta decisión cuando quieras desde el pie de página.</p>
+        <div style="margin-top:24px;display:grid;gap:1px;background:#D3E2E9;border:1px solid #D3E2E9">
+          <div style="background:#FFFFFF;padding:18px;display:flex;gap:14px;align-items:flex-start">
+            <input type="checkbox" checked="{{ true }}" disabled="" aria-label="Cookies necesarias, siempre activas" style="width:20px;height:20px;margin-top:2px;accent-color:#1F6E8C;flex:none" />
+            <div>
+              <p style="font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;color:#10313F">Necesarias · siempre activas</p>
+              <p style="margin-top:8px;font-size:15px;line-height:1.7;color:#3B5461">Permiten el funcionamiento básico del sitio y recordar tu decisión.</p>
+            </div>
+          </div>
+          <div style="background:#FFFFFF;padding:18px;display:flex;gap:14px;align-items:flex-start">
+            <input type="checkbox" disabled="" aria-label="Cookies analíticas, no se utilizan" style="width:20px;height:20px;margin-top:2px;flex:none" />
+            <div>
+              <p style="font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;color:#10313F">Analíticas · no se utilizan actualmente</p>
+              <p style="margin-top:8px;font-size:15px;line-height:1.7;color:#3B5461">Si en el futuro se incorporan, solo se activarán con tu consentimiento.</p>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:26px">
+          <button type="button" onClick="{{ guardar }}" style="background:#1C5A73;color:#FFFFFF;border:none;min-height:50px;padding:0 26px;font-size:12px;letter-spacing:.16em;text-transform:uppercase;cursor:pointer" style-hover="background:#123F52">Guardar preferencias</button>
+          <button type="button" onClick="{{ rechazar }}" style="background:transparent;color:#10313F;border:1px solid #BCD2DC;min-height:50px;padding:0 22px;font-size:12px;letter-spacing:.16em;text-transform:uppercase;cursor:pointer" style-hover="border-color:#10313F">Rechazar todas</button>
+          <button type="button" onClick="{{ cerrarPanel }}" style="background:none;border:none;color:#3B5461;min-height:50px;padding:0 12px;font-size:12px;letter-spacing:.16em;text-transform:uppercase;cursor:pointer" style-hover="color:#10313F">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </sc-if>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;heroVariante&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;A&quot;,&quot;B&quot;,&quot;C&quot;],&quot;default&quot;:&quot;C&quot;,&quot;tsType&quot;:&quot;'A'|'B'|'C'&quot;,&quot;section&quot;:&quot;Contenido&quot;},&quot;mostrarBlog&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Contenido&quot;},&quot;mostrarAvisoCookies&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Cumplimiento&quot;}}">
+const LANG = 'es';
+const FILES = { es: 'Gestio Legal Juridica v2.dc.html', ca: 'Gestio Legal Juridica v2 CA.dc.html', ru: 'Gestio Legal Juridica v2 RU.dc.html' };
+const PAGES = ['inicio','despacho','proceso','problema','girona','sfg','blog','contacto','aviso','privacidad','cookies'];
+const FAQS = [["¿Cuándo debería consultar con un abogado?","Cuando exista una situación que pueda tener consecuencias jurídicas, especialmente antes de firmar documentos, iniciar una reclamación, responder a una demanda o recibir una notificación judicial."],["¿Puedo consultar con un abogado aunque todavía no quiera iniciar ninguna acción?","Sí. Una consulta jurídica puede servir para conocer las opciones disponibles y valorar qué actuación puede resultar más conveniente antes de tomar una decisión."],["¿Qué hago si recibo una demanda o una notificación judicial?","No debe ignorarse. Los procedimientos judiciales están sujetos a plazos, por lo que es recomendable consultar cuanto antes con un abogado para conocer el contenido de la notificación y las actuaciones que correspondan."],["¿Es necesario acudir siempre a los tribunales para resolver un conflicto?","No necesariamente. Dependiendo de la naturaleza del conflicto, pueden existir alternativas como la negociación, la mediación u otras vías extrajudiciales."],["¿Puedo reclamar si considero que se han vulnerado mis derechos?","En muchos casos existen mecanismos de reclamación, pero las posibilidades y los plazos dependen de la naturaleza concreta del asunto. Es necesario analizar cada situación individualmente."],["¿Cuánto tiempo tengo para presentar una reclamación?","No existe un único plazo para todas las reclamaciones. Los plazos dependen del tipo de acción y de la legislación aplicable, por lo que es importante consultar el caso concreto."],["¿Una consulta jurídica implica contratar al abogado?","No necesariamente. La consulta y la contratación de servicios profesionales son cuestiones diferentes. La relación profesional se establecerá cuando corresponda y conforme a las condiciones acordadas."]];
+class Component extends DCLogic {
+  state = { page: 'inicio', enviado: false, cookies: null, panel: false, analitica: false, w: typeof window !== 'undefined' ? window.innerWidth : 1400, menu: false, faq: -1 };
+
+  componentDidMount() {
+    this.onResize = () => this.setState({ w: window.innerWidth, menu: window.innerWidth >= 900 ? false : this.state.menu });
+    window.addEventListener('resize', this.onResize);
+    this.onResize();
+    document.documentElement.lang = LANG;
+    const hp = (window.location.hash || '').slice(1);
+    if (PAGES.includes(hp)) this.setState({ page: hp });
+  }
+  componentWillUnmount() { window.removeEventListener('resize', this.onResize); }
+
+  go(page) {
+    this.setState({ page, enviado: false, menu: false });
+    try { history.replaceState(null, '', '#' + page); } catch (e) {}
+    if (typeof window !== 'undefined') window.scrollTo({ top: 0, behavior: 'auto' });
+  }
+
+  renderVals() {
+    const p = this.state.page;
+    const v = this.props.heroVariante || 'C';
+    const blog = this.props.mostrarBlog !== false;
+    const decidido = this.state.cookies !== null;
+    return {
+      pInicio: p === 'inicio', pDespacho: p === 'despacho', pProceso: p === 'proceso',
+      pProblema: p === 'problema', pGirona: p === 'girona', pSfg: p === 'sfg',
+      pBlog: p === 'blog' && blog, pContacto: p === 'contacto',
+      pAviso: p === 'aviso', pPrivacidad: p === 'privacidad', pCookies: p === 'cookies',
+      blogVisible: blog,
+      hrefEs: encodeURI(FILES.es) + '#' + p, hrefCa: encodeURI(FILES.ca) + '#' + p, hrefRu: encodeURI(FILES.ru) + '#' + p,
+      faqs: FAQS.map(([q, a], i) => ({ q, a, open: this.state.faq === i, sign: this.state.faq === i ? '−' : '+', toggle: () => this.setState(s => ({ faq: s.faq === i ? -1 : i })) })),
+      ambitosCols: this.state.w >= 1100 ? 4 : this.state.w >= 620 ? 2 : 1,
+      wide: this.state.w >= 1580, midNav: this.state.w >= 900 && this.state.w < 1580, narrow: this.state.w < 900,
+      showCta: this.state.w >= 720,
+      menuOpen: this.state.menu && this.state.w < 900,
+      menuLabel: this.state.menu ? 'Cerrar' : 'Menú',
+      toggleMenu: () => this.setState(s => ({ menu: !s.menu })),
+      varA: v === 'A', varB: v === 'B', varC: v === 'C',
+      enviado: this.state.enviado, noEnviado: !this.state.enviado,
+      analitica: this.state.analitica,
+      panelVisible: this.state.panel,
+      bannerVisible: !decidido && !this.state.panel && this.props.mostrarAvisoCookies !== false,
+      irInicio: () => this.go('inicio'),
+      irDespacho: () => this.go('despacho'),
+      irProceso: () => this.go('proceso'),
+      irProblema: () => this.go('problema'),
+      irGirona: () => this.go('girona'),
+      irSfg: () => this.go('sfg'),
+      irBlog: () => this.go('blog'),
+      irContacto: () => this.go('contacto'),
+      irAviso: () => this.go('aviso'),
+      irPrivacidad: () => this.go('privacidad'),
+      irCookies: () => this.go('cookies'),
+      enviar: (e) => { e.preventDefault(); this.setState({ enviado: true }); },
+      abrirPanel: () => this.setState({ panel: true }),
+      cerrarPanel: () => this.setState({ panel: false }),
+      toggleAnalitica: (e) => this.setState({ analitica: e.target.checked }),
+      guardar: () => this.setState({ panel: false, cookies: { analitica: this.state.analitica } }),
+      aceptar: () => this.setState({ analitica: true, panel: false, cookies: { analitica: true } }),
+      rechazar: () => this.setState({ analitica: false, panel: false, cookies: { analitica: false } })
+    };
+  }
+}
+
+</script>
+</body>
+</html>
