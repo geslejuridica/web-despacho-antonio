@@ -23,6 +23,31 @@
   ::selection { background: #BFE0EE; color: #10313F; }
   @keyframes glj-rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
 </style>
+<style>
+  /* ---- Ajustes para movil (anadido 2026-10) ---- */
+  @media (max-width: 899px) {
+    header > div:first-child { flex-wrap: wrap !important; gap: 10px 12px !important; padding-left: 14px !important; padding-right: 14px !important; }
+    header > div:first-child > div { flex: 1 1 100% !important; justify-content: space-between !important; gap: 6px !important; }
+    header nav[aria-label="Idioma / Language"] { margin-right: 0 !important; }
+    header nav[aria-label="Idioma / Language"] a { padding: 0 4px !important; gap: 4px !important; }
+    header a[href^="tel:"] { padding: 0 10px !important; }
+    main div, main p, main h1, main h2, main h3, main ul, main ol, main li, main figure, main form, main fieldset,
+    footer div, footer p, footer ul, footer li { min-width: 0 !important; }
+    main p, main h1, main h2, main h3, main li, footer p, footer li { overflow-wrap: break-word; }
+  }
+  @media (max-width: 400px) {
+    header > div:first-child { padding-left: 12px !important; padding-right: 12px !important; }
+    header > div:first-child > div { gap: 4px !important; }
+    header > div:first-child > button[aria-label] { gap: 11px !important; }
+    header > div:first-child > button[aria-label] img { width: 54px !important; height: 54px !important; }
+    header > div:first-child > button[aria-label] span > span:first-child { font-size: 17.5px !important; }
+    header > div:first-child > button[aria-label] span > span:last-child { font-size: 9.5px !important; letter-spacing: .12em !important; }
+    header nav[aria-label="Idioma / Language"] a { padding: 0 2px !important; gap: 3px !important; }
+    header nav[aria-label="Idioma / Language"] a > span[aria-hidden] { width: 15px !important; height: 10px !important; }
+    header a[href^="tel:"] { padding: 0 8px !important; font-size: 12px !important; }
+    header > div:first-child > div > button:last-child { padding: 0 10px !important; }
+  }
+</style>
 </helmet>
 
 <div style="font-family:'Jost',system-ui,sans-serif;color:#10313F;background:#FBFAF7;min-height:100vh;text-wrap:pretty">
@@ -100,7 +125,7 @@
     <sc-if value="{{ pInicio }}" hint-placeholder-val="{{ true }}">
       <section style="background:#EAF3F7;color:#10313F;padding:clamp(48px,7vw,100px) clamp(20px,5vw,56px) clamp(56px,7vw,96px);position:relative;overflow:hidden">
         <div style="position:absolute;inset:14px;border:1px solid rgba(31,110,140,.22);pointer-events:none"></div>
-        <div style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:clamp(36px,5vw,72px);align-items:start;position:relative">
+        <div style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr));gap:clamp(36px,5vw,72px);align-items:start;position:relative">
           <div style="animation:glj-rise .7s ease both">
             <p style="font-size:11.5px;letter-spacing:.3em;text-transform:uppercase;color:#1F6E8C;margin-bottom:26px">Girona · Sant Feliu de Guíxols</p>
             <sc-if value="{{ varA }}" hint-placeholder-val="{{ true }}">
@@ -142,7 +167,7 @@
       </figure>
 
       <section style="background:#FBFAF7;padding:clamp(64px,9vw,124px) clamp(20px,5vw,56px)">
-        <div style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:clamp(36px,5vw,80px);align-items:start">
+        <div style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:clamp(36px,5vw,80px);align-items:start">
           <div>
             <p style="font-size:11.5px;letter-spacing:.3em;text-transform:uppercase;color:#1F6E8C;margin-bottom:22px">El plantejament</p>
             <h2 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(30px,4vw,50px);line-height:1.14">Cada cas mereix una anàlisi completa, no una etiqueta.</h2>
@@ -164,7 +189,7 @@
             </div>
             <button type="button" onClick="{{ irProceso }}" style="background:transparent;color:#1F6E8C;border:1px solid rgba(31,110,140,.45);min-height:48px;padding:0 24px;font-size:12px;letter-spacing:.16em;text-transform:uppercase;cursor:pointer" style-hover="background:rgba(31,110,140,.1)">Veure el procés complet</button>
           </div>
-          <ol style="list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1px;background:rgba(31,110,140,.24)">
+          <ol style="list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(200px,100%),1fr));gap:1px;background:rgba(31,110,140,.24)">
             <li style="background:#EAF3F7;padding:clamp(24px,3vw,34px)">
               <span style="font-family:'Cormorant Garamond',serif;font-size:34px;color:#1F6E8C">01</span>
               <h3 style="font-size:13px;letter-spacing:.2em;text-transform:uppercase;margin:14px 0 12px;font-weight:500">Escoltar</h3>
@@ -199,7 +224,7 @@
           <p style="font-size:11.5px;letter-spacing:.3em;text-transform:uppercase;color:#1F6E8C;margin-bottom:22px">Tens un problema legal?</p>
           <h2 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(30px,4.2vw,54px);line-height:1.12;max-width:22ch">Comença per explicar-ho amb les teves paraules.</h2>
           <p style="margin-top:24px;max-width:58ch;font-size:17px;line-height:1.8;color:#3B5461">Aquestes són algunes de les maneres en què les persones descriuen la seva situació quan arriben al despatx. Cap no esmenta una branca del Dret, i no cal que la teva ho faci.</p>
-          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px;margin-top:40px">
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(250px,100%),1fr));gap:14px;margin-top:40px">
             <p style="border:1px solid #D3E2E9;background:#FFFFFF;padding:22px;font-family:'Cormorant Garamond',serif;font-size:20px;line-height:1.45">«M'han acomiadat i no sé si és correcte el que m'ofereixen.»</p>
             <p style="border:1px solid #D3E2E9;background:#FFFFFF;padding:22px;font-family:'Cormorant Garamond',serif;font-size:20px;line-height:1.45">«He rebut una carta i no entenc què em reclamen.»</p>
             <p style="border:1px solid #D3E2E9;background:#FFFFFF;padding:22px;font-family:'Cormorant Garamond',serif;font-size:20px;line-height:1.45">«Tinc un desacord amb un familiar i no sé com resoldre'l.»</p>
@@ -212,7 +237,7 @@
       </section>
       <section style="background:#EAF3F7;padding:clamp(64px,9vw,124px) clamp(20px,5vw,56px)">
         <div style="max-width:1180px;margin:0 auto">
-          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:clamp(24px,4vw,64px);align-items:end;margin-bottom:clamp(36px,4vw,56px)">
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:clamp(24px,4vw,64px);align-items:end;margin-bottom:clamp(36px,4vw,56px)">
             <div>
               <p style="font-size:11.5px;letter-spacing:.3em;text-transform:uppercase;color:#1F6E8C;margin-bottom:20px">Assumptes que arriben al despatx</p>
               <h2 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(30px,4vw,50px);line-height:1.14">Alguns dels àmbits en què treballo</h2>
@@ -262,7 +287,7 @@
       <section style="background:#EAF3F7;color:#10313F;padding:clamp(64px,9vw,110px) clamp(20px,5vw,56px)">
         <div style="max-width:1180px;margin:0 auto">
           <p style="font-size:11.5px;letter-spacing:.3em;text-transform:uppercase;color:#1F6E8C;margin-bottom:34px">On atenc</p>
-          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1px;background:rgba(31,110,140,.24)">
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(280px,100%),1fr));gap:1px;background:rgba(31,110,140,.24)">
             <div style="background:#EAF3F7;padding:clamp(28px,4vw,44px)">
               <h3 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(26px,3vw,36px)">Girona</h3>
               <p style="margin-top:16px;font-size:16px;line-height:1.75;color:rgba(16,49,63,.78)">Atenció a persones i famílies de la ciutat i la seva àrea, amb cita prèvia.</p>
@@ -289,7 +314,7 @@
         </div>
       </section>
       <section style="background:#FBFAF7;padding:clamp(56px,8vw,110px) clamp(20px,5vw,56px)">
-        <div style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:clamp(36px,5vw,72px);align-items:start">
+        <div style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(290px,100%),1fr));gap:clamp(36px,5vw,72px);align-items:start">
           <div>
             <div style="border:1px solid #D3E2E9;background:#FFFFFF;padding:24px">
               <div style="display:flex;align-items:center;gap:18px">
@@ -308,7 +333,7 @@
             <p>La meva manera de treballar parteix d'una convicció senzilla: la persona que arriba amb un problema no té per què saber Dret. El que necessita és que algú escolti els fets, els analitzi amb rigor i li expliqui, sense tecnicismes innecessaris, quines opcions hi ha i què implica cadascuna.</p>
             <p>Aquesta anàlisi prèvia és la feina real. A partir d'aquí, la decisió d'actuar la prenem junts, amb la informació sobre la taula.</p>
             <div style="display:grid;border-bottom:1px solid #D3E2E9">
-              <div style="display:grid;grid-template-columns:minmax(120px,170px) minmax(0,1fr);gap:12px 24px;padding:20px 0;border-top:1px solid #D3E2E9">
+              <div style="display:grid;grid-template-columns:minmax(min(120px,100%),170px) minmax(0,1fr);gap:12px 24px;padding:20px 0;border-top:1px solid #D3E2E9">
                 <h3 style="font-size:11.5px;letter-spacing:.22em;text-transform:uppercase;color:#1F6E8C;font-weight:500;padding-top:4px">Formació</h3>
                 <ul style="list-style:none;padding:0;display:grid;gap:6px;color:#10313F">
                   <li>Graduat en Dret</li>
@@ -406,7 +431,7 @@
         </div>
       </section>
       <section style="background:#FBFAF7;padding:clamp(56px,8vw,110px) clamp(20px,5vw,56px)">
-        <div style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:clamp(36px,5vw,72px);align-items:start">
+        <div style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:clamp(36px,5vw,72px);align-items:start">
           <div style="display:grid;gap:24px">
             <h2 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(26px,3.2vw,38px);line-height:1.2">Què passa quan escrius</h2>
             <ol style="font-size:16.5px;line-height:1.8;color:#3B5461;display:grid;gap:12px">
@@ -430,7 +455,7 @@
                   <label for="glj-nombre" style="font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#3B5461">Nom</label>
                   <input id="glj-nombre" name="nombre" type="text" autocomplete="name" required="" style="border:1px solid #BCD2DC;background:#FBFAF7;padding:14px;font-size:16px;min-height:50px;color:#10313F" />
                 </div>
-                <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px">
+                <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(160px,100%),1fr));gap:16px">
                   <div style="display:grid;gap:8px">
                     <label for="glj-tel" style="font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#3B5461">Telèfon</label>
                     <input id="glj-tel" name="telefono" type="tel" autocomplete="tel" style="border:1px solid #BCD2DC;background:#FBFAF7;padding:14px;font-size:16px;min-height:50px;color:#10313F" />
@@ -481,7 +506,7 @@
         </div>
       </section>
       <section style="background:#FBFAF7;padding:clamp(56px,8vw,110px) clamp(20px,5vw,56px)">
-        <div style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:clamp(36px,5vw,72px);align-items:start">
+        <div style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:clamp(36px,5vw,72px);align-items:start">
           <div style="display:grid;gap:22px;font-size:17px;line-height:1.8;color:#3B5461">
             <p style="font-family:'Cormorant Garamond',serif;font-size:clamp(22px,2.4vw,30px);line-height:1.45;color:#10313F">A Girona atenc qui arriba amb un problema i encara no sap com es diu jurídicament.</p>
             <p>Moltes de les persones que acudeixen al meu despatx de Girona ho fan després de rebre una carta, una notificació o una comunicació que no entenen, o després d'un conflicte que s'ha allargat més del que esperaven. Cada consulta comença sempre igual: m'expliques què ha passat.</p>
@@ -518,7 +543,7 @@
         </div>
       </section>
       <section style="background:#FBFAF7;padding:clamp(56px,8vw,110px) clamp(20px,5vw,56px)">
-        <div style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:clamp(36px,5vw,72px);align-items:start">
+        <div style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:clamp(36px,5vw,72px);align-items:start">
           <div style="display:grid;gap:22px;font-size:17px;line-height:1.8;color:#3B5461">
             <p style="font-family:'Cormorant Garamond',serif;font-size:clamp(22px,2.4vw,30px);line-height:1.45;color:#10313F">A la costa del Baix Empordà, tenir el despatx a prop canvia com s'afronta un problema.</p>
             <p>Sant Feliu de Guíxols viu amb dos ritmes: el de tot l'any i el de la temporada. Això es nota en els assumptes que arriben al despatx, en les relacions de veïnatge i en l'habitatge, i també en la dificultat de trobar temps per tractar un problema legal amb calma.</p>
@@ -754,7 +779,7 @@
         </div>
       </section>
       <section style="background:#FBFAF7;padding:clamp(56px,8vw,110px) clamp(20px,5vw,56px)">
-        <div style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:clamp(36px,5vw,72px);align-items:start">
+        <div style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(290px,100%),1fr));gap:clamp(36px,5vw,72px);align-items:start">
           <div style="display:grid;gap:16px">
             <div style="border:1px solid #D3E2E9;background:#FFFFFF;padding:clamp(24px,3vw,34px)">
               <p style="font-family:'Cormorant Garamond',serif;font-size:22px;letter-spacing:.14em;text-transform:uppercase">Gestió Legal Jurídica</p>
@@ -1005,7 +1030,7 @@
   </main>
 
   <footer style="background:#DCEBF2;color:#10313F;padding:clamp(48px,6vw,84px) clamp(20px,5vw,56px) 32px;border-top:1px solid rgba(31,110,140,.28)">
-    <div style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:clamp(32px,4vw,64px)">
+    <div style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(240px,100%),1fr));gap:clamp(32px,4vw,64px)">
       <div>
         <div style="display:flex;align-items:center;gap:14px">
           <img src="assets/logo-gl.png" alt="" width="96" height="96" style="width:96px;height:96px;object-fit:cover;object-position:50% 26%;border:1px solid rgba(31,110,140,.5)" />
@@ -1095,10 +1120,10 @@ const FILES = { es: 'Gestio Legal Juridica v2.dc.html', ca: 'Gestio Legal Juridi
 const PAGES = ['inicio','despacho','proceso','problema','girona','sfg','blog','contacto','aviso','privacidad','cookies'];
 const FAQS = [["Quan hauria de consultar amb un advocat?","Quan hi hagi una situació que pugui tenir conseqüències jurídiques, especialment abans de signar documents, iniciar una reclamació, respondre a una demanda o rebre una notificació judicial."],["Puc consultar amb un advocat encara que no vulgui iniciar cap acció?","Sí. Una consulta jurídica pot servir per conèixer les opcions disponibles i valorar quina actuació pot ser més convenient abans de prendre una decisió."],["Què faig si rebo una demanda o una notificació judicial?","No s'ha d'ignorar. Els procediments judicials estan subjectes a terminis, per la qual cosa és recomanable consultar al més aviat possible amb un advocat per conèixer el contingut de la notificació i les actuacions que corresponguin."],["Cal acudir sempre als tribunals per resoldre un conflicte?","No necessàriament. Depenent de la naturalesa del conflicte, hi pot haver alternatives com la negociació, la mediació o altres vies extrajudicials."],["Puc reclamar si considero que s'han vulnerat els meus drets?","En molts casos hi ha mecanismes de reclamació, però les possibilitats i els terminis depenen de la naturalesa concreta de l'assumpte. Cal analitzar cada situació individualment."],["Quant de temps tinc per presentar una reclamació?","No hi ha un termini únic per a totes les reclamacions. Els terminis depenen del tipus d'acció i de la legislació aplicable, per la qual cosa és important consultar el cas concret."],["Una consulta jurídica implica contractar l'advocat?","No necessàriament. La consulta i la contractació de serveis professionals són qüestions diferents. La relació professional s'establirà quan correspongui i d'acord amb les condicions acordades."]];
 class Component extends DCLogic {
-  state = { page: 'inicio', enviado: false, cookies: null, panel: false, analitica: false, w: typeof window !== 'undefined' ? window.innerWidth : 1400, menu: false, faq: -1 };
+  state = { page: 'inicio', enviado: false, cookies: null, panel: false, analitica: false, w: typeof window !== 'undefined' ? document.documentElement.clientWidth : 1400, menu: false, faq: -1 };
 
   componentDidMount() {
-    this.onResize = () => this.setState({ w: window.innerWidth, menu: window.innerWidth >= 900 ? false : this.state.menu });
+    this.onResize = () => this.setState({ w: document.documentElement.clientWidth, menu: document.documentElement.clientWidth >= 900 ? false : this.state.menu });
     window.addEventListener('resize', this.onResize);
     this.onResize();
     document.documentElement.lang = LANG;
