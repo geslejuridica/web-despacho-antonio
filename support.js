@@ -1140,11 +1140,11 @@
   }
 
   // src/cdn.ts
-  var REACT_URL = "./assets/vendor/react.production.min.js";
+  var REACT_URL = "/assets/vendor/react.production.min.js";
   var REACT_SRI = "";
-  var REACT_DOM_URL = "./assets/vendor/react-dom.production.min.js";
+  var REACT_DOM_URL = "/assets/vendor/react-dom.production.min.js";
   var REACT_DOM_SRI = "";
-  var BABEL_URL = "./assets/vendor/babel.min.js";
+  var BABEL_URL = "/assets/vendor/babel.min.js";
   var BABEL_SRI = "";
   function cdnScriptFor(url, sri) {
     const res = window.__resources;
