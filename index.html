@@ -53,6 +53,9 @@
 <style>
   /* ---- Ajustes para movil (anadido 2026-10) ---- */
   @media (max-width: 899px) {
+    /* foto del Cami de Ronda en movil: encuadre del templete y pie de foto debajo, sin tapar la imagen */
+    main figure > img[src*="cami-ronda"] { height: clamp(280px, 75vw, 420px) !important; object-position: 80% 50% !important; }
+    main figure > figcaption[style*="absolute"] { position: static !important; display: block !important; background: transparent !important; padding: 10px 20px 14px !important; font-size: 11.5px !important; line-height: 1.5 !important; letter-spacing: .04em !important; color: #3B5461 !important; }
     header > div:first-child { flex-wrap: wrap !important; gap: 10px 12px !important; padding-left: 14px !important; padding-right: 14px !important; }
     header > div:first-child > div { flex: 1 1 100% !important; justify-content: space-between !important; gap: 6px !important; }
     header nav[aria-label="Idioma / Language"] { margin-right: 0 !important; }
@@ -176,7 +179,7 @@
 
           <div style="animation:glj-rise .9s ease both;max-width:300px;width:100%;justify-self:center">
             <div style="border:1px solid rgba(31,110,140,.32);padding:clamp(12px,1.4vw,18px);background:#FFFFFF">
-              <img src="/assets/antonio-despacho.jpg" alt="Antonio Villegas, abogado, sentado en su despacho" width="960" height="1200" fetchpriority="high" style="display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:50% 22%" />
+              <img src="/assets/antonio-despacho.jpg" alt="Antonio Villegas, abogado en Girona y Sant Feliu de Guíxols, sentado en su despacho" width="960" height="1200" fetchpriority="high" style="display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:50% 22%" />
               <div style="display:flex;align-items:center;justify-content:space-between;gap:16px;margin-top:clamp(14px,1.6vw,20px);padding-top:clamp(12px,1.4vw,16px);border-top:1px solid rgba(31,110,140,.28)">
                 <span style="font-family:'Cormorant Garamond',serif;font-size:21px;letter-spacing:.02em">Antonio Villegas</span>
                 <img src="/assets/logo-gl-claro.webp" alt="Logotipo de Gestió Legal Jurídica" width="44" height="44" style="display:block;width:44px;height:auto;flex:none" />
@@ -191,7 +194,7 @@
       </section>
 
       <figure style="position:relative;margin:0;background:#DCEBF2">
-        <img src="/assets/cami-ronda-sagaro.webp" alt="Templete del Camí de Ronda de S'Agaró, frente al mar" width="1983" height="793" loading="lazy" style="display:block;width:100%;height:clamp(260px,42vw,560px);object-fit:cover;object-position:50% 50%" />
+        <img src="/assets/cami-ronda-sagaro.webp" alt="Templete del Camí de Ronda de S'Agaró, frente al mar, en la Costa Brava" width="1983" height="793" loading="lazy" style="display:block;width:100%;height:clamp(260px,42vw,560px);object-fit:cover;object-position:50% 50%" />
         <figcaption style="position:absolute;left:clamp(20px,5vw,56px);bottom:18px;background:rgba(251,252,251,.9);padding:6px 12px;font-size:12px;letter-spacing:.06em;color:#3B5461">Camí de Ronda de S'Agaró a Sa Conca, Platja d'Aro · Foto: Antonio Villegas</figcaption>
       </figure>
 
@@ -302,7 +305,11 @@
               <h3 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(22px,2.2vw,27px);color:#10313F">Laboral</h3>
               <p style="margin-top:10px;font-size:15.5px;line-height:1.7;color:#3B5461">Para trabajadores: despidos, reclamaciones de salarios, condiciones de trabajo y finiquitos. Para empresas: contratación, sanciones disciplinarias, extinciones de contrato y relación con la plantilla.</p>
             </div>
-            <div style="background:#1C5A73;padding:clamp(22px,2.6vw,30px);display:flex;flex-direction:column;justify-content:space-between;gap:20px">
+            <div style="background:#FFFFFF;padding:clamp(22px,2.6vw,30px)">
+              <h3 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(22px,2.2vw,27px);color:#10313F">Reclamación judicial de deudas internacionales dentro de la Unión Europea</h3>
+              <p style="margin-top:10px;font-size:15.5px;line-height:1.7;color:#3B5461">Cobro de deudas a deudores de otros países de la Unión Europea: proceso monitorio europeo, proceso europeo de escasa cuantía y ejecución de sentencias en otro Estado miembro.</p>
+            </div>
+            <div style="background:#1C5A73;padding:clamp(22px,2.6vw,30px);display:flex;flex-direction:column;justify-content:space-between;gap:20px;grid-column:{{ ambitosLast }}">
               <div>
                 <h3 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(22px,2.2vw,27px);color:#FFFFFF">¿No ves tu caso?</h3>
                 <p style="margin-top:10px;font-size:15.5px;line-height:1.7;color:#FFFFFF">No hace falta que encaje en ninguna categoría. Cuéntame qué ha ocurrido y lo analizaré.</p>
@@ -482,7 +489,7 @@ class Component extends DCLogic {
       blogVisible: blog,
       hrefEs: URLS.es[p], hrefCa: URLS.ca[p], hrefRu: URLS.ru[p],
       faqs: FAQS.map(([q, a], i) => ({ q, a, open: this.state.faq === i, sign: this.state.faq === i ? '−' : '+', toggle: () => this.setState(s => ({ faq: s.faq === i ? -1 : i })) })),
-      ambitosCols: this.state.w >= 1100 ? 4 : this.state.w >= 620 ? 2 : 1,
+      ambitosCols: this.state.w >= 1100 ? 3 : this.state.w >= 620 ? 2 : 1, ambitosLast: this.state.w >= 620 && this.state.w < 1100 ? '1 / -1' : 'auto',
       wide: this.state.w >= 1580, midNav: this.state.w >= 900 && this.state.w < 1580, narrow: this.state.w < 900,
       showCta: this.state.w >= 720,
       menuOpen: this.state.menu && this.state.w < 900,

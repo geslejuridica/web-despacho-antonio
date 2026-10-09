@@ -53,6 +53,9 @@
 <style>
   /* ---- Ajustes para movil (anadido 2026-10) ---- */
   @media (max-width: 899px) {
+    /* foto del Cami de Ronda en movil: encuadre del templete y pie de foto debajo, sin tapar la imagen */
+    main figure > img[src*="cami-ronda"] { height: clamp(280px, 75vw, 420px) !important; object-position: 80% 50% !important; }
+    main figure > figcaption[style*="absolute"] { position: static !important; display: block !important; background: transparent !important; padding: 10px 20px 14px !important; font-size: 11.5px !important; line-height: 1.5 !important; letter-spacing: .04em !important; color: #3B5461 !important; }
     header > div:first-child { flex-wrap: wrap !important; gap: 10px 12px !important; padding-left: 14px !important; padding-right: 14px !important; }
     header > div:first-child > div { flex: 1 1 100% !important; justify-content: space-between !important; gap: 6px !important; }
     header nav[aria-label="Idioma / Language"] { margin-right: 0 !important; }
@@ -171,7 +174,7 @@
           <div>
             <div style="border:1px solid #D3E2E9;background:#FFFFFF;padding:24px">
               <div style="display:flex;align-items:center;gap:18px">
-                <img src="/assets/antonio-retrato.jpg" alt="Retrat d'Antonio Villegas" width="96" height="96" loading="lazy" style="display:block;width:96px;height:96px;flex:none;border-radius:50%;object-fit:cover;object-position:50% 18%;border:1px solid #D3E2E9" />
+                <img src="/assets/antonio-retrato.jpg" alt="Retrat d'Antonio Villegas, advocat a Girona" width="96" height="96" loading="lazy" style="display:block;width:96px;height:96px;flex:none;border-radius:50%;object-fit:cover;object-position:50% 18%;border:1px solid #D3E2E9" />
                 <div>
                   <p style="font-family:'Cormorant Garamond',serif;font-size:26px;line-height:1.15">Antonio Villegas</p>
                   <p style="font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:#1F6E8C;margin-top:8px">Advocat · ICAG núm. 3913</p>
@@ -364,7 +367,7 @@ class Component extends DCLogic {
       blogVisible: blog,
       hrefEs: URLS.es[p], hrefCa: URLS.ca[p], hrefRu: URLS.ru[p],
       faqs: FAQS.map(([q, a], i) => ({ q, a, open: this.state.faq === i, sign: this.state.faq === i ? '−' : '+', toggle: () => this.setState(s => ({ faq: s.faq === i ? -1 : i })) })),
-      ambitosCols: this.state.w >= 1100 ? 4 : this.state.w >= 620 ? 2 : 1,
+      ambitosCols: this.state.w >= 1100 ? 3 : this.state.w >= 620 ? 2 : 1, ambitosLast: this.state.w >= 620 && this.state.w < 1100 ? '1 / -1' : 'auto',
       wide: this.state.w >= 1580, midNav: this.state.w >= 900 && this.state.w < 1580, narrow: this.state.w < 900,
       showCta: this.state.w >= 720,
       menuOpen: this.state.menu && this.state.w < 900,
