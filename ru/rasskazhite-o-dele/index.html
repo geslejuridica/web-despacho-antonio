@@ -33,6 +33,7 @@
 <style>html{background:#FBFAF7}body{margin:0;background:#FBFAF7}</style>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":["LegalService","Attorney"],"@id":"https://gestionlegaljuridica.com/#despacho","name":"Gestió Legal Jurídica","alternateName":["Antonio Villegas, abogado","Abogado Antonio Villegas","Antonio Villegas Advocat","Gestión Legal Jurídica"],"description":"Адвокат в Жироне и на Коста-Брава (Сан-Фелиу-де-Гишольс). ICAG № 3913.","url":"https://gestionlegaljuridica.com/","telephone":"+34645877276","email":"geslejuridica@gmail.com","image":"https://gestionlegaljuridica.com/assets/og-image.jpg","logo":"https://gestionlegaljuridica.com/assets/icon-512.png","address":{"@type":"PostalAddress","streetAddress":"Carrer Sèquia, 3","addressLocality":"Girona","postalCode":"17001","addressRegion":"Girona","addressCountry":"ES"},"areaServed":[{"@type":"Place","name":"Girona"},{"@type":"Place","name":"Sant Feliu de Guíxols"},{"@type":"Place","name":"Costa Brava"},{"@type":"Place","name":"Baix Empordà"},{"@type":"Place","name":"Gironès"}],"founder":{"@id":"https://gestionlegaljuridica.com/#antonio-villegas"}},{"@type":"Person","@id":"https://gestionlegaljuridica.com/#antonio-villegas","name":"Antonio Villegas","jobTitle":"Адвокат","description":"Адвокат в Жироне и на Коста-Брава (Сан-Фелиу-де-Гишольс). ICAG № 3913.","url":"https://gestionlegaljuridica.com/ru/advokat/","telephone":"+34645877276","workLocation":[{"@type":"Place","name":"Girona","address":{"@type":"PostalAddress","streetAddress":"Carrer Sèquia, 3","addressLocality":"Girona","postalCode":"17001","addressCountry":"ES"}},{"@type":"Place","name":"Sant Feliu de Guíxols (Costa Brava)","address":{"@type":"PostalAddress","addressLocality":"Sant Feliu de Guíxols","addressRegion":"Girona","addressCountry":"ES"}}],"image":"https://gestionlegaljuridica.com/assets/antonio-retrato.jpg","worksFor":{"@id":"https://gestionlegaljuridica.com/#despacho"},"memberOf":{"@type":"Organization","name":"Il·lustre Col·legi de l'Advocacia de Girona (ICAG)","url":"https://www.icag.cat"},"identifier":{"@type":"PropertyValue","propertyID":"ICAG","value":"3913"}},{"@type":"WebPage","@id":"https://gestionlegaljuridica.com/ru/rasskazhite-o-dele/#pagina","url":"https://gestionlegaljuridica.com/ru/rasskazhite-o-dele/","name":"Расскажите о своём деле | Antonio Villegas, адвокат в Жироне","description":"Расскажите своими словами, что произошло. Я проанализирую ситуацию, определю, какие отрасли права затронуты, и объясню возможные пути. Жирона и Сан-Фелиу-де-Гишольс.","inLanguage":"ru","isPartOf":{"@type":"WebSite","@id":"https://gestionlegaljuridica.com/#web","url":"https://gestionlegaljuridica.com/","name":"Antonio Villegas, адвокат · Gestió Legal Jurídica"},"about":{"@id":"https://gestionlegaljuridica.com/#despacho"}}]}</script>
 <script src="/support.js"></script>
+<script src="/assets/contacto-rapido.js" defer></script>
 </head>
 <body>
 <x-dc>
@@ -194,6 +195,7 @@
           <div style="border:1px solid #D3E2E9;background:#FFFFFF;padding:clamp(24px,3.4vw,40px)">
             <sc-if value="{{ noEnviado }}" hint-placeholder-val="{{ true }}">
               <form onSubmit="{{ enviar }}" novalidate="" style="display:grid;gap:20px">
+                <input type="text" name="web" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0" />
                 <h2 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(24px,2.8vw,34px)">Расскажите о своём деле</h2>
                 <div style="display:grid;gap:8px">
                   <label for="glj-nombre" style="font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#3B5461">Имя</label>
@@ -229,7 +231,14 @@
                 <button type="submit" style="background:#1C5A73;color:#FFFFFF;border:none;min-height:54px;padding:0 32px;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;cursor:pointer;justify-self:start" style-hover="background:#123F52">Отправить запрос</button>
               </form>
             </sc-if>
-            <sc-if value="{{ enviado }}">
+            <sc-if value="{{ enviadoOk }}">
+              <div role="status" style="display:grid;gap:16px">
+                <p style="font-size:11.5px;letter-spacing:.24em;text-transform:uppercase;color:#1F6E8C">Запрос получен</p>
+                <h2 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(24px,2.8vw,34px);line-height:1.2">Спасибо. Ваш запрос получен.</h2>
+                <p style="font-size:16.5px;line-height:1.8;color:#3B5461">Я внимательно его прочитаю и свяжусь с вами выбранным способом. Если вопрос срочный, позвоните по номеру <a href="tel:+34645877276">645 877 276</a> или напишите в <a href="https://wa.me/34645877276">WhatsApp</a>.</p>
+              </div>
+            </sc-if>
+            <sc-if value="{{ enviadoMail }}">
               <div role="status" style="display:grid;gap:16px">
                 <p style="font-size:11.5px;letter-spacing:.24em;text-transform:uppercase;color:#1F6E8C">Почти отправлено</p>
                 <h2 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(24px,2.8vw,34px);line-height:1.2">Открылась ваша почта с текстом запроса.</h2>
@@ -394,7 +403,7 @@ class Component extends DCLogic {
       menuLabel: this.state.menu ? "Закрыть" : "Меню",
       toggleMenu: () => this.setState(s => ({ menu: !s.menu })),
       varA: v === 'A', varB: v === 'B', varC: v === 'C',
-      enviado: this.state.enviado, noEnviado: !this.state.enviado,
+      enviado: this.state.enviado, noEnviado: !this.state.enviado, enviadoOk: this.state.enviado && !!this.state.ok, enviadoMail: this.state.enviado && !this.state.ok,
       analitica: this.state.analitica,
       panelVisible: this.state.panel,
       bannerVisible: !decidido && !this.state.panel && this.props.mostrarAvisoCookies !== false,
@@ -409,7 +418,7 @@ class Component extends DCLogic {
       irAviso: () => this.go('aviso'),
       irPrivacidad: () => this.go('privacidad'),
       irCookies: () => this.go('cookies'),
-      enviar: (e) => { e.preventDefault(); var f = new FormData(e.target); var g = function (k) { return String(f.get(k) || '').trim(); }; var cuerpo = ['Nombre: ' + g('nombre'), 'Telefono: ' + g('telefono'), 'Email: ' + g('email'), 'Prefiere contacto por: ' + g('preferencia'), '', 'Consulta:', g('caso')].join('\n'); var asunto = 'Consulta web' + (g('nombre') ? ' - ' + g('nombre') : ''); try { window.location.href = 'mailto:geslejuridica@gmail.com?subject=' + encodeURIComponent(asunto) + '&body=' + encodeURIComponent(cuerpo); } catch (err) {} this.setState({ enviado: true }); },
+      enviar: (e) => { e.preventDefault(); var f = new FormData(e.target); var g = function (k) { return String(f.get(k) || '').trim(); }; var cuerpo = ['Nombre: ' + g('nombre'), 'Telefono: ' + g('telefono'), 'Email: ' + g('email'), 'Prefiere contacto por: ' + g('preferencia'), '', 'Consulta:', g('caso')].join('\n'); var asunto = 'Consulta web (RU)' + (g('nombre') ? ' - ' + g('nombre') : ''); if (!g('nombre') || !g('caso') || !f.get('rgpd') || (!g('telefono') && !g('email'))) { var falta = !g('nombre') ? 'nombre' : !g('caso') ? 'caso' : (!g('telefono') && !g('email')) ? 'telefono' : 'rgpd'; try { var el = e.target.elements[falta]; if (el && el.focus) el.focus(); } catch (x) {} alert('Чтобы я мог ответить, укажите имя, телефон или e-mail, кратко опишите ситуацию и отметьте согласие с политикой конфиденциальности.'); return; } if (g('web')) { this.setState({ enviado: true, ok: true }); return; } if (this.enviando) return; this.enviando = true; var self = this; var mail = function () { try { window.location.href = 'mailto:geslejuridica@gmail.com?subject=' + encodeURIComponent(asunto) + '&body=' + encodeURIComponent(cuerpo); } catch (err) {} self.enviando = false; self.setState({ enviado: true, ok: false }); }; try { fetch('https://formsubmit.co/ajax/geslejuridica@gmail.com', { method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }, body: JSON.stringify({ _subject: asunto, _template: 'table', _captcha: 'false', Nombre: g('nombre'), Telefono: g('telefono'), Email: g('email'), Preferencia: g('preferencia'), Consulta: g('caso'), Idioma: LANG, Pagina: window.location.href }) }).then(function (r) { return r.json().catch(function () { return {}; }); }).then(function (d) { if (d && (d.success === true || d.success === 'true')) { self.enviando = false; self.setState({ enviado: true, ok: true }); } else { mail(); } }).catch(mail); } catch (err) { mail(); } },
       abrirPanel: () => this.setState({ panel: true }),
       cerrarPanel: () => this.setState({ panel: false }),
       toggleAnalitica: (e) => this.setState({ analitica: e.target.checked }),
