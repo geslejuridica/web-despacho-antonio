@@ -2,10 +2,11 @@
 (function () {
   var NUM = '34645877276';
   var path = location.pathname || '/';
-  var lang = path.indexOf('/ca/') === 0 ? 'ca' : path.indexOf('/ru/') === 0 ? 'ru' : 'es';
+  var lang = path.indexOf('/ca/') === 0 ? 'ca' : path.indexOf('/ru/') === 0 ? 'ru' : path.indexOf('/en/') === 0 ? 'en' : 'es';
   var T = {
     es: { msg: 'Hola, he visto su web y quería hacer una consulta.', label: 'Escríbeme por WhatsApp', tip: 'WhatsApp' },
     ca: { msg: 'Hola, he vist el vostre web i voldria fer una consulta.', label: 'Escriu-me per WhatsApp', tip: 'WhatsApp' },
+    en: { msg: 'Hello, I have seen your website and would like to make an enquiry.', label: 'Message me on WhatsApp', tip: 'WhatsApp' },
     ru: { msg: 'Здравствуйте! Я увидел(а) ваш сайт и хотел(а) бы получить консультацию.', label: 'Написать в WhatsApp', tip: 'WhatsApp' }
   }[lang];
 
