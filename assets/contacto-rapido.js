@@ -2,11 +2,12 @@
 (function () {
   var NUM = '34645877276';
   var path = location.pathname || '/';
-  var lang = path.indexOf('/ca/') === 0 ? 'ca' : path.indexOf('/ru/') === 0 ? 'ru' : path.indexOf('/en/') === 0 ? 'en' : 'es';
+  var lang = path.indexOf('/ca/') === 0 ? 'ca' : path.indexOf('/ru/') === 0 ? 'ru' : path.indexOf('/en/') === 0 ? 'en' : path.indexOf('/fr/') === 0 ? 'fr' : 'es';
   var T = {
     es: { msg: 'Hola, he visto su web y quería hacer una consulta.', label: 'Escríbeme por WhatsApp', tip: 'WhatsApp' },
     ca: { msg: 'Hola, he vist el vostre web i voldria fer una consulta.', label: 'Escriu-me per WhatsApp', tip: 'WhatsApp' },
     en: { msg: 'Hello, I have seen your website and would like to make an enquiry.', label: 'Message me on WhatsApp', tip: 'WhatsApp' },
+    fr: { msg: 'Bonjour, j\'ai vu votre site web et je souhaiterais vous consulter.', label: 'Écrivez-moi sur WhatsApp', tip: 'WhatsApp' },
     ru: { msg: 'Здравствуйте! Я увидел(а) ваш сайт и хотел(а) бы получить консультацию.', label: 'Написать в WhatsApp', tip: 'WhatsApp' }
   }[lang];
 
@@ -35,6 +36,20 @@
       '<span>' + T.label + '</span>';
     document.body.appendChild(a);
   }
+
+  // Selector de idioma desplegable: se cierra al pulsar fuera o con Escape.
+  document.addEventListener('click', function (e) {
+    var abiertos = document.querySelectorAll('details[data-glj="idioma"][open]');
+    for (var i = 0; i < abiertos.length; i++) { if (!abiertos[i].contains(e.target)) abiertos[i].removeAttribute('open'); }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Escape') return;
+    var abiertos = document.querySelectorAll('details[data-glj="idioma"][open]');
+    for (var i = 0; i < abiertos.length; i++) {
+      abiertos[i].removeAttribute('open');
+      var s = abiertos[i].querySelector('summary'); if (s) s.focus();
+    }
+  });
 
   // Si hay una barra fija abajo (por ejemplo, el aviso de cookies), el botón se coloca encima.
   function ajustar() {
