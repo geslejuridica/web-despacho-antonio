@@ -79,7 +79,7 @@
 78	Es el tiempo medio que tarda un médico en interrumpir a un paciente que empieza a explicar por qué ha acudido a consulta, según un estudio publicado en el
 79	Journal of General Internal Medicine
 80	(2018). Contar un problema sin interrupciones es menos habitual de lo que parece. En este despacho, la primera conversación empieza por escucharte hasta el final.
-81	Abogado · ICAG núm. 3913
+81	Abogado · ICAG
 82	geslejuridica@gmail.com
 83	Abogado ejerciente en Girona y Sant Feliu de Guíxols. Gestió Legal Jurídica es mi despacho.
 84	Mi forma de trabajar parte de una convicción sencilla: la persona que llega con un problema no tiene por qué saber de Derecho. Lo que necesita es que alguien escuche los hechos, los analice con rigor y le explique, sin tecnicismos innecesarios, qué opciones existen y qué implica cada una.
@@ -250,7 +250,7 @@
 249	Titulación:
 250	Graduado en Derecho y Máster Universitario en Abogacía, títulos expedidos en España
 251	Colegio profesional:
-252	Il·lustre Col·legi de l'Advocacia de Girona (ICAG), número de colegiado 3913
+252	Il·lustre Col·legi de l'Advocacia de Girona (ICAG)
 253	Normas profesionales aplicables:
 254	Estatuto General de la Abogacía Española, aprobado por el Real Decreto 135/2021, de 2 de marzo; Código Deontológico de la Abogacía Española; y normativa del Consell dels Il·lustres Col·legis de l'Advocacia de Catalunya y del ICAG, consultables en
 255	www.abogacia.es
